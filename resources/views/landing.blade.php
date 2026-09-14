@@ -6,169 +6,306 @@
     <title>POS Garam - Sistem Penjualan dan Pengolahan Garam</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="{{ asset('css/material.css') }}">
-    <style>
-        .landing-hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
-        }
-        .landing-nav {
-            height: 72px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 48px;
-            background-color: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(8px);
-            border-bottom: 1px solid var(--md-sys-color-outline-variant);
-        }
-        .landing-brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--md-sys-color-primary);
-        }
-        .landing-body {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 60px 24px;
-        }
-        .hero-container {
-            max-width: 960px;
-            text-align: center;
-        }
-        .hero-title {
-            font-size: 40px;
-            font-weight: 700;
-            color: var(--md-sys-color-on-surface);
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-        .hero-desc {
-            font-size: 17px;
-            color: var(--md-sys-color-on-surface-variant);
-            max-width: 720px;
-            margin: 0 auto 36px;
-            line-height: 1.6;
-        }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 24px;
-            margin-top: 48px;
-            text-align: left;
-        }
-        .feature-card {
-            background-color: #ffffff;
-            padding: 24px;
-            border-radius: var(--md-shape-corner-medium);
-            border: 1px solid var(--md-sys-color-outline-variant);
-            box-shadow: var(--md-elevation-1);
-        }
-        .feature-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: var(--md-shape-corner-medium);
-            background-color: var(--md-sys-color-primary-container);
-            color: var(--md-sys-color-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px;
-        }
-        .feature-title {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--md-sys-color-on-surface);
-        }
-        .feature-text {
-            font-size: 13.5px;
-            color: var(--md-sys-color-on-surface-variant);
-            line-height: 1.5;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/landing.css') }}">
 </head>
-<body class="landing-hero">
-    <header class="landing-nav">
-        <div class="landing-brand">
-            <span class="material-symbols-outlined" style="font-size: 28px;">grain</span>
-            <span>POS Garam</span>
-        </div>
-        <div>
-            @auth
-                <a href="{{ route('dashboard') }}" class="md-btn md-btn-primary">
-                    <span class="material-symbols-outlined">dashboard</span>
-                    <span>Dashboard</span>
-                </a>
-            @else
-                <a href="{{ route('login') }}" class="md-btn md-btn-primary">
-                    <span class="material-symbols-outlined">login</span>
-                    <span>Masuk</span>
-                </a>
-            @endauth
-        </div>
-    </header>
+<body class="landing-page-body">
 
-    <main class="landing-body">
-        <div class="hero-container">
-            <h1 class="hero-title">Sistem Point of Sale & Pengolahan Garam</h1>
-            <p class="hero-desc">
-                Solusi terintegrasi untuk mengelola rantai pasok garam: pencatatan bahan mentah datang, proses produksi kemasan 300 gram, transaksi kasir penjualan, cetak nota/faktur, dan monitoring stok secara real-time.
-            </p>
+    <!-- Master Canvas Container -->
+    <div class="lp-wrapper">
+        
+        <!-- Header & Navbar -->
+        <header class="lp-navbar">
+            <a href="{{ url('/') }}" class="lp-brand">
+                <div class="lp-brand-logo">
+                    <span class="material-symbols-outlined" style="font-size: 20px;">grain</span>
+                </div>
+                <span>Garam.</span>
+            </a>
+
+            <ul class="lp-nav-links">
+                <li><a href="#fitur" class="lp-nav-link">Fitur</a></li>
+                <li><a href="#alur" class="lp-nav-link">Alur Kerja</a></li>
+                <li><a href="#bento" class="lp-nav-link">Produksi</a></li>
+                <li><a href="#kontak" class="lp-nav-link">Kontak</a></li>
+            </ul>
 
             <div>
                 @auth
-                    <a href="{{ route('dashboard') }}" class="md-btn md-btn-primary" style="padding: 12px 28px; font-size: 15px;">
-                        <span>Buka Aplikasi</span>
+                    <a href="{{ route('dashboard') }}" class="lp-btn-pill-primary">
+                        <span class="material-symbols-outlined" style="font-size: 18px;">dashboard</span>
+                        <span>Buka Dashboard</span>
                     </a>
                 @else
-                    <a href="{{ route('login') }}" class="md-btn md-btn-primary" style="padding: 12px 28px; font-size: 15px;">
-                        <span>Masuk ke Sistem</span>
+                    <a href="{{ route('login') }}" class="lp-btn-pill-primary">
+                        <span>Masuk Sistem</span>
                     </a>
                 @endauth
             </div>
+        </header>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <span class="material-symbols-outlined">warehouse</span>
-                    </div>
-                    <div class="feature-title">Bahan Mentah</div>
-                    <div class="feature-text">
-                        Pencatatan garam mentah dalam gram, kilogram, atau ton dengan konversi presisi dan kartu stok otomatis.
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <span class="material-symbols-outlined">precision_manufacturing</span>
-                    </div>
-                    <div class="feature-title">Proses Produksi</div>
-                    <div class="feature-text">
-                        Konversi garam mentah ke produk siap jual (standar 1 bungkus = 300 gram) dengan proteksi anti-stok negatif.
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <span class="material-symbols-outlined">point_of_sale</span>
-                    </div>
-                    <div class="feature-title">Kasir & Faktur</div>
-                    <div class="feature-text">
-                        Transaksi cepat penjualan garam bungkus, hitung kembalian otomatis, serta cetak nota dan faktur resmi.
-                    </div>
+        <!-- Hero Section -->
+        <section class="lp-hero">
+            <div class="lp-hero-content">
+                <h1 class="lp-hero-title">Elevate Your Workflow</h1>
+                <p class="lp-hero-desc">
+                    Tingkatkan efisiensi alur bisnis garam dari penerimaan bahan mentah, otomasi konversi kemasan 300 gram, kasir penjualan cepat, hingga monitoring analitik secara real-time.
+                </p>
+                <div class="lp-hero-actions">
+                    @auth
+                        <a href="{{ route('dashboard') }}" class="lp-btn-pill-primary lp-btn-pill-hero">
+                            <span>Buka Dashboard</span>
+                        </a>
+                    @else
+                        <a href="{{ route('login') }}" class="lp-btn-pill-primary lp-btn-pill-hero">
+                            <span>Mulai Sekarang</span>
+                        </a>
+                    @endauth
+                    <a href="#alur" class="lp-link-arrow">
+                        <span>Pelajari Alur</span>
+                        <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+                    </a>
                 </div>
             </div>
-        </div>
-    </main>
+
+            <div class="lp-hero-visual">
+                <img src="{{ asset('images/hero_manager.jpg') }}" alt="Operations Manager" class="lp-hero-img">
+                <div class="lp-hero-gradient-overlay"></div>
+            </div>
+        </section>
+
+        <!-- 3 Feature Columns (Trio) -->
+        <section class="lp-features-trio" id="fitur">
+            <div class="lp-trio-item">
+                <div class="lp-trio-header">
+                    <div class="lp-trio-icon">
+                        <span class="material-symbols-outlined">inventory_2</span>
+                    </div>
+                    <h3 class="lp-trio-title">Manajemen Stok</h3>
+                </div>
+                <p class="lp-trio-text">
+                    Pencatatan akurat bahan mentah dalam gram, kilogram, atau ton dengan konversi otomatis dan kartu stok terperinci.
+                </p>
+            </div>
+
+            <div class="lp-trio-item">
+                <div class="lp-trio-header">
+                    <div class="lp-trio-icon">
+                        <span class="material-symbols-outlined">hub</span>
+                    </div>
+                    <h3 class="lp-trio-title">Kolaborasi Alur</h3>
+                </div>
+                <p class="lp-trio-text">
+                    Sinkronisasi data langsung antara bagian penerimaan gudang, divisi pengolahan, hingga operator kasir tanpa selisih.
+                </p>
+            </div>
+
+            <div class="lp-trio-item">
+                <div class="lp-trio-header">
+                    <div class="lp-trio-icon">
+                        <span class="material-symbols-outlined">precision_manufacturing</span>
+                    </div>
+                    <h3 class="lp-trio-title">Otomasi Produksi</h3>
+                </div>
+                <p class="lp-trio-text">
+                    Kalkulasi presisi standar kemasan 300g per bungkus dengan proteksi pencegahan stok minus secara otomatis.
+                </p>
+            </div>
+        </section>
+
+        <!-- Bento Grid Showcase -->
+        <section class="lp-bento-grid" id="bento">
+            <!-- Cell 1: Dark Navy Card -->
+            <div class="lp-bento-card lp-bento-dark">
+                <div>
+                    <span class="lp-bento-dark-badge">Sistem Terpadu</span>
+                    <h4 class="lp-bento-dark-title">Produksi &amp; POS Siap 300g</h4>
+                    <p class="lp-bento-dark-desc">
+                        Kontrol seluruh alur produksi dan distribusi garam dalam satu platform terintegrasi.
+                    </p>
+                </div>
+                <a href="{{ route('login') }}" class="lp-bento-dark-btn">Kelola Sistem</a>
+            </div>
+
+            <!-- Cell 2: Stacked Imagery -->
+            <div class="lp-bento-stacked">
+                <div class="lp-bento-stack-item">
+                    <img src="{{ asset('images/bento_salt.jpg') }}" alt="Quality Inspection" class="lp-bento-stack-img">
+                    <div class="lp-stack-caption">Pemeriksaan Kualitas</div>
+                </div>
+                <div class="lp-bento-stack-item">
+                    <img src="{{ asset('images/bento_laptop.jpg') }}" alt="Administrasi Operasional" class="lp-bento-stack-img" style="object-position: top center;">
+                    <div class="lp-stack-caption">Operasional Gudang</div>
+                </div>
+            </div>
+
+            <!-- Cell 3: Portrait card -->
+            <div class="lp-bento-card lp-bento-portrait">
+                <img src="{{ asset('images/bento_laptop.jpg') }}" alt="Manajer Produksi" class="lp-bento-portrait-img">
+            </div>
+
+            <!-- Cell 4: Productivity metric -->
+            <div class="lp-bento-card lp-bento-stat">
+                <div class="lp-stat-label">Peningkatan Efisiensi Kerja</div>
+                <div class="lp-stat-number">30%</div>
+                <div class="lp-stat-subtext">Akurat, Cepat &amp; Otomatis</div>
+            </div>
+
+            <!-- Cell 5: Tablet POS screen -->
+            <div class="lp-bento-card lp-bento-pos">
+                <img src="{{ asset('images/bento_pos.jpg') }}" alt="Aplikasi POS Garam" class="lp-bento-pos-img">
+            </div>
+        </section>
+
+        <!-- Lower Section: Workflow Accordion & Contact -->
+        <section class="lp-bottom-grid" id="alur">
+            <!-- Left: Workflow List -->
+            <div class="lp-workflow-col">
+                <h3 class="lp-section-title">Alur Sistem</h3>
+                <div class="lp-accordion-list">
+                    
+                    <div class="lp-accordion-item active" onclick="toggleAccordion(this)">
+                        <div class="lp-accordion-header">
+                            <div class="lp-accordion-lead">
+                                <span class="lp-pill-badge">Bahan Mentah</span>
+                                <img src="{{ asset('images/hero_manager.jpg') }}" class="lp-avatar-thumb" alt="Gudang">
+                                <span class="lp-accordion-title">Pencatatan garam mentah (g, kg, ton)</span>
+                            </div>
+                            <span class="material-symbols-outlined lp-accordion-chevron">expand_more</span>
+                        </div>
+                        <div class="lp-accordion-content">
+                            Pencatatan pengiriman dari petani dan supplier garam dengan otomatisasi konversi satuan berat presisi serta kartu mutasi stok real-time.
+                        </div>
+                    </div>
+
+                    <div class="lp-accordion-item" onclick="toggleAccordion(this)">
+                        <div class="lp-accordion-header">
+                            <div class="lp-accordion-lead">
+                                <span class="lp-pill-badge">Produksi</span>
+                                <img src="{{ asset('images/bento_laptop.jpg') }}" class="lp-avatar-thumb" alt="Pabrik">
+                                <span class="lp-accordion-title">Konversi pengemasan standar 300g</span>
+                            </div>
+                            <span class="material-symbols-outlined lp-accordion-chevron">expand_more</span>
+                        </div>
+                        <div class="lp-accordion-content">
+                            Proses pencucian, iodisasi, dan pengemasan otomatis dengan rasio standar 1 bungkus = 300 gram dan validasi stok bahan baku.
+                        </div>
+                    </div>
+
+                    <div class="lp-accordion-item" onclick="toggleAccordion(this)">
+                        <div class="lp-accordion-header">
+                            <div class="lp-accordion-lead">
+                                <span class="lp-pill-badge">Barang Jadi</span>
+                                <img src="{{ asset('images/bento_salt.jpg') }}" class="lp-avatar-thumb" alt="Produk">
+                                <span class="lp-accordion-title">Katalog SKU garam siap jual</span>
+                            </div>
+                            <span class="material-symbols-outlined lp-accordion-chevron">expand_more</span>
+                        </div>
+                        <div class="lp-accordion-content">
+                            Pengelolaan varian garam dapur beryodium, garam halus, serta garam kemasan siap edar lengkap dengan harga jual dan ambang batas minimum stok.
+                        </div>
+                    </div>
+
+                    <div class="lp-accordion-item" onclick="toggleAccordion(this)">
+                        <div class="lp-accordion-header">
+                            <div class="lp-accordion-lead">
+                                <span class="lp-pill-badge">Kasir POS</span>
+                                <img src="{{ asset('images/bento_pos.jpg') }}" class="lp-avatar-thumb" alt="Kasir">
+                                <span class="lp-accordion-title">Transaksi cepat, kembalian &amp; faktur cetak</span>
+                            </div>
+                            <span class="material-symbols-outlined lp-accordion-chevron">expand_more</span>
+                        </div>
+                        <div class="lp-accordion-content">
+                            Layanan kasir responsif untuk transaksi grosir dan eceran dengan kalkulasi kembalian otomatis dan pencetakan faktur/nota format kasir.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right: Let's Talk Form -->
+            <div class="lp-contact-col" id="kontak">
+                <h3 class="lp-section-title">Konsultasi Cepat</h3>
+                <form class="lp-contact-form" onsubmit="handleContactSubmit(event)">
+                    <div class="lp-select-pill-wrap">
+                        <select class="lp-select-pill" required>
+                            <option value="" disabled selected>Pilih Skala Bisnis</option>
+                            <option value="pabrik">Pabrik &amp; Pengolahan Garam</option>
+                            <option value="distributor">Distributor &amp; Gudang Besar</option>
+                            <option value="grosir">Toko Grosir / Eceran</option>
+                        </select>
+                        <span class="material-symbols-outlined lp-select-arrow">expand_more</span>
+                    </div>
+
+                    <div class="lp-select-pill-wrap">
+                        <select class="lp-select-pill" required>
+                            <option value="" disabled selected>Kebutuhan Utama</option>
+                            <option value="pos">Sistem Kasir &amp; Penjualan POS</option>
+                            <option value="produksi">Manajemen Konversi &amp; Pengemasan 300g</option>
+                            <option value="full">Paket Lengkap Terintegrasi</option>
+                        </select>
+                        <span class="material-symbols-outlined lp-select-arrow">expand_more</span>
+                    </div>
+
+                    <div class="lp-select-pill-wrap">
+                        <select class="lp-select-pill" required>
+                            <option value="" disabled selected>Rencana Implementasi</option>
+                            <option value="segera">Segera (Minggu Ini)</option>
+                            <option value="bulan_ini">Bulan Ini</option>
+                            <option value="eksplorasi">Uji Coba &amp; Demo Sistem</option>
+                        </select>
+                        <span class="material-symbols-outlined lp-select-arrow">expand_more</span>
+                    </div>
+
+                    <button type="submit" class="lp-btn-pill-dark">
+                        <span>Kirim Permintaan Demo</span>
+                        <span class="material-symbols-outlined" style="font-size: 18px;">send</span>
+                    </button>
+                    <div id="contact-alert" style="display: none; font-size: 13px; color: #059669; text-align: center; margin-top: 8px;">
+                        Terima kasih! Permintaan demo berhasil dikirim.
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="lp-footer">
+            <div class="lp-footer-left">
+                <span>&copy; {{ date('Y') }} POS Garam. Hak cipta dilindungi.</span>
+                <span class="lp-status-badge">
+                    <span class="lp-status-dot"></span>
+                    <span>Sistem Aktif &amp; Terhubung</span>
+                </span>
+            </div>
+            <div>
+                <a href="{{ route('login') }}" style="color: var(--lp-text-muted); text-decoration: none; font-size: 13px;">Login Karyawan</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Micro-interactions Script -->
+    <script>
+        function toggleAccordion(item) {
+            const allItems = document.querySelectorAll('.lp-accordion-item');
+            const isActive = item.classList.contains('active');
+            
+            allItems.forEach(el => el.classList.remove('active'));
+            
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const alertBox = document.getElementById('contact-alert');
+            alertBox.style.display = 'block';
+            setTimeout(() => {
+                window.location.href = "{{ route('login') }}";
+            }, 1200);
+        }
+    </script>
 </body>
 </html>

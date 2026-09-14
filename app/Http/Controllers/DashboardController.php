@@ -55,7 +55,10 @@ class DashboardController extends Controller
             ->orderBy('sale_date')
             ->get();
 
+        $finishedProducts = FinishedProduct::all();
+
         return view('dashboard.index', compact(
+            'finishedProducts',
             'totalRawStockGram',
             'formattedRawStock',
             'totalFinishedPacks',

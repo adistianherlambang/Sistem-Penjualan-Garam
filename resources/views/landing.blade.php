@@ -6,7 +6,7 @@
     <title>POS Garam - Industri Pengolahan &amp; Sistem Distribusi Garam</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/landing.css') }}">
 </head>
 <body class="landing-page-body">
@@ -14,28 +14,30 @@
     <!-- 100% Full-Width Master Wrapper -->
     <div class="lp-wrapper">
         
-        <!-- Header & Navbar (Full Width, Zero Icons) -->
-        <header class="lp-header-wrap">
+        <!-- Header & Navbar (Exact NGC Layout in Blue, Zero Icons) -->
+        <header class="ngc-nav-wrap">
+            <div class="ngc-top-bar"></div>
             <div class="lp-container">
-                <nav class="lp-navbar">
-                    <a href="{{ url('/') }}" class="lp-brand">
-                        <span>POS Garam</span><span class="lp-brand-dot">.</span>
+                <nav class="ngc-navbar">
+                    <a href="{{ url('/') }}" class="ngc-brand">
+                        <span>POS</span><span class="highlight">Garam</span>
                     </a>
 
-                    <ul class="lp-nav-links">
-                        <li><a href="#tentang" class="lp-nav-link">Tentang Kami</a></li>
-                        <li><a href="#keunggulan" class="lp-nav-link">Keunggulan</a></li>
-                        <li><a href="#produk" class="lp-nav-link">Produk</a></li>
-                        <li><a href="#kontak" class="lp-nav-link">Kontak</a></li>
+                    <ul class="ngc-nav-links">
+                        <li><a href="#home" class="ngc-nav-item active">Home</a></li>
+                        <li><a href="#tentang" class="ngc-nav-item">Tentang Kami</a></li>
+                        <li><a href="#keunggulan" class="ngc-nav-item">Keunggulan</a></li>
+                        <li><a href="#produk" class="ngc-nav-item">Produk</a></li>
+                        <li><a href="#kontak" class="ngc-nav-item">Kontak</a></li>
                     </ul>
 
                     <div>
                         @auth
-                            <a href="{{ route('dashboard') }}" class="lp-btn-pill-primary">
+                            <a href="{{ route('dashboard') }}" class="ngc-btn-cta">
                                 <span>Buka Dashboard</span>
                             </a>
                         @else
-                            <a href="{{ route('login') }}" class="lp-btn-pill-primary">
+                            <a href="{{ route('login') }}" class="ngc-btn-cta">
                                 <span>Masuk Sistem</span>
                             </a>
                         @endauth
@@ -44,254 +46,334 @@
             </div>
         </header>
 
-        <!-- Hero Section (Full Width, Real Authentic Photo, Zero Icons) -->
-        <section class="lp-hero-section">
-            <div class="lp-container">
-                <div class="lp-hero">
-                    <div class="lp-hero-content">
-                        <div style="display: inline-block; padding: 6px 14px; background-color: var(--lp-primary-subtle); color: var(--lp-primary); border-radius: 9999px; font-size: 12.5px; font-weight: 700; margin-bottom: 16px; border: 1px solid rgba(79, 117, 255, 0.15);">
-                            Perusahaan Industri Garam Kredibel, Berpengalaman dan Terpercaya
-                        </div>
-                        <h1 class="lp-hero-title">Solusi Garam Industri &amp; Konsumsi Berkualitas</h1>
-                        <p class="lp-hero-desc">
-                            Produsen dan distributor garam terpercaya dengan standar mutu pangan tinggi, bahan baku pilihan, proses higienis, serta dukungan sistem operasional dan kasir terpadu.
+        <!-- Hero Section (Exact NGC Hero in Blue, Zero Icons) -->
+        <section class="ngc-hero-section" id="home">
+            <div class="lp-container ngc-hero-inner">
+                <div class="ngc-hero-grid">
+                    
+                    <!-- Left Hero Content -->
+                    <div class="ngc-hero-text">
+                        <span class="ngc-hero-badge">Solusi Garam Industri &amp; Konsumsi Berkualitas</span>
+                        <h1 class="ngc-hero-title">
+                            POS <span class="blue-grad">Garam</span>
+                        </h1>
+                        <p class="ngc-hero-subtitle">
+                            “Perusahaan Industri Garam Kredibel, Berpengalaman dan Terpercaya”
                         </p>
-                        <div class="lp-hero-actions">
-                            <a href="#kontak" class="lp-btn-pill-primary lp-btn-pill-hero">
-                                <span>Konsultasi Sekarang</span>
+
+                        <div class="ngc-hero-actions">
+                            <a href="#kontak" class="ngc-btn-primary">
+                                <span>Hubungi Kami</span>
                             </a>
-                            @auth
-                                <a href="{{ route('dashboard') }}" class="lp-link-arrow">
-                                    <span>Buka Dashboard</span>
-                                </a>
-                            @else
-                                <a href="{{ route('login') }}" class="lp-link-arrow">
-                                    <span>Masuk Sistem</span>
-                                </a>
-                            @endauth
+                            <a href="#produk" class="ngc-btn-outline">
+                                <span>Produk Kami</span>
+                            </a>
                         </div>
                     </div>
 
-                    <div class="lp-hero-visual">
-                        <img src="{{ asset('images/hero_real.png') }}" alt="Sentra Fasilitas dan Pengolahan Garam" class="lp-hero-img">
-                        <div class="lp-hero-gradient-overlay"></div>
+                    <!-- Right Hero Media (Real Authentic Photo) -->
+                    <div class="ngc-hero-media">
+                        <div class="ngc-hero-frame">
+                            <img src="{{ asset('images/hero_real.png') }}" alt="Sentra Fasilitas dan Pengolahan Garam" class="ngc-hero-img">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Trust / Partner Badges Marquee Strip -->
+            <div class="ngc-marquee-strip">
+                <div class="lp-container">
+                    <div class="ngc-marquee-label">Dipercaya Berbagai Sektor Industri &amp; Distribusi Nasional</div>
+                    <div class="ngc-trust-grid">
+                        <div class="ngc-trust-chip">Industri Makanan &amp; Minuman</div>
+                        <div class="ngc-trust-chip">Industri Pakan &amp; Perikanan</div>
+                        <div class="ngc-trust-chip">Industri Kimia, Tekstil &amp; Kulit</div>
+                        <div class="ngc-trust-chip">Water Treatment &amp; Sanitasi</div>
+                        <div class="ngc-trust-chip">Distribusi Retail &amp; Pasar Konsumsi</div>
+                        <div class="ngc-trust-chip">Kemitraan Petani Garam Lokal</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 3 Feature Columns Section (Numbered 01, 02, 03 - Zero Icons) -->
-        <section class="lp-features-section" id="keunggulan">
+        <!-- Section 1: Tentang Perusahaan (Exact NGC About Layout, Zero Icons) -->
+        <section class="ngc-about-section" id="tentang">
             <div class="lp-container">
-                <div class="lp-features-trio">
-                    <div class="lp-trio-item">
-                        <div class="lp-trio-header">
-                            <span class="lp-trio-num">01</span>
-                            <h3 class="lp-trio-title">Standar Mutu Pangan</h3>
+                
+                <!-- Section Header -->
+                <div class="ngc-section-header">
+                    <span class="ngc-pill-tag">Tentang Perusahaan</span>
+                    <h2 class="ngc-section-title">Tentang Kami</h2>
+                    <div class="ngc-divider-center"></div>
+                    <p class="ngc-section-desc">
+                        Mengenal lebih dalam sentra pengolahan dan sistem manajemen garam yang berkomitmen pada kualitas dan profesionalisme
+                    </p>
+                </div>
+
+                <!-- Two Column Split Row -->
+                <div class="ngc-split-row">
+                    <div class="ngc-split-col">
+                        <div class="ngc-about-card">
+                            <img src="{{ asset('images/about_real.png') }}" alt="Gedung Fasilitas Pergudangan Garam" class="ngc-about-img">
                         </div>
-                        <p class="lp-trio-text">
-                            Memenuhi standar mutu nasional SNI, higienis, dan pengawasan ketat untuk menjamin kemurnian serta kepatuhan regulasi keamanan pangan.
-                        </p>
                     </div>
 
-                    <div class="lp-trio-item">
-                        <div class="lp-trio-header">
-                            <span class="lp-trio-num">02</span>
-                            <h3 class="lp-trio-title">Kapasitas Pasokan Tinggi</h3>
-                        </div>
-                        <p class="lp-trio-text">
-                            Kapasitas pasokan konsisten hingga puluhan ribu ton per tahun dengan kontinuitas pasokan terjamin dan dukungan manajemen logistik terintegrasi.
+                    <div class="ngc-split-col">
+                        <span class="ngc-split-badge">Berkomitmen pada Kualitas</span>
+                        <h3 class="ngc-split-title">Sentra Pengolahan &amp; Distribusi Garam</h3>
+                        <div class="ngc-divider-left"></div>
+                        <p class="ngc-split-text">
+                            POS Garam mengintegrasikan pengolahan garam modern dengan pemilihan bahan baku berkualitas tinggi, proses pemurnian kristal higienis berstandar mutu nasional, serta tata kelola pencatatan stok dan kasir terpadu dari hulu ke hilir.
                         </p>
-                    </div>
-
-                    <div class="lp-trio-item">
-                        <div class="lp-trio-header">
-                            <span class="lp-trio-num">03</span>
-                            <h3 class="lp-trio-title">Pengolahan Modern</h3>
-                        </div>
-                        <p class="lp-trio-text">
-                            Fasilitas modern dengan proses pencucian kristal garam, pengeringan, iodisasi, dan pengemasan presisi mulai dari kemasan konsumsi hingga karung industri.
-                        </p>
+                        <a href="#kontak" class="ngc-btn-primary">
+                            <span>Konsultasi Sekarang &rarr;</span>
+                        </a>
                     </div>
                 </div>
+
+                <!-- 4 Metrics / Features Cards Grid -->
+                <div class="ngc-metrics-grid" id="keunggulan">
+                    <div class="ngc-metric-card">
+                        <div class="ngc-metric-number">01</div>
+                        <h4 class="ngc-metric-title">Jenis Industri</h4>
+                        <p class="ngc-metric-desc">Spesialis dalam pengolahan garam industri dan konsumsi modern.</p>
+                    </div>
+
+                    <div class="ngc-metric-card">
+                        <div class="ngc-metric-number">02</div>
+                        <h4 class="ngc-metric-title">Produk Unggulan</h4>
+                        <p class="ngc-metric-desc">Garam industri &amp; konsumsi beryodium berkualitas tinggi.</p>
+                    </div>
+
+                    <div class="ngc-metric-card">
+                        <div class="ngc-metric-number">03</div>
+                        <h4 class="ngc-metric-title">Standar Mutu</h4>
+                        <p class="ngc-metric-desc">Kepatuhan standar mutu pangan nasional, SNI, dan kebersihan tinggi.</p>
+                    </div>
+
+                    <div class="ngc-metric-card">
+                        <div class="ngc-metric-number">04</div>
+                        <h4 class="ngc-metric-title">Kapasitas Pasokan</h4>
+                        <p class="ngc-metric-desc">Kapasitas pasokan konsisten mencapai puluhan ribu ton per tahun.</p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <!-- Bento Grid Section (Full Width, Real Photos, Zero Icons) -->
-        <section class="lp-bento-section" id="tentang">
+        <!-- Section 2: Produk & Ragam Pengolahan (Exact NGC Blog/Products Layout in Blue, Zero Icons) -->
+        <section class="ngc-products-section" id="produk">
             <div class="lp-container">
-                <div class="lp-bento-grid">
-                    <!-- Cell 1: Dark Navy Card -->
-                    <div class="lp-bento-card lp-bento-dark">
-                        <div>
-                            <span class="lp-bento-dark-badge">Komitmen Mutu &amp; Kualitas</span>
-                            <h4 class="lp-bento-dark-title">Fasilitas Modern &amp; Terintegrasi</h4>
-                            <p class="lp-bento-dark-desc">
-                                Menghadirkan pasokan garam berkualitas tinggi dengan standar pemurnian higienis serta tata kelola rantai pasok dan kasir yang transparan dan akurat.
-                            </p>
-                        </div>
-                        <a href="#kontak" class="lp-bento-dark-btn">Hubungi Kami</a>
-                    </div>
-
-                    <!-- Cell 2: Stacked Real Imagery -->
-                    <div class="lp-bento-stacked">
-                        <div class="lp-bento-stack-item">
-                            <img src="{{ asset('images/about_real.png') }}" alt="Fasilitas Pergudangan Garam" class="lp-bento-stack-img">
-                            <div class="lp-stack-caption">Fasilitas Pergudangan Garam</div>
-                        </div>
-                        <div class="lp-bento-stack-item">
-                            <img src="{{ asset('images/processing_real.png') }}" alt="Fasilitas Pengolahan Modern" class="lp-bento-stack-img">
-                            <div class="lp-stack-caption">Fasilitas Pengolahan Modern</div>
-                        </div>
-                    </div>
-
-                    <!-- Cell 3: Real Industrial Salt Packaging -->
-                    <div class="lp-bento-card lp-bento-portrait">
-                        <img src="{{ asset('images/product_ghb.png') }}" alt="Produk Garam Halus Industri GHB" class="lp-bento-portrait-img">
-                        <div class="lp-stack-caption">Garam Industri Beryodium (GHB)</div>
-                    </div>
-
-                    <!-- Cell 4: Productivity metric -->
-                    <div class="lp-bento-card lp-bento-stat">
-                        <div class="lp-stat-label">Kapasitas Pasokan Garam Berkala</div>
-                        <div class="lp-stat-number">150.000</div>
-                        <div class="lp-stat-subtext">Ton Kapasitas Industri &amp; Konsumsi</div>
-                    </div>
-
-                    <!-- Cell 5: Real Consumer Salt Packaging -->
-                    <div class="lp-bento-card lp-bento-pos">
-                        <img src="{{ asset('images/product_pack.png') }}" alt="Garam Konsumsi Kemasan" class="lp-bento-pos-img">
-                        <div class="lp-stack-caption">Garam Konsumsi Kemasan Higienis</div>
-                    </div>
+                
+                <div class="ngc-section-header">
+                    <h2 class="ngc-section-title">Produk &amp; Layanan Terpadu</h2>
+                    <p class="ngc-section-desc">
+                        Pilihan garam berkualitas prima dan solusi manajemen distribusi untuk berbagai kebutuhan industri
+                    </p>
                 </div>
-            </div>
-        </section>
 
-        <!-- Lower Section: Products & Consultation Form (Zero Icons) -->
-        <section class="lp-bottom-section" id="produk">
-            <div class="lp-container">
-                <div class="lp-bottom-grid">
-                    <!-- Left: Products Catalog Accordion -->
-                    <div class="lp-workflow-col">
-                        <h3 class="lp-section-title">Katalog Produk Unggulan</h3>
-                        <div class="lp-accordion-list">
-                            
-                            <div class="lp-accordion-item active" onclick="toggleAccordion(this)">
-                                <div class="lp-accordion-header">
-                                    <div class="lp-accordion-lead">
-                                        <span class="lp-pill-badge">Industri Pangan</span>
-                                        <span class="lp-accordion-title">Garam Halus Industri (GHA &amp; GHB)</span>
-                                    </div>
-                                    <span class="lp-accordion-status">Detail</span>
-                                </div>
-                                <div class="lp-accordion-content">
-                                    Garam murni dengan kadar NaCl tinggi untuk industri biskuit, mie instan, bumbu makanan, dan margarin. Tersedia pilihan non-yodium (GHA) dan beryodium (GHB) dalam kemasan karung 25kg, 50kg, dan jumbo bag 1.200kg.
-                                </div>
-                            </div>
-
-                            <div class="lp-accordion-item" onclick="toggleAccordion(this)">
-                                <div class="lp-accordion-header">
-                                    <div class="lp-accordion-lead">
-                                        <span class="lp-pill-badge">Bahan Baku</span>
-                                        <span class="lp-accordion-title">Garam Krosok Premium &amp; Lokal (GKP/GKL)</span>
-                                    </div>
-                                    <span class="lp-accordion-status">Detail</span>
-                                </div>
-                                <div class="lp-accordion-content">
-                                    Kristal garam alami kualitas pilihan untuk kebutuhan industri penyamakan kulit, pengawetan hasil laut, pakan ternak, water treatment, dan bahan baku industri kimia.
-                                </div>
-                            </div>
-
-                            <div class="lp-accordion-item" onclick="toggleAccordion(this)">
-                                <div class="lp-accordion-header">
-                                    <div class="lp-accordion-lead">
-                                        <span class="lp-pill-badge">Konsumsi</span>
-                                        <span class="lp-accordion-title">Garam Dapur &amp; Meja Beryodium</span>
-                                    </div>
-                                    <span class="lp-accordion-status">Detail</span>
-                                </div>
-                                <div class="lp-accordion-content">
-                                    Garam kemasan konsumsi keluarga standar 250g dan 300g dengan fortifikasi Iodium (KIO3) terstandarisasi SNI, putih bersih, halus, dan higienis untuk kebutuhan dapur dan meja makan.
-                                </div>
-                            </div>
-
-                            <div class="lp-accordion-item" onclick="toggleAccordion(this)">
-                                <div class="lp-accordion-header">
-                                    <div class="lp-accordion-lead">
-                                        <span class="lp-pill-badge">Distribusi &amp; POS</span>
-                                        <span class="lp-accordion-title">Sistem Penjualan &amp; Kasir Terpadu</span>
-                                    </div>
-                                    <span class="lp-accordion-status">Detail</span>
-                                </div>
-                                <div class="lp-accordion-content">
-                                    Platform Point of Sale dan monitoring gudang real-time untuk pencatatan penerimaan garam mentah, hasil produksi kemasan, transaksi faktur kasir, hingga mutasi stok tanpa selisih.
-                                </div>
-                            </div>
-
+                <div class="ngc-products-grid">
+                    
+                    <!-- Left: Large Featured Product Card -->
+                    <div class="ngc-feat-card">
+                        <img src="{{ asset('images/product_ghb.png') }}" alt="Garam Halus Industri" class="ngc-feat-img">
+                        <div class="ngc-feat-meta">
+                            <span>Karung 50kg &amp; Jumbo Bag</span>
+                            <span class="ngc-meta-dot"></span>
+                            <span>Kadar NaCl &ge; 98%</span>
                         </div>
-                    </div>
-
-                    <!-- Right: Consultation Form (Zero Icons) -->
-                    <div class="lp-contact-col" id="kontak">
-                        <h3 class="lp-section-title">Konsultasi Kebutuhan Garam</h3>
-                        <p style="font-size: 13.5px; color: var(--lp-text-muted); margin-bottom: 20px; line-height: 1.5;">
-                            Butuh garam berkualitas untuk industri Anda? Tim kami siap membantu memberikan spesifikasi produk dan penawaran terbaik.
+                        <h3 class="ngc-feat-title">Garam Halus Industri Beryodium (GHB) &amp; Non-Yodium (GHA)</h3>
+                        <p class="ngc-feat-desc">
+                            Garam murni dengan kadar NaCl tinggi dan kadar air terkontrol ketat untuk industri biskuit, mie instan, bumbu makanan, margarin, dan pakan ternak. Kemurnian kristal tinggi dengan jaminan kelancaran pasokan.
                         </p>
-                        <form class="lp-contact-form" onsubmit="handleContactSubmit(event)">
-                            <div class="lp-select-pill-wrap">
-                                <select class="lp-select-pill" required>
-                                    <option value="" disabled selected>Pilih Sektor Industri</option>
-                                    <option value="makanan">Industri Makanan &amp; Minuman</option>
-                                    <option value="kimia">Industri Kimia, Farmasi &amp; Tekstil</option>
-                                    <option value="pakan">Industri Pakan &amp; Perikanan</option>
-                                    <option value="distributor">Distributor / Retail Konsumsi</option>
-                                </select>
-                            </div>
-
-                            <div class="lp-select-pill-wrap">
-                                <select class="lp-select-pill" required>
-                                    <option value="" disabled selected>Kebutuhan Produk</option>
-                                    <option value="gha">Garam Halus Industri Non-Yodium (GHA)</option>
-                                    <option value="ghb">Garam Halus Industri Beryodium (GHB)</option>
-                                    <option value="gkp">Garam Krosok Premium (GKP)</option>
-                                    <option value="konsumsi">Garam Konsumsi Kemasan 250g/300g</option>
-                                    <option value="pos">Sistem Manajemen &amp; Kasir POS</option>
-                                </select>
-                            </div>
-
-                            <div class="lp-select-pill-wrap">
-                                <select class="lp-select-pill" required>
-                                    <option value="" disabled selected>Estimasi Volume Kebutuhan</option>
-                                    <option value="5ton">&lt; 5 Ton / Pengiriman</option>
-                                    <option value="25ton">5 - 25 Ton / Pengiriman</option>
-                                    <option value="kontrak">Kontrak Pasokan Rutin Tahunan</option>
-                                </select>
-                            </div>
-
-                            <button type="submit" class="lp-btn-pill-dark">
-                                <span>Kirim Permintaan Konsultasi</span>
-                            </button>
-                            <div id="contact-alert" style="display: none; font-size: 13.5px; color: #059669; text-align: center; margin-top: 10px; font-weight: 600;">
-                                Terima kasih! Permintaan konsultasi Anda telah kami terima dan tim kami akan segera menghubungi.
-                            </div>
-                        </form>
                     </div>
+
+                    <!-- Right: Stack of 3 List Cards -->
+                    <div class="ngc-stack-list">
+                        
+                        <a href="#kontak" class="ngc-stack-item">
+                            <img src="{{ asset('images/product_pack.png') }}" alt="Garam Konsumsi" class="ngc-stack-thumb">
+                            <div class="ngc-stack-info">
+                                <h4 class="ngc-stack-title">Garam Dapur &amp; Meja Beryodium (250g - 300g)</h4>
+                                <p class="ngc-stack-desc">Kemasan konsumsi keluarga dengan fortifikasi KIO3 standar mutu nasional, putih bersih, halus, dan higienis.</p>
+                                <span class="ngc-stack-tag">Konsumsi Kemasan &bull; SNI</span>
+                            </div>
+                        </a>
+
+                        <a href="#kontak" class="ngc-stack-item">
+                            <img src="{{ asset('images/processing_real.png') }}" alt="Garam Krosok" class="ngc-stack-thumb">
+                            <div class="ngc-stack-info">
+                                <h4 class="ngc-stack-title">Garam Krosok Pilihan (GKP/GKL)</h4>
+                                <p class="ngc-stack-desc">Kristal alami untuk industri penyamakan kulit, pengawetan hasil laut, water treatment, dan kimia.</p>
+                                <span class="ngc-stack-tag">Bahan Baku Industri &bull; Alami</span>
+                            </div>
+                        </a>
+
+                        <a href="{{ route('login') }}" class="ngc-stack-item">
+                            <img src="{{ asset('images/hero_real.png') }}" alt="Sistem Kasir" class="ngc-stack-thumb">
+                            <div class="ngc-stack-info">
+                                <h4 class="ngc-stack-title">Sistem Kasir POS &amp; Monitoring Mutasi Stok</h4>
+                                <p class="ngc-stack-desc">Pencatatan garam mentah masuk, hasil kemasan, hingga transaksi kasir toko dan faktur cetak nota otomatis.</p>
+                                <span class="ngc-stack-tag">Platform Terpadu &bull; Real-Time</span>
+                            </div>
+                        </a>
+
+                    </div>
+
                 </div>
+
             </div>
         </section>
 
-        <!-- Footer (Full Width, Zero Icons) -->
-        <footer class="lp-footer-section">
-            <div class="lp-container">
-                <div class="lp-footer">
-                    <div class="lp-footer-left">
-                        <span>&copy; {{ date('Y') }} POS Garam. Hak cipta dilindungi.</span>
-                        <span class="lp-status-badge">
-                            <span>Standar Mutu Pangan SNI &bull; Kualitas Terjamin</span>
-                        </span>
+        <!-- Section 3: Call-To-Action Banner (Exact NGC CTA Layout in Blue, Zero Icons) -->
+        <section class="ngc-cta-wrap" id="kontak">
+            <div class="ngc-cta-box">
+                <div class="ngc-cta-content">
+                    <div>
+                        <h3 class="ngc-cta-title">Butuh Garam Berkualitas untuk Industri Anda?</h3>
+                        <p class="ngc-cta-desc">
+                            Tim kami siap membantu Anda menemukan produk garam terbaik dan estimasi pasokan sesuai kebutuhan operasional Anda.
+                        </p>
                     </div>
                     <div>
-                        <a href="{{ route('login') }}" style="color: var(--lp-text-muted); text-decoration: none; font-size: 13.5px; font-weight: 600;">Login Sistem POS</a>
+                        <a href="#form-konsultasi" class="ngc-btn-white">
+                            <span>Konsultasi Sekarang &rarr;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Consultation Form Card -->
+        <div class="ngc-form-wrap" id="form-konsultasi">
+            <div class="ngc-form-card">
+                <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--lp-gray-900); margin-bottom: 0.5rem;">Formulir Permintaan Penawaran &amp; Konsultasi</h3>
+                <p style="font-size: 0.925rem; color: var(--lp-gray-600); margin-bottom: 1.5rem;">Silakan isi formulir berikut untuk mendapatkan rekomendasi produk garam dan penawaran harga terbaik.</p>
+                
+                <form onsubmit="handleContactSubmit(event)">
+                    <div class="ngc-form-grid">
+                        <div>
+                            <select class="ngc-select" required>
+                                <option value="" disabled selected>Pilih Sektor Industri</option>
+                                <option value="makanan">Industri Makanan &amp; Minuman</option>
+                                <option value="kimia">Industri Kimia &amp; Tekstil</option>
+                                <option value="pakan">Industri Pakan &amp; Perikanan</option>
+                                <option value="retail">Distributor / Retail Konsumsi</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="ngc-select" required>
+                                <option value="" disabled selected>Kebutuhan Produk</option>
+                                <option value="gha">Garam Halus Non-Yodium (GHA)</option>
+                                <option value="ghb">Garam Halus Beryodium (GHB)</option>
+                                <option value="krosok">Garam Krosok Bahan Baku</option>
+                                <option value="konsumsi">Garam Konsumsi 250g/300g</option>
+                                <option value="pos">Sistem Kasir &amp; Stok POS</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select class="ngc-select" required>
+                                <option value="" disabled selected>Estimasi Volume</option>
+                                <option value="5ton">&lt; 5 Ton / Pengiriman</option>
+                                <option value="25ton">5 - 25 Ton / Pengiriman</option>
+                                <option value="kontrak">Kontrak Pasokan Rutin Tahunan</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 1.25rem;">
+                        <textarea class="ngc-input" rows="3" placeholder="Catatan spesifikasi khusus atau pertanyaan tambahan..."></textarea>
+                    </div>
+
+                    <div style="margin-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+                        <button type="submit" class="ngc-btn-primary" style="padding: 0.85rem 2rem;">
+                            <span>Kirim Permintaan Konsultasi</span>
+                        </button>
+                        <div id="contact-alert" style="display: none; font-size: 0.9rem; color: #059669; font-weight: 700;">
+                            Terima kasih! Permintaan konsultasi Anda telah kami terima dan tim kami akan segera menghubungi.
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer (Exact NGC Footer Layout in Blue, Zero Icons) -->
+        <footer class="ngc-footer">
+            <div class="lp-container">
+                <div class="ngc-footer-grid">
+                    
+                    <!-- Col 1: Brand & Info -->
+                    <div class="ngc-footer-col1">
+                        <div class="ngc-footer-brand">
+                            <span>POS</span> Garam
+                        </div>
+                        <p class="ngc-footer-text">
+                            Sistem Manajemen Penjualan, Pergudangan, dan Distribusi Garam Terpadu dengan standar mutu operasional terpercaya.
+                        </p>
+                        <div>
+                            <span class="ngc-footer-cert">Standar Mutu Nasional &bull; SNI &bull; Kualitas Terjamin</span>
+                        </div>
+                    </div>
+
+                    <!-- Col 2: Navigation Links -->
+                    <div class="ngc-footer-subcols">
+                        <div>
+                            <h4 class="ngc-footer-heading">Perusahaan</h4>
+                            <ul class="ngc-footer-links">
+                                <li><a href="#tentang" class="ngc-footer-link">Tentang Kami</a></li>
+                                <li><a href="#keunggulan" class="ngc-footer-link">Keunggulan Mutu</a></li>
+                                <li><a href="#produk" class="ngc-footer-link">Katalog Produk</a></li>
+                                <li><a href="#kontak" class="ngc-footer-link">Kontak Pasokan</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="ngc-footer-heading">Produk</h4>
+                            <ul class="ngc-footer-links">
+                                <li><a href="#produk" class="ngc-footer-link">Garam Industri GHB/GHA</a></li>
+                                <li><a href="#produk" class="ngc-footer-link">Garam Krosok Bahan Baku</a></li>
+                                <li><a href="#produk" class="ngc-footer-link">Garam Meja Kemasan</a></li>
+                                <li><a href="{{ route('login') }}" class="ngc-footer-link">Sistem Kasir POS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Col 3: Hours -->
+                    <div>
+                        <h4 class="ngc-footer-heading">Jam Operasional</h4>
+                        <ul class="ngc-hours-list">
+                            <li class="ngc-hours-row">
+                                <span>Senin - Jumat</span>
+                                <span>08:00 - 17:00</span>
+                            </li>
+                            <li class="ngc-hours-row">
+                                <span>Sabtu</span>
+                                <span>08:00 - 14:00</span>
+                            </li>
+                            <li class="ngc-hours-row">
+                                <span>Minggu</span>
+                                <span>Tutup</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Footer Bottom Bar -->
+                <div class="ngc-footer-bottom">
+                    <div>
+                        &copy; {{ date('Y') }} POS Garam. Hak cipta dilindungi.
+                    </div>
+                    <div>
+                        @auth
+                            <a href="{{ route('dashboard') }}" style="color: var(--lp-blue-600); text-decoration: none; font-weight: 600;">
+                                Buka Dashboard &rarr;
+                            </a>
+                        @else
+                            <a href="{{ route('login') }}" style="color: var(--lp-blue-600); text-decoration: none; font-weight: 600;">
+                                Masuk Sistem POS &rarr;
+                            </a>
+                        @endauth
                     </div>
                 </div>
             </div>
@@ -301,17 +383,6 @@
 
     <!-- Micro-interactions Script -->
     <script>
-        function toggleAccordion(item) {
-            const allItems = document.querySelectorAll('.lp-accordion-item');
-            const isActive = item.classList.contains('active');
-            
-            allItems.forEach(el => el.classList.remove('active'));
-            
-            if (!isActive) {
-                item.classList.add('active');
-            }
-        }
-
         function handleContactSubmit(e) {
             e.preventDefault();
             const alertBox = document.getElementById('contact-alert');

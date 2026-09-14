@@ -38,10 +38,7 @@
     <!-- Riwayat Barang Masuk (Pembelian) -->
     <div class="md-card">
         <div class="md-card-header">
-            <div>
-                <div class="md-card-title">Riwayat Barang Masuk</div>
-                <div class="md-card-subtitle">Pembelian dari supplier</div>
-            </div>
+            <div class="md-card-title">Pembelian</div>
         </div>
         <div class="table-responsive">
             <table class="md-table">
@@ -78,10 +75,7 @@
     <!-- Riwayat Penggunaan Produksi -->
     <div class="md-card">
         <div class="md-card-header">
-            <div>
-                <div class="md-card-title">Riwayat Produksi</div>
-                <div class="md-card-subtitle">Pemakaian untuk garam bungkus</div>
-            </div>
+            <div class="md-card-title">Produksi</div>
         </div>
         <div class="table-responsive">
             <table class="md-table">
@@ -119,10 +113,7 @@
 <!-- Kartu Stok & Mutasi Terakhir -->
 <div class="md-card">
     <div class="md-card-header">
-        <div>
-            <div class="md-card-title">Kartu Stok Mutasi</div>
-            <div class="md-card-subtitle">Pergerakan stok mentah ini</div>
-        </div>
+        <div class="md-card-title">Mutasi Stok</div>
     </div>
     <div class="table-responsive">
         <table class="md-table">

@@ -6,10 +6,7 @@
 @section('content')
 <div class="md-card" style="max-width: 780px; margin: 0 auto;">
     <div class="md-card-header">
-        <div>
-            <div class="md-card-title">Faktur Pembelian Baru</div>
-            <div class="md-card-subtitle">Penerimaan barang mentah garam dari supplier</div>
-        </div>
+        <div class="md-card-title">Pembelian</div>
         <a href="{{ route('purchases.index') }}" class="md-btn md-btn-outlined md-btn-sm">Kembali</a>
     </div>
 
@@ -70,7 +67,7 @@
         </div>
 
         <div class="form-group">
-            <label class="form-label" for="purchase_total_price">Total Pembelian (Rp)</label>
+            <label class="form-label" for="purchase_total_price">Total (Rp)</label>
             <input type="number" step="any" id="purchase_total_price" name="total_price" class="form-input {{ $errors->has('total_price') ? 'is-invalid' : '' }}" value="{{ old('total_price', 0) }}" min="0" required style="font-weight: 700; font-size: 15px;">
         </div>
 

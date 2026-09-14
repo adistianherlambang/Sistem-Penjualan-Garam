@@ -16,10 +16,7 @@
 @section('content')
 <div class="md-card" style="max-width: 780px; margin: 0 auto;">
     <div class="md-card-header">
-        <div>
-            <div class="md-card-title">Transaksi: {{ $sale->transaction_number }}</div>
-            <div class="md-card-subtitle">Tanggal: {{ $sale->sale_date->format('d F Y') }}</div>
-        </div>
+        <div class="md-card-title">Nota: {{ $sale->transaction_number }}</div>
     </div>
 
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--md-sys-color-outline-variant); margin-bottom: 20px;">

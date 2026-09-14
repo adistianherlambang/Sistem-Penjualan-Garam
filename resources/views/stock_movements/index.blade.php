@@ -6,10 +6,7 @@
 @section('content')
 <div class="md-card">
     <div class="md-card-header">
-        <div>
-            <div class="md-card-title">Riwayat Mutasi & Pergerakan Stok</div>
-            <div class="md-card-subtitle">Jejak audit seluruh perubahan stok mentah dan jadi</div>
-        </div>
+        <div class="md-card-title">Mutasi Stok</div>
     </div>
 
     <!-- Filter Form -->

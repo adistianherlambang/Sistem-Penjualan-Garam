@@ -6,10 +6,7 @@
 @section('content')
 <div class="md-card" style="max-width: 720px; margin: 0 auto;">
     <div class="md-card-header">
-        <div>
-            <div class="md-card-title">Ubah Barang Mentah</div>
-            <div class="md-card-subtitle">{{ $rawMaterial->name }}</div>
-        </div>
+        <div class="md-card-title">Ubah Mentah</div>
         <a href="{{ route('raw-materials.index') }}" class="md-btn md-btn-outlined md-btn-sm">Kembali</a>
     </div>
 

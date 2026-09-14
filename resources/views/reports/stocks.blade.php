@@ -13,27 +13,20 @@
 @section('content')
 <div class="kpi-grid">
     <div class="kpi-card">
-        <div>
-            <div class="kpi-label">Total Bahan Mentah</div>
-            <div class="kpi-value">{{ $formattedRawTotal }}</div>
-        </div>
+        <div class="kpi-label">Stok Mentah</div>
+        <div class="kpi-value">{{ $formattedRawTotal }}</div>
     </div>
 
     <div class="kpi-card">
-        <div>
-            <div class="kpi-label">Total Barang Jadi</div>
-            <div class="kpi-value">{{ number_format($totalPacks, 0, ',', '.') }} bungkus</div>
-        </div>
+        <div class="kpi-label">Stok Jadi</div>
+        <div class="kpi-value">{{ number_format($totalPacks, 0, ',', '.') }} bungkus</div>
     </div>
 </div>
 
 <!-- 1. Tabel Stok Bahan Mentah -->
 <div class="md-card" style="margin-bottom: 24px;">
     <div class="md-card-header">
-        <div>
-            <div class="md-card-title">Posisi Stok Barang Mentah</div>
-            <div class="md-card-subtitle">Satuan tampilan otomatis: gram (&lt;1 kg), kg (1-1.000 kg), ton (&gt;=1.000 kg)</div>
-        </div>
+        <div class="md-card-title">Stok Mentah</div>
     </div>
     <div class="table-responsive">
         <table class="md-table">
@@ -84,10 +77,7 @@
 <!-- 2. Tabel Stok Barang Jadi -->
 <div class="md-card">
     <div class="md-card-header">
-        <div>
-            <div class="md-card-title">Posisi Stok Barang Jadi</div>
-            <div class="md-card-subtitle">Garam kemasan siap jual dalam satuan bungkus (300 gram)</div>
-        </div>
+        <div class="md-card-title">Stok Jadi</div>
     </div>
     <div class="table-responsive">
         <table class="md-table">

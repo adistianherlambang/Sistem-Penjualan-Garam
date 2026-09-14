@@ -38,10 +38,7 @@
     <!-- Riwayat Produksi Masuk -->
     <div class="md-card">
         <div class="md-card-header">
-            <div>
-                <div class="md-card-title">Barang Jadi Masuk</div>
-                <div class="md-card-subtitle">Riwayat hasil produksi</div>
-            </div>
+            <div class="md-card-title">Produksi</div>
         </div>
         <div class="table-responsive">
             <table class="md-table">
@@ -78,10 +75,7 @@
     <!-- Riwayat Penjualan Keluar -->
     <div class="md-card">
         <div class="md-card-header">
-            <div>
-                <div class="md-card-title">Barang Jadi Keluar</div>
-                <div class="md-card-subtitle">Penjualan kepada pelanggan</div>
-            </div>
+            <div class="md-card-title">Penjualan</div>
         </div>
         <div class="table-responsive">
             <table class="md-table">
@@ -119,10 +113,7 @@
 <!-- Kartu Stok & Mutasi -->
 <div class="md-card">
     <div class="md-card-header">
-        <div>
-            <div class="md-card-title">Kartu Stok Bungkus</div>
-            <div class="md-card-subtitle">Pergerakan stok barang jadi ini</div>
-        </div>
+        <div class="md-card-title">Mutasi Stok</div>
     </div>
     <div class="table-responsive">
         <table class="md-table">

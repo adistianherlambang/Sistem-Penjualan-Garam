@@ -14,26 +14,19 @@
 @section('content')
 <div class="kpi-grid">
     <div class="kpi-card">
-        <div>
-            <div class="kpi-label">Total Hasil Produksi</div>
-            <div class="kpi-value">{{ number_format($totalPacksProduced, 0, ',', '.') }} bungkus</div>
-        </div>
+        <div class="kpi-label">Produksi</div>
+        <div class="kpi-value">{{ number_format($totalPacksProduced, 0, ',', '.') }} bungkus</div>
     </div>
 
     <div class="kpi-card">
-        <div>
-            <div class="kpi-label">Garam Mentah Terpakai</div>
-            <div class="kpi-value">{{ $formattedRawUsed }}</div>
-        </div>
+        <div class="kpi-label">Bahan Terpakai</div>
+        <div class="kpi-value">{{ $formattedRawUsed }}</div>
     </div>
 </div>
 
 <div class="md-card">
     <div class="md-card-header">
-        <div>
-            <div class="md-card-title">Daftar Batch Produksi</div>
-            <div class="md-card-subtitle">Konversi garam mentah ke produk jadi kemasan 300g</div>
-        </div>
+        <div class="md-card-title">Produksi</div>
     </div>
 
     <!-- Filter Bar -->

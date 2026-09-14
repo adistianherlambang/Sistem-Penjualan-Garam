@@ -6,10 +6,7 @@
 @section('content')
 <div class="md-card" style="max-width: 780px; margin: 0 auto;">
     <div class="md-card-header">
-        <div>
-            <div class="md-card-title">Pencatatan Hasil Produksi</div>
-            <div class="md-card-subtitle">Standar produk jadi: 1 bungkus = 300 gram</div>
-        </div>
+        <div class="md-card-title">Produksi</div>
         <a href="{{ route('productions.index') }}" class="md-btn md-btn-outlined md-btn-sm">Kembali</a>
     </div>
 

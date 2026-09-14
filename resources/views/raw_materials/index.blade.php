@@ -14,19 +14,14 @@
 @section('content')
 <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
     <div class="kpi-card">
-        <div>
-            <div class="kpi-label">Total Stok Mentah</div>
-            <div class="kpi-value">{{ $formattedTotalStock }}</div>
-        </div>
+        <div class="kpi-label">Stok Mentah</div>
+        <div class="kpi-value">{{ $formattedTotalStock }}</div>
     </div>
 </div>
 
 <div class="md-card">
     <div class="md-card-header">
-        <div>
-            <div class="md-card-title">Daftar Barang Mentah</div>
-            <div class="md-card-subtitle">Garam mentah belum dikemas</div>
-        </div>
+        <div class="md-card-title">Stok Mentah</div>
     </div>
 
     <div class="table-responsive">

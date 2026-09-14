@@ -8,10 +8,7 @@
     <!-- Left: Transaction Input Form -->
     <div class="md-card">
         <div class="md-card-header">
-            <div>
-                <div class="md-card-title">Transaksi Penjualan Baru</div>
-                <div class="md-card-subtitle">Penjualan garam kemasan bungkus (300 gram)</div>
-            </div>
+            <div class="md-card-title">Penjualan</div>
             <a href="{{ route('sales.index') }}" class="md-btn md-btn-outlined md-btn-sm">Kembali</a>
         </div>
 

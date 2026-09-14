@@ -10,10 +10,7 @@
 @section('content')
 <div class="md-card" style="max-width: 800px; margin: 0 auto;">
     <div class="md-card-header">
-        <div>
-            <div class="md-card-title">Batch Produksi: {{ $production->production_number }}</div>
-            <div class="md-card-subtitle">Tanggal: {{ $production->production_date->format('d F Y') }}</div>
-        </div>
+        <div class="md-card-title">Produksi: {{ $production->production_number }}</div>
     </div>
 
     <div class="kpi-grid">

@@ -15,13 +15,12 @@
     <div class="app-layout">
         <!-- Sidebar Navigation (Uxerflow / Orbit Style) -->
         <aside class="app-drawer" id="app-drawer">
-            <!-- Company / Plan Header -->
+            <!-- Company Header -->
             <div class="drawer-header">
                 <a href="{{ url('/') }}" class="drawer-company-wrap">
                     <div class="drawer-logo-badge">G.</div>
                     <div>
                         <div class="drawer-company-name">Garam Inc.</div>
-                        <div class="drawer-company-sub">{{ auth()->user()->isAdmin() ? 'Admin Operasional' : 'Owner Bisnis' }}</div>
                     </div>
                 </a>
                 <button type="button" class="drawer-collapse-btn" title="Ciutkan" onclick="toggleSidebar()">«</button>
@@ -35,9 +34,9 @@
                 </div>
             </div>
 
-            <!-- Navigation Sections -->
+            <!-- Navigation Sections (Short 1-2 Word Titles, Zero Subtitles) -->
             <div class="drawer-content">
-                <div class="drawer-section-title">MAIN MENU</div>
+                <div class="drawer-section-title">MENU</div>
 
                 <a href="{{ route('dashboard') }}" class="drawer-nav-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
                     <div class="drawer-nav-left">
@@ -47,35 +46,35 @@
 
                 <a href="{{ route('finished-products.index') }}" class="drawer-nav-item {{ request()->routeIs('finished-products.*') ? 'active' : '' }}">
                     <div class="drawer-nav-left">
-                        <span>Product</span>
+                        <span>Stok Jadi</span>
                     </div>
                     <span class="drawer-pill-counter">{{ \App\Models\FinishedProduct::count() }}</span>
                 </a>
 
                 <a href="{{ route('sales.index') }}" class="drawer-nav-item {{ request()->routeIs('sales.*') ? 'active' : '' }}">
                     <div class="drawer-nav-left">
-                        <span>Order</span>
+                        <span>Penjualan</span>
                     </div>
                     <span class="drawer-pill-counter">{{ \App\Models\Sale::count() }}</span>
                 </a>
 
                 <a href="{{ route('suppliers.index') }}" class="drawer-nav-item {{ request()->routeIs('suppliers.*') ? 'active' : '' }}">
                     <div class="drawer-nav-left">
-                        <span>Customer &amp; Supplier</span>
+                        <span>Supplier</span>
                     </div>
                 </a>
 
-                <div class="drawer-section-title">OPERATIONAL</div>
+                <div class="drawer-section-title">OPERASIONAL</div>
 
                 <a href="{{ route('raw-materials.index') }}" class="drawer-nav-item {{ request()->routeIs('raw-materials.*') ? 'active' : '' }}">
                     <div class="drawer-nav-left">
-                        <span>Bahan Mentah</span>
+                        <span>Stok Mentah</span>
                     </div>
                 </a>
 
                 <a href="{{ route('productions.index') }}" class="drawer-nav-item {{ request()->routeIs('productions.*') ? 'active' : '' }}">
                     <div class="drawer-nav-left">
-                        <span>Produksi 300g</span>
+                        <span>Produksi</span>
                     </div>
                 </a>
 
@@ -91,11 +90,11 @@
                     </div>
                 </a>
 
-                <div class="drawer-section-title">WORKSPACE</div>
+                <div class="drawer-section-title">SISTEM</div>
 
                 <a href="{{ route('reports.index') }}" class="drawer-nav-item {{ request()->routeIs('reports.*') ? 'active' : '' }}">
                     <div class="drawer-nav-left">
-                        <span>Laporan Analitik</span>
+                        <span>Laporan</span>
                     </div>
                     <span class="drawer-pill-counter">5</span>
                 </a>
@@ -103,21 +102,19 @@
                 @if(auth()->user()->isAdmin())
                 <a href="{{ route('settings.index') }}" class="drawer-nav-item {{ request()->routeIs('settings.*') ? 'active' : '' }}">
                     <div class="drawer-nav-left">
-                        <span>Settings</span>
+                        <span>Pengaturan</span>
                     </div>
                 </a>
                 @endif
             </div>
 
-            <!-- Bottom Upgrade & User Footer -->
+            <!-- Bottom User & POS Footer (Zero Subtitles, Zero Icons, Royal Blue Tone) -->
             <div class="drawer-footer">
                 <a href="{{ route('sales.create') }}" class="drawer-upgrade-card">
-                    <div class="drawer-upgrade-icon">⚡</div>
                     <div class="drawer-upgrade-text">
-                        <div class="drawer-upgrade-title">Kasir POS Siap</div>
-                        <div class="drawer-upgrade-sub">Buka Layanan Kasir</div>
+                        <div class="drawer-upgrade-title">Kasir POS</div>
                     </div>
-                    <span style="color: var(--ux-orange); font-size: 13px; font-weight: 700;">›</span>
+                    <span class="ux-btn-outline" style="font-size: 11px; padding: 2px 8px; border-color: var(--ux-primary); color: var(--ux-primary);">Buka</span>
                 </a>
 
                 <div class="drawer-user-row">
@@ -127,7 +124,7 @@
                         </div>
                         <div>
                             <div class="drawer-user-name">{{ auth()->user()->name }}</div>
-                            <div class="drawer-user-role">{{ auth()->user()->isAdmin() ? 'Administrator' : 'Owner' }}</div>
+                            <div class="drawer-user-role">{{ auth()->user()->isAdmin() ? 'Admin' : 'Owner' }}</div>
                         </div>
                     </div>
                     <form action="{{ route('logout') }}" method="POST">
@@ -140,25 +137,20 @@
 
         <!-- Main Content Layout -->
         <div class="app-main">
-            <!-- Top App Bar -->
+            <!-- Top App Bar (Zero Icons, Royal Blue Tone) -->
             <header class="app-topbar">
-                <div class="topbar-title">@yield('page-title', 'Product')</div>
+                <div class="topbar-title">@yield('page-title', 'Dashboard')</div>
                 <div class="topbar-right">
-                    <button type="button" class="topbar-icon-btn" title="Bagikan">↗</button>
-                    <button type="button" class="topbar-icon-btn" title="Notifikasi">⚲</button>
-                    
-                    <!-- Team Avatars Group -->
+                    @yield('topbar-actions')
+
                     <div class="topbar-avatars-group">
-                        <div class="topbar-avatar-bubble" style="background-color: #fef08a;">AD</div>
-                        <div class="topbar-avatar-bubble" style="background-color: #fed7aa;">OW</div>
-                        <div class="topbar-avatar-bubble topbar-avatar-count">+3</div>
+                        <div class="topbar-avatar-bubble" style="background-color: #dbeafe; color: #1e40af;">AD</div>
+                        <div class="topbar-avatar-bubble" style="background-color: #e0e7ff; color: #3730a3;">OW</div>
                     </div>
 
-                    <button type="button" class="topbar-icon-btn" title="Tambah Pengguna">+</button>
-
-                    <button type="button" class="ux-btn-outline" style="font-size: 12.5px;">
-                        <span>Customize Widget</span>
-                    </button>
+                    <a href="{{ url('/') }}" class="ux-btn-outline" style="font-size: 12px; text-decoration: none;">
+                        <span>Landing</span>
+                    </a>
                 </div>
             </header>
 

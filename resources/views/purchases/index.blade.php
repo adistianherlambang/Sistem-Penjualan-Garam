@@ -14,19 +14,14 @@
 @section('content')
 <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
     <div class="kpi-card">
-        <div>
-            <div class="kpi-label">Total Pembelian</div>
-            <div class="kpi-value">Rp {{ number_format($totalSpent, 0, ',', '.') }}</div>
-        </div>
+        <div class="kpi-label">Pembelian</div>
+        <div class="kpi-value">Rp {{ number_format($totalSpent, 0, ',', '.') }}</div>
     </div>
 </div>
 
 <div class="md-card">
     <div class="md-card-header">
-        <div>
-            <div class="md-card-title">Daftar Faktur Pembelian</div>
-            <div class="md-card-subtitle">Transaksi penerimaan barang mentah</div>
-        </div>
+        <div class="md-card-title">Pembelian</div>
     </div>
 
     <!-- Filter Bar -->

@@ -13,33 +13,24 @@
 @section('content')
 <div class="kpi-grid">
     <div class="kpi-card">
-        <div>
-            <div class="kpi-label">Laba Kotor</div>
-            <div class="kpi-value">Rp {{ number_format($grossProfit, 0, ',', '.') }}</div>
-        </div>
+        <div class="kpi-label">Laba Kotor</div>
+        <div class="kpi-value">Rp {{ number_format($grossProfit, 0, ',', '.') }}</div>
     </div>
 
     <div class="kpi-card">
-        <div>
-            <div class="kpi-label">Margin Keuntungan</div>
-            <div class="kpi-value">{{ number_format($profitMargin, 1, ',', '.') }}%</div>
-        </div>
+        <div class="kpi-label">Margin Keuntungan</div>
+        <div class="kpi-value">{{ number_format($profitMargin, 1, ',', '.') }}%</div>
     </div>
 
     <div class="kpi-card">
-        <div>
-            <div class="kpi-label">Total Omzet Penjualan</div>
-            <div class="kpi-value">Rp {{ number_format($totalSales, 0, ',', '.') }}</div>
-        </div>
+        <div class="kpi-label">Omzet</div>
+        <div class="kpi-value">Rp {{ number_format($totalSales, 0, ',', '.') }}</div>
     </div>
 </div>
 
 <div class="md-card">
     <div class="md-card-header no-print">
-        <div>
-            <div class="md-card-title">Filter Periode Analisis</div>
-            <div class="md-card-subtitle">Rentang waktu kalkulasi laba</div>
-        </div>
+        <div class="md-card-title">Filter</div>
     </div>
 
     <form action="{{ route('reports.profit') }}" method="GET" class="no-print" style="display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;">
@@ -48,13 +39,13 @@
         <button type="submit" class="md-btn md-btn-primary md-btn-sm">Hitung</button>
     </form>
 
-    <div style="max-width: 680px; margin: 0 auto; background-color: var(--md-sys-color-surface-container-high); border-radius: var(--md-shape-corner-medium); padding: 24px; border: 1px solid var(--md-sys-color-outline-variant);">
-        <div style="font-size: 16px; font-weight: 700; margin-bottom: 16px; border-bottom: 1px solid var(--md-sys-color-outline); padding-bottom: 10px;">
-            Rincian Laba Kotor (Gross Profit)
+    <div style="max-width: 680px; margin: 0 auto; background-color: var(--ux-card); border-radius: 8px; padding: 24px; border: 1px solid var(--ux-border);">
+        <div style="font-size: 16px; font-weight: 700; margin-bottom: 16px; border-bottom: 1px solid var(--ux-border); padding-bottom: 10px; color: var(--ux-text-heading);">
+            Rincian Laba Kotor
         </div>
 
         <div style="display: flex; justify-content: space-between; padding: 10px 0; font-size: 14px;">
-            <span>Total Pendapatan Penjualan:</span>
+            <span>Pendapatan:</span>
             <strong>Rp {{ number_format($totalSales, 0, ',', '.') }}</strong>
         </div>
 

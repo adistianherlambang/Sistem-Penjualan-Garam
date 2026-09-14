@@ -6,10 +6,7 @@
 @section('content')
 <div class="md-card" style="max-width: 720px; margin: 0 auto;">
     <div class="md-card-header">
-        <div>
-            <div class="md-card-title">Barang Mentah Baru</div>
-            <div class="md-card-subtitle">Input data garam mentah</div>
-        </div>
+        <div class="md-card-title">Tambah Mentah</div>
         <a href="{{ route('raw-materials.index') }}" class="md-btn md-btn-outlined md-btn-sm">Kembali</a>
     </div>
 

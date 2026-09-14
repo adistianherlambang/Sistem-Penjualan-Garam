@@ -6,10 +6,7 @@
 @section('content')
 <div class="md-card" style="max-width: 680px; margin: 0 auto;">
     <div class="md-card-header">
-        <div>
-            <div class="md-card-title">Pengaturan Dasar Sistem</div>
-            <div class="md-card-subtitle">Profil toko, alamat, dan informasi dokumen cetak</div>
-        </div>
+        <div class="md-card-title">Pengaturan</div>
     </div>
 
     <form action="{{ route('settings.update') }}" method="POST">

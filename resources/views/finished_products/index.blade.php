@@ -14,19 +14,14 @@
 @section('content')
 <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
     <div class="kpi-card">
-        <div>
-            <div class="kpi-label">Total Stok Siap Jual</div>
-            <div class="kpi-value">{{ number_format($totalPacks, 0, ',', '.') }} bungkus</div>
-        </div>
+        <div class="kpi-label">Stok Jadi</div>
+        <div class="kpi-value">{{ number_format($totalPacks, 0, ',', '.') }} bungkus</div>
     </div>
 </div>
 
 <div class="md-card">
     <div class="md-card-header">
-        <div>
-            <div class="md-card-title">Daftar Barang Jadi</div>
-            <div class="md-card-subtitle">Garam kemasan siap jual (standar 1 bungkus = 300 gram)</div>
-        </div>
+        <div class="md-card-title">Stok Jadi</div>
     </div>
 
     <div class="table-responsive">

@@ -14,10 +14,7 @@
 @section('content')
 <div class="md-card">
     <div class="md-card-header">
-        <div>
-            <div class="md-card-title">Daftar Supplier</div>
-            <div class="md-card-subtitle">Pemasok garam mentah</div>
-        </div>
+        <div class="md-card-title">Supplier</div>
     </div>
 
     <div class="table-responsive">

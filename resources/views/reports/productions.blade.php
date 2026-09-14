@@ -13,33 +13,24 @@
 @section('content')
 <div class="kpi-grid">
     <div class="kpi-card">
-        <div>
-            <div class="kpi-label">Hasil Produksi</div>
-            <div class="kpi-value">{{ number_format($totalPacks, 0, ',', '.') }} bungkus</div>
-        </div>
+        <div class="kpi-label">Produksi</div>
+        <div class="kpi-value">{{ number_format($totalPacks, 0, ',', '.') }} bungkus</div>
     </div>
 
     <div class="kpi-card">
-        <div>
-            <div class="kpi-label">Mentah Terpakai</div>
-            <div class="kpi-value">{{ $formattedRawUsed }}</div>
-        </div>
+        <div class="kpi-label">Bahan Terpakai</div>
+        <div class="kpi-value">{{ $formattedRawUsed }}</div>
     </div>
 
     <div class="kpi-card">
-        <div>
-            <div class="kpi-label">Jumlah Batch</div>
-            <div class="kpi-value">{{ $productions->count() }} batch</div>
-        </div>
+        <div class="kpi-label">Batch</div>
+        <div class="kpi-value">{{ $productions->count() }} batch</div>
     </div>
 </div>
 
 <div class="md-card">
     <div class="md-card-header no-print">
-        <div>
-            <div class="md-card-title">Filter Periode</div>
-            <div class="md-card-subtitle">Pilih rentang tanggal produksi</div>
-        </div>
+        <div class="md-card-title">Filter</div>
     </div>
 
     <form action="{{ route('reports.productions') }}" method="GET" class="no-print" style="display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;">

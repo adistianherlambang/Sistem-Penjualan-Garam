@@ -13,33 +13,24 @@
 @section('content')
 <div class="kpi-grid">
     <div class="kpi-card">
-        <div>
-            <div class="kpi-label">Total Omzet</div>
-            <div class="kpi-value">Rp {{ number_format($totalRevenue, 0, ',', '.') }}</div>
-        </div>
+        <div class="kpi-label">Omzet</div>
+        <div class="kpi-value">Rp {{ number_format($totalRevenue, 0, ',', '.') }}</div>
     </div>
 
     <div class="kpi-card">
-        <div>
-            <div class="kpi-label">Jumlah Transaksi</div>
-            <div class="kpi-value">{{ number_format($totalTransactions, 0, ',', '.') }}</div>
-        </div>
+        <div class="kpi-label">Transaksi</div>
+        <div class="kpi-value">{{ number_format($totalTransactions, 0, ',', '.') }}</div>
     </div>
 
     <div class="kpi-card">
-        <div>
-            <div class="kpi-label">Bungkus Terjual</div>
-            <div class="kpi-value">{{ number_format($totalPacksSold, 0, ',', '.') }} bks</div>
-        </div>
+        <div class="kpi-label">Terjual</div>
+        <div class="kpi-value">{{ number_format($totalPacksSold, 0, ',', '.') }} bks</div>
     </div>
 </div>
 
 <div class="md-card">
     <div class="md-card-header no-print">
-        <div>
-            <div class="md-card-title">Filter Periode</div>
-            <div class="md-card-subtitle">Pilih rentang tanggal transaksi</div>
-        </div>
+        <div class="md-card-title">Filter</div>
     </div>
 
     <form action="{{ route('reports.sales') }}" method="GET" class="no-print" style="display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;">

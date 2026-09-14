@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT Niaga Garam Cemerlang - Industri Garam Kredibel &amp; Terpercaya</title>
+    <title>POS Garam - Industri Pengolahan &amp; Sistem Distribusi Garam</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
             <div class="lp-container">
                 <nav class="lp-navbar">
                     <a href="{{ url('/') }}" class="lp-brand">
-                        <span>Niaga Garam Cemerlang</span><span class="lp-brand-dot">.</span>
+                        <span>POS Garam</span><span class="lp-brand-dot">.</span>
                     </a>
 
                     <ul class="lp-nav-links">
@@ -54,7 +54,7 @@
                         </div>
                         <h1 class="lp-hero-title">Solusi Garam Industri &amp; Konsumsi Berkualitas</h1>
                         <p class="lp-hero-desc">
-                            PT Niaga Garam Cemerlang adalah perusahaan pengolahan garam modern dengan bahan baku pilihan, proses terstandarisasi FSSC 22000, BPOM RI, ISO SNI, dan Halal, serta sistem operasional terintegrasi.
+                            Produsen dan distributor garam terpercaya dengan standar mutu pangan tinggi, bahan baku pilihan, proses higienis, serta dukungan sistem operasional dan kasir terpadu.
                         </p>
                         <div class="lp-hero-actions">
                             <a href="#kontak" class="lp-btn-pill-primary lp-btn-pill-hero">
@@ -73,7 +73,7 @@
                     </div>
 
                     <div class="lp-hero-visual">
-                        <img src="{{ asset('images/hero_real.png') }}" alt="Pabrik dan Fasilitas PT Niaga Garam Cemerlang" class="lp-hero-img">
+                        <img src="{{ asset('images/hero_real.png') }}" alt="Sentra Fasilitas dan Pengolahan Garam" class="lp-hero-img">
                         <div class="lp-hero-gradient-overlay"></div>
                     </div>
                 </div>
@@ -87,20 +87,20 @@
                     <div class="lp-trio-item">
                         <div class="lp-trio-header">
                             <span class="lp-trio-num">01</span>
-                            <h3 class="lp-trio-title">Standar Mutu Resmi</h3>
+                            <h3 class="lp-trio-title">Standar Mutu Pangan</h3>
                         </div>
                         <p class="lp-trio-text">
-                            Tersertifikasi FSSC 22000 v6, BPOM RI, ISO SNI 2018, dan Halal untuk menjamin kemurnian serta kepatuhan regulasi keamanan pangan nasional.
+                            Memenuhi standar mutu nasional SNI, higienis, dan pengawasan ketat untuk menjamin kemurnian serta kepatuhan regulasi keamanan pangan.
                         </p>
                     </div>
 
                     <div class="lp-trio-item">
                         <div class="lp-trio-header">
                             <span class="lp-trio-num">02</span>
-                            <h3 class="lp-trio-title">Kapasitas 150.000 Ton</h3>
+                            <h3 class="lp-trio-title">Kapasitas Pasokan Tinggi</h3>
                         </div>
                         <p class="lp-trio-text">
-                            Kapasitas pasokan mencapai 150.000 ton per tahun dengan kontinuitas pasokan terjamin dan dukungan armada logistik muatan besar hingga 38,4 ton.
+                            Kapasitas pasokan konsisten hingga puluhan ribu ton per tahun dengan kontinuitas pasokan terjamin dan dukungan manajemen logistik terintegrasi.
                         </p>
                     </div>
 
@@ -110,7 +110,7 @@
                             <h3 class="lp-trio-title">Pengolahan Modern</h3>
                         </div>
                         <p class="lp-trio-text">
-                            Pabrik modern dengan proses pencucian, pengeringan, iodisasi, dan pengemasan presisi mulai dari kemasan 250g-300g hingga jumbo bag 1.200kg.
+                            Fasilitas modern dengan proses pencucian kristal garam, pengeringan, iodisasi, dan pengemasan presisi mulai dari kemasan konsumsi hingga karung industri.
                         </p>
                     </div>
                 </div>
@@ -124,10 +124,10 @@
                     <!-- Cell 1: Dark Navy Card -->
                     <div class="lp-bento-card lp-bento-dark">
                         <div>
-                            <span class="lp-bento-dark-badge">Berkomitmen pada Kualitas</span>
-                            <h4 class="lp-bento-dark-title">PT Niaga Garam Cemerlang</h4>
+                            <span class="lp-bento-dark-badge">Komitmen Mutu &amp; Kualitas</span>
+                            <h4 class="lp-bento-dark-title">Fasilitas Modern &amp; Terintegrasi</h4>
                             <p class="lp-bento-dark-desc">
-                                Berlokasi di Jl. Raya Cirebon – Tegal Km 11 Astanamukti, Pangenan, Cirebon. Menghadirkan garam berkualitas dengan bahan baku dan proses terstandarisasi.
+                                Menghadirkan pasokan garam berkualitas tinggi dengan standar pemurnian higienis serta tata kelola rantai pasok dan kasir yang transparan dan akurat.
                             </p>
                         </div>
                         <a href="#kontak" class="lp-bento-dark-btn">Hubungi Kami</a>
@@ -136,11 +136,11 @@
                     <!-- Cell 2: Stacked Real Imagery -->
                     <div class="lp-bento-stacked">
                         <div class="lp-bento-stack-item">
-                            <img src="{{ asset('images/about_real.png') }}" alt="Gedung Pabrik PT Niaga Garam Cemerlang" class="lp-bento-stack-img">
-                            <div class="lp-stack-caption">Gedung Pabrik Cirebon</div>
+                            <img src="{{ asset('images/about_real.png') }}" alt="Fasilitas Pergudangan Garam" class="lp-bento-stack-img">
+                            <div class="lp-stack-caption">Fasilitas Pergudangan Garam</div>
                         </div>
                         <div class="lp-bento-stack-item">
-                            <img src="{{ asset('images/processing_real.png') }}" alt="Fasilitas Pengolahan Garam" class="lp-bento-stack-img">
+                            <img src="{{ asset('images/processing_real.png') }}" alt="Fasilitas Pengolahan Modern" class="lp-bento-stack-img">
                             <div class="lp-stack-caption">Fasilitas Pengolahan Modern</div>
                         </div>
                     </div>
@@ -153,9 +153,9 @@
 
                     <!-- Cell 4: Productivity metric -->
                     <div class="lp-bento-card lp-bento-stat">
-                        <div class="lp-stat-label">Kapasitas Pasokan Garam Tahunan</div>
+                        <div class="lp-stat-label">Kapasitas Pasokan Garam Berkala</div>
                         <div class="lp-stat-number">150.000</div>
-                        <div class="lp-stat-subtext">Ton / Tahun Industri &amp; Konsumsi</div>
+                        <div class="lp-stat-subtext">Ton Kapasitas Industri &amp; Konsumsi</div>
                     </div>
 
                     <!-- Cell 5: Real Consumer Salt Packaging -->
@@ -272,7 +272,7 @@
                                 <span>Kirim Permintaan Konsultasi</span>
                             </button>
                             <div id="contact-alert" style="display: none; font-size: 13.5px; color: #059669; text-align: center; margin-top: 10px; font-weight: 600;">
-                                Terima kasih! Tim PT Niaga Garam Cemerlang akan segera menghubungi Anda.
+                                Terima kasih! Permintaan konsultasi Anda telah kami terima dan tim kami akan segera menghubungi.
                             </div>
                         </form>
                     </div>
@@ -285,9 +285,9 @@
             <div class="lp-container">
                 <div class="lp-footer">
                     <div class="lp-footer-left">
-                        <span>&copy; {{ date('Y') }} PT Niaga Garam Cemerlang - POS Garam. Hak cipta dilindungi.</span>
+                        <span>&copy; {{ date('Y') }} POS Garam. Hak cipta dilindungi.</span>
                         <span class="lp-status-badge">
-                            <span>Sertifikasi FSSC 22000 &bull; BPOM RI &bull; SNI &bull; Halal</span>
+                            <span>Standar Mutu Pangan SNI &bull; Kualitas Terjamin</span>
                         </span>
                     </div>
                     <div>

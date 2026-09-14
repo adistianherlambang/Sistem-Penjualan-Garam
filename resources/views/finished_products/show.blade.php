@@ -13,9 +13,6 @@
 @section('content')
 <div class="kpi-grid">
     <div class="kpi-card">
-        <div class="kpi-icon-box secondary">
-            <span class="material-symbols-outlined">inventory_2</span>
-        </div>
         <div>
             <div class="kpi-label">Stok Bungkus Tersedia</div>
             <div class="kpi-value">{{ number_format($finishedProduct->stock_packs, 0, ',', '.') }} bungkus</div>
@@ -23,9 +20,6 @@
     </div>
 
     <div class="kpi-card">
-        <div class="kpi-icon-box primary">
-            <span class="material-symbols-outlined">sell</span>
-        </div>
         <div>
             <div class="kpi-label">Harga Jual</div>
             <div class="kpi-value">Rp {{ number_format($finishedProduct->price_per_pack, 0, ',', '.') }}</div>
@@ -33,9 +27,6 @@
     </div>
 
     <div class="kpi-card">
-        <div class="kpi-icon-box info">
-            <span class="material-symbols-outlined">scale</span>
-        </div>
         <div>
             <div class="kpi-label">Berat per Bungkus</div>
             <div class="kpi-value">{{ $finishedProduct->weight_per_pack_gram }} gram</div>

@@ -6,7 +6,6 @@
 @section('topbar-actions')
     @if(auth()->user()->isAdmin())
         <a href="{{ route('productions.create') }}" class="md-btn md-btn-primary md-btn-sm">
-            <span class="material-symbols-outlined">add</span>
             <span>Tambah</span>
         </a>
     @endif
@@ -15,9 +14,6 @@
 @section('content')
 <div class="kpi-grid">
     <div class="kpi-card">
-        <div class="kpi-icon-box info">
-            <span class="material-symbols-outlined">precision_manufacturing</span>
-        </div>
         <div>
             <div class="kpi-label">Total Hasil Produksi</div>
             <div class="kpi-value">{{ number_format($totalPacksProduced, 0, ',', '.') }} bungkus</div>
@@ -25,9 +21,6 @@
     </div>
 
     <div class="kpi-card">
-        <div class="kpi-icon-box primary">
-            <span class="material-symbols-outlined">warehouse</span>
-        </div>
         <div>
             <div class="kpi-label">Garam Mentah Terpakai</div>
             <div class="kpi-value">{{ $formattedRawUsed }}</div>

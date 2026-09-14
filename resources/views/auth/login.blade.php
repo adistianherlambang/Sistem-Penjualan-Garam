@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="{{ asset('css/material.css') }}">
     <style>
         .login-page-wrap {
@@ -31,19 +30,8 @@
             text-align: center;
             margin-bottom: 32px;
         }
-        .login-brand-icon {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, #4f75ff 0%, #7693ff 100%);
-            color: #ffffff;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 16px;
-        }
         .login-brand-title {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 800;
             color: #121826;
             letter-spacing: -0.5px;
@@ -92,7 +80,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
             transition: all 0.2s ease;
             margin-top: 8px;
         }
@@ -112,13 +99,12 @@
         .demo-pill-btn {
             display: inline-flex;
             align-items: center;
-            gap: 4px;
-            padding: 6px 14px;
+            padding: 6px 16px;
             background-color: #ffffff;
             border: 1px solid #cbd5e1;
             border-radius: 9999px;
             font-family: inherit;
-            font-size: 11.5px;
+            font-size: 12px;
             font-weight: 600;
             color: #121826;
             cursor: pointer;
@@ -136,16 +122,12 @@
 <body class="login-page-wrap">
     <div class="login-box">
         <div class="login-brand-header">
-            <div class="login-brand-icon">
-                <span class="material-symbols-outlined" style="font-size: 26px;">grain</span>
-            </div>
-            <h1 class="login-brand-title">Masuk ke Sistem</h1>
-            <p class="login-brand-desc">POS Penjualan &amp; Pengolahan Garam</p>
+            <h1 class="login-brand-title">Garam.</h1>
+            <p class="login-brand-desc">Sistem POS &amp; Pengolahan Garam</p>
         </div>
 
         @if($errors->any())
             <div class="md-alert md-alert-error" style="border-radius: 12px; margin-bottom: 20px;">
-                <span class="material-symbols-outlined">error</span>
                 <div>{{ $errors->first() }}</div>
             </div>
         @endif
@@ -172,7 +154,6 @@
 
             <button type="submit" class="login-submit-btn">
                 <span>Masuk Sekarang</span>
-                <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
             </button>
         </form>
 
@@ -182,11 +163,9 @@
             <div>Owner: <strong>owner@posgaram.com</strong> (password123)</div>
             <div>
                 <button type="button" class="demo-pill-btn" onclick="fillLogin('admin@posgaram.com', 'password123')">
-                    <span class="material-symbols-outlined" style="font-size: 14px;">admin_panel_settings</span>
                     <span>Isi Admin</span>
                 </button>
                 <button type="button" class="demo-pill-btn" onclick="fillLogin('owner@posgaram.com', 'password123')">
-                    <span class="material-symbols-outlined" style="font-size: 14px;">account_balance</span>
                     <span>Isi Owner</span>
                 </button>
             </div>

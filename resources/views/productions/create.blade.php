@@ -71,7 +71,6 @@
 
         <div class="form-actions">
             <button type="submit" class="md-btn md-btn-primary">
-                <span class="material-symbols-outlined">precision_manufacturing</span>
                 <span>Simpan</span>
             </button>
             <a href="{{ route('productions.index') }}" class="md-btn md-btn-outlined">Batal</a>

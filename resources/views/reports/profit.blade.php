@@ -6,7 +6,6 @@
 @section('topbar-actions')
     <a href="{{ route('reports.index') }}" class="md-btn md-btn-outlined md-btn-sm">Kembali</a>
     <button onclick="window.print()" class="md-btn md-btn-primary md-btn-sm no-print">
-        <span class="material-symbols-outlined">print</span>
         <span>Cetak</span>
     </button>
 @endsection
@@ -14,9 +13,6 @@
 @section('content')
 <div class="kpi-grid">
     <div class="kpi-card">
-        <div class="kpi-icon-box success">
-            <span class="material-symbols-outlined">trending_up</span>
-        </div>
         <div>
             <div class="kpi-label">Laba Kotor</div>
             <div class="kpi-value">Rp {{ number_format($grossProfit, 0, ',', '.') }}</div>
@@ -24,9 +20,6 @@
     </div>
 
     <div class="kpi-card">
-        <div class="kpi-icon-box primary">
-            <span class="material-symbols-outlined">percent</span>
-        </div>
         <div>
             <div class="kpi-label">Margin Keuntungan</div>
             <div class="kpi-value">{{ number_format($profitMargin, 1, ',', '.') }}%</div>
@@ -34,9 +27,6 @@
     </div>
 
     <div class="kpi-card">
-        <div class="kpi-icon-box secondary">
-            <span class="material-symbols-outlined">payments</span>
-        </div>
         <div>
             <div class="kpi-label">Total Omzet Penjualan</div>
             <div class="kpi-value">Rp {{ number_format($totalSales, 0, ',', '.') }}</div>

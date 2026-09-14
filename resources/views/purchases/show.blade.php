@@ -6,7 +6,6 @@
 @section('topbar-actions')
     <a href="{{ route('purchases.index') }}" class="md-btn md-btn-outlined md-btn-sm">Kembali</a>
     <a href="{{ route('purchases.print', $purchase) }}" target="_blank" class="md-btn md-btn-primary md-btn-sm">
-        <span class="material-symbols-outlined">print</span>
         <span>Cetak</span>
     </a>
 @endsection
@@ -72,7 +71,6 @@
 
     <div style="display: flex; justify-content: flex-end; gap: 12px;">
         <a href="{{ route('purchases.print', $purchase) }}" target="_blank" class="md-btn md-btn-primary">
-            <span class="material-symbols-outlined">print</span>
             <span>Cetak</span>
         </a>
     </div>

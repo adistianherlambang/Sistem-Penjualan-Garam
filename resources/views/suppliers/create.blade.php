@@ -37,7 +37,6 @@
 
         <div class="form-actions">
             <button type="submit" class="md-btn md-btn-primary">
-                <span class="material-symbols-outlined">save</span>
                 <span>Simpan</span>
             </button>
             <a href="{{ route('suppliers.index') }}" class="md-btn md-btn-outlined">Batal</a>

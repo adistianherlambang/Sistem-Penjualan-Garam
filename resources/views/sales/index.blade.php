@@ -6,7 +6,6 @@
 @section('topbar-actions')
     @if(auth()->user()->isAdmin())
         <a href="{{ route('sales.create') }}" class="md-btn md-btn-primary md-btn-sm">
-            <span class="material-symbols-outlined">add</span>
             <span>Kasir</span>
         </a>
     @endif
@@ -15,9 +14,6 @@
 @section('content')
 <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
     <div class="kpi-card">
-        <div class="kpi-icon-box success">
-            <span class="material-symbols-outlined">payments</span>
-        </div>
         <div>
             <div class="kpi-label">Total Pendapatan</div>
             <div class="kpi-value">Rp {{ number_format($totalRevenue, 0, ',', '.') }}</div>

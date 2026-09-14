@@ -6,7 +6,6 @@
 @section('topbar-actions')
     <a href="{{ route('reports.index') }}" class="md-btn md-btn-outlined md-btn-sm">Kembali</a>
     <button onclick="window.print()" class="md-btn md-btn-primary md-btn-sm no-print">
-        <span class="material-symbols-outlined">print</span>
         <span>Cetak</span>
     </button>
 @endsection
@@ -14,9 +13,6 @@
 @section('content')
 <div class="kpi-grid">
     <div class="kpi-card">
-        <div class="kpi-icon-box primary">
-            <span class="material-symbols-outlined">shopping_cart</span>
-        </div>
         <div>
             <div class="kpi-label">Total Pembelian</div>
             <div class="kpi-value">Rp {{ number_format($totalSpent, 0, ',', '.') }}</div>
@@ -24,9 +20,6 @@
     </div>
 
     <div class="kpi-card">
-        <div class="kpi-icon-box secondary">
-            <span class="material-symbols-outlined">warehouse</span>
-        </div>
         <div>
             <div class="kpi-label">Total Berat Masuk</div>
             <div class="kpi-value">{{ $formattedTotalWeight }}</div>
@@ -34,9 +27,6 @@
     </div>
 
     <div class="kpi-card">
-        <div class="kpi-icon-box info">
-            <span class="material-symbols-outlined">receipt_long</span>
-        </div>
         <div>
             <div class="kpi-label">Jumlah Faktur</div>
             <div class="kpi-value">{{ $purchases->count() }} faktur</div>

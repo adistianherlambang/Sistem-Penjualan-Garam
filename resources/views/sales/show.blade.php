@@ -6,11 +6,9 @@
 @section('topbar-actions')
     <a href="{{ route('sales.index') }}" class="md-btn md-btn-outlined md-btn-sm">Kembali</a>
     <a href="{{ route('sales.receipt', $sale) }}" target="_blank" class="md-btn md-btn-secondary md-btn-sm">
-        <span class="material-symbols-outlined">receipt</span>
         <span>Nota</span>
     </a>
     <a href="{{ route('sales.invoice', $sale) }}" target="_blank" class="md-btn md-btn-primary md-btn-sm">
-        <span class="material-symbols-outlined">description</span>
         <span>Faktur</span>
     </a>
 @endsection
@@ -93,11 +91,9 @@
 
     <div style="display: flex; justify-content: flex-end; gap: 12px;">
         <a href="{{ route('sales.receipt', $sale) }}" target="_blank" class="md-btn md-btn-secondary">
-            <span class="material-symbols-outlined">receipt</span>
             <span>Cetak Nota</span>
         </a>
         <a href="{{ route('sales.invoice', $sale) }}" target="_blank" class="md-btn md-btn-primary">
-            <span class="material-symbols-outlined">description</span>
             <span>Cetak Faktur</span>
         </a>
     </div>

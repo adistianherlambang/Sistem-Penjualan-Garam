@@ -6,7 +6,6 @@
 @section('topbar-actions')
     @if(auth()->user()->isAdmin())
         <a href="{{ route('sales.create') }}" class="md-btn md-btn-primary md-btn-sm">
-            <span class="material-symbols-outlined">point_of_sale</span>
             <span>Kasir</span>
         </a>
     @endif
@@ -16,9 +15,6 @@
 <!-- KPI Cards Grid (Label 1-2 kata) -->
 <div class="kpi-grid">
     <div class="kpi-card">
-        <div class="kpi-icon-box primary">
-            <span class="material-symbols-outlined">warehouse</span>
-        </div>
         <div>
             <div class="kpi-label">Stok Mentah</div>
             <div class="kpi-value">{{ $formattedRawStock }}</div>
@@ -26,9 +22,6 @@
     </div>
 
     <div class="kpi-card">
-        <div class="kpi-icon-box secondary">
-            <span class="material-symbols-outlined">inventory_2</span>
-        </div>
         <div>
             <div class="kpi-label">Stok Jadi</div>
             <div class="kpi-value">{{ number_format($totalFinishedPacks, 0, ',', '.') }} bks</div>
@@ -36,9 +29,6 @@
     </div>
 
     <div class="kpi-card">
-        <div class="kpi-icon-box success">
-            <span class="material-symbols-outlined">point_of_sale</span>
-        </div>
         <div>
             <div class="kpi-label">Penjualan Hari Ini</div>
             <div class="kpi-value">Rp {{ number_format($todayRevenue, 0, ',', '.') }}</div>
@@ -46,9 +36,6 @@
     </div>
 
     <div class="kpi-card">
-        <div class="kpi-icon-box info">
-            <span class="material-symbols-outlined">precision_manufacturing</span>
-        </div>
         <div>
             <div class="kpi-label">Produksi Bulan Ini</div>
             <div class="kpi-value">{{ number_format($monthProductionPacks, 0, ',', '.') }} bks</div>
@@ -56,9 +43,6 @@
     </div>
 
     <div class="kpi-card">
-        <div class="kpi-icon-box primary">
-            <span class="material-symbols-outlined">shopping_cart</span>
-        </div>
         <div>
             <div class="kpi-label">Pembelian Bulan Ini</div>
             <div class="kpi-value">Rp {{ number_format($monthPurchasesTotal, 0, ',', '.') }}</div>
@@ -66,9 +50,6 @@
     </div>
 
     <div class="kpi-card">
-        <div class="kpi-icon-box success">
-            <span class="material-symbols-outlined">payments</span>
-        </div>
         <div>
             <div class="kpi-label">Laba Kotor</div>
             <div class="kpi-value">Rp {{ number_format($estimatedGrossProfit, 0, ',', '.') }}</div>

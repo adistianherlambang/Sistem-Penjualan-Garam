@@ -76,7 +76,6 @@
 
             <div class="form-actions">
                 <button type="submit" class="md-btn md-btn-primary" style="padding: 12px 24px; font-size: 14px;">
-                    <span class="material-symbols-outlined">check</span>
                     <span>Simpan</span>
                 </button>
                 <a href="{{ route('sales.index') }}" class="md-btn md-btn-outlined">Batal</a>
@@ -87,7 +86,6 @@
     <!-- Right: Summary & Change Calculation Panel -->
     <div class="pos-cart-panel">
         <div style="font-size: 16px; font-weight: 700; color: var(--md-sys-color-on-surface); margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
-            <span class="material-symbols-outlined" style="color: var(--md-sys-color-primary);">receipt_long</span>
             <span>Ringkasan Kasir</span>
         </div>
 

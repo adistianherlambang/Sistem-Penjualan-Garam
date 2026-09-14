@@ -96,7 +96,6 @@
     <div class="print-btn-wrap no-print">
         <a href="{{ route('sales.show', $sale) }}" class="md-btn md-btn-outlined md-btn-sm">Kembali</a>
         <button onclick="window.print()" class="md-btn md-btn-primary md-btn-sm">
-            <span class="material-symbols-outlined">print</span>
             <span>Cetak</span>
         </button>
     </div>

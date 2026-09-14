@@ -18,9 +18,6 @@
 
     <div class="kpi-grid">
         <div class="kpi-card">
-            <div class="kpi-icon-box secondary">
-                <span class="material-symbols-outlined">inventory_2</span>
-            </div>
             <div>
                 <div class="kpi-label">Hasil Produksi</div>
                 <div class="kpi-value">{{ number_format($production->pack_quantity, 0, ',', '.') }} bungkus</div>
@@ -28,9 +25,6 @@
         </div>
 
         <div class="kpi-card">
-            <div class="kpi-icon-box primary">
-                <span class="material-symbols-outlined">warehouse</span>
-            </div>
             <div>
                 <div class="kpi-label">Pengurangan Mentah</div>
                 <div class="kpi-value">{{ $production->formatted_raw_used }}</div>
@@ -38,9 +32,6 @@
         </div>
 
         <div class="kpi-card">
-            <div class="kpi-icon-box info">
-                <span class="material-symbols-outlined">scale</span>
-            </div>
             <div>
                 <div class="kpi-label">Standar Kemasan</div>
                 <div class="kpi-value">{{ $production->weight_per_pack_gram }} gram / bks</div>

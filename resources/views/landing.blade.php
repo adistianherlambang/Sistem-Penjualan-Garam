@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="{{ asset('css/landing.css') }}">
 </head>
 <body class="landing-page-body">
@@ -15,15 +14,12 @@
     <!-- 100% Full-Width Master Wrapper -->
     <div class="lp-wrapper">
         
-        <!-- Header & Navbar (Full Width) -->
+        <!-- Header & Navbar (Full Width, Zero Icons) -->
         <header class="lp-header-wrap">
             <div class="lp-container">
                 <nav class="lp-navbar">
                     <a href="{{ url('/') }}" class="lp-brand">
-                        <div class="lp-brand-logo">
-                            <span class="material-symbols-outlined">grain</span>
-                        </div>
-                        <span>Garam.</span>
+                        <span>Garam</span><span class="lp-brand-dot">.</span>
                     </a>
 
                     <ul class="lp-nav-links">
@@ -36,7 +32,6 @@
                     <div>
                         @auth
                             <a href="{{ route('dashboard') }}" class="lp-btn-pill-primary">
-                                <span class="material-symbols-outlined" style="font-size: 18px;">dashboard</span>
                                 <span>Buka Dashboard</span>
                             </a>
                         @else
@@ -49,7 +44,7 @@
             </div>
         </header>
 
-        <!-- Hero Section (Full Width) -->
+        <!-- Hero Section (Full Width, Zero Icons) -->
         <section class="lp-hero-section">
             <div class="lp-container">
                 <div class="lp-hero">
@@ -70,7 +65,6 @@
                             @endauth
                             <a href="#alur" class="lp-link-arrow">
                                 <span>Pelajari Alur</span>
-                                <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
                             </a>
                         </div>
                     </div>
@@ -83,15 +77,13 @@
             </div>
         </section>
 
-        <!-- 3 Feature Columns Section (Full Width) -->
+        <!-- 3 Feature Columns Section (Numbered 01, 02, 03 - Zero Icons) -->
         <section class="lp-features-section" id="fitur">
             <div class="lp-container">
                 <div class="lp-features-trio">
                     <div class="lp-trio-item">
                         <div class="lp-trio-header">
-                            <div class="lp-trio-icon">
-                                <span class="material-symbols-outlined">inventory_2</span>
-                            </div>
+                            <span class="lp-trio-num">01</span>
                             <h3 class="lp-trio-title">Manajemen Stok</h3>
                         </div>
                         <p class="lp-trio-text">
@@ -101,9 +93,7 @@
 
                     <div class="lp-trio-item">
                         <div class="lp-trio-header">
-                            <div class="lp-trio-icon">
-                                <span class="material-symbols-outlined">hub</span>
-                            </div>
+                            <span class="lp-trio-num">02</span>
                             <h3 class="lp-trio-title">Kolaborasi Alur</h3>
                         </div>
                         <p class="lp-trio-text">
@@ -113,9 +103,7 @@
 
                     <div class="lp-trio-item">
                         <div class="lp-trio-header">
-                            <div class="lp-trio-icon">
-                                <span class="material-symbols-outlined">precision_manufacturing</span>
-                            </div>
+                            <span class="lp-trio-num">03</span>
                             <h3 class="lp-trio-title">Otomasi Produksi</h3>
                         </div>
                         <p class="lp-trio-text">
@@ -126,7 +114,7 @@
             </div>
         </section>
 
-        <!-- Bento Grid Section (Full Width) -->
+        <!-- Bento Grid Section (Full Width, Zero Icons) -->
         <section class="lp-bento-section" id="bento">
             <div class="lp-container">
                 <div class="lp-bento-grid">
@@ -174,7 +162,7 @@
             </div>
         </section>
 
-        <!-- Lower Section: Workflow Accordion & Contact (Full Width) -->
+        <!-- Lower Section: Workflow Accordion & Contact (Zero Icons) -->
         <section class="lp-bottom-section" id="alur">
             <div class="lp-container">
                 <div class="lp-bottom-grid">
@@ -190,7 +178,7 @@
                                         <img src="{{ asset('images/hero_manager.jpg') }}" class="lp-avatar-thumb" alt="Gudang">
                                         <span class="lp-accordion-title">Pencatatan garam mentah (g, kg, ton)</span>
                                     </div>
-                                    <span class="material-symbols-outlined lp-accordion-chevron">expand_more</span>
+                                    <span class="lp-accordion-status">Detail</span>
                                 </div>
                                 <div class="lp-accordion-content">
                                     Pencatatan pengiriman dari petani dan supplier garam dengan otomatisasi konversi satuan berat presisi serta kartu mutasi stok real-time.
@@ -204,7 +192,7 @@
                                         <img src="{{ asset('images/bento_laptop.jpg') }}" class="lp-avatar-thumb" alt="Pabrik">
                                         <span class="lp-accordion-title">Konversi pengemasan standar 300g</span>
                                     </div>
-                                    <span class="material-symbols-outlined lp-accordion-chevron">expand_more</span>
+                                    <span class="lp-accordion-status">Detail</span>
                                 </div>
                                 <div class="lp-accordion-content">
                                     Proses pencucian, iodisasi, dan pengemasan otomatis dengan rasio standar 1 bungkus = 300 gram dan validasi stok bahan baku.
@@ -218,7 +206,7 @@
                                         <img src="{{ asset('images/bento_salt.jpg') }}" class="lp-avatar-thumb" alt="Produk">
                                         <span class="lp-accordion-title">Katalog SKU garam siap jual</span>
                                     </div>
-                                    <span class="material-symbols-outlined lp-accordion-chevron">expand_more</span>
+                                    <span class="lp-accordion-status">Detail</span>
                                 </div>
                                 <div class="lp-accordion-content">
                                     Pengelolaan varian garam dapur beryodium, garam halus, serta garam kemasan siap edar lengkap dengan harga jual dan ambang batas minimum stok.
@@ -232,7 +220,7 @@
                                         <img src="{{ asset('images/bento_pos.jpg') }}" class="lp-avatar-thumb" alt="Kasir">
                                         <span class="lp-accordion-title">Transaksi cepat, kembalian &amp; faktur cetak</span>
                                     </div>
-                                    <span class="material-symbols-outlined lp-accordion-chevron">expand_more</span>
+                                    <span class="lp-accordion-status">Detail</span>
                                 </div>
                                 <div class="lp-accordion-content">
                                     Layanan kasir responsif untuk transaksi grosir dan eceran dengan kalkulasi kembalian otomatis dan pencetakan faktur/nota format kasir.
@@ -242,7 +230,7 @@
                         </div>
                     </div>
 
-                    <!-- Right: Let's Talk Form -->
+                    <!-- Right: Let's Talk Form (Zero Icons) -->
                     <div class="lp-contact-col" id="kontak">
                         <h3 class="lp-section-title">Konsultasi Cepat</h3>
                         <form class="lp-contact-form" onsubmit="handleContactSubmit(event)">
@@ -253,7 +241,6 @@
                                     <option value="distributor">Distributor &amp; Gudang Besar</option>
                                     <option value="grosir">Toko Grosir / Eceran</option>
                                 </select>
-                                <span class="material-symbols-outlined lp-select-arrow">expand_more</span>
                             </div>
 
                             <div class="lp-select-pill-wrap">
@@ -263,7 +250,6 @@
                                     <option value="produksi">Manajemen Konversi &amp; Pengemasan 300g</option>
                                     <option value="full">Paket Lengkap Terintegrasi</option>
                                 </select>
-                                <span class="material-symbols-outlined lp-select-arrow">expand_more</span>
                             </div>
 
                             <div class="lp-select-pill-wrap">
@@ -273,12 +259,10 @@
                                     <option value="bulan_ini">Bulan Ini</option>
                                     <option value="eksplorasi">Uji Coba &amp; Demo Sistem</option>
                                 </select>
-                                <span class="material-symbols-outlined lp-select-arrow">expand_more</span>
                             </div>
 
                             <button type="submit" class="lp-btn-pill-dark">
                                 <span>Kirim Permintaan Demo</span>
-                                <span class="material-symbols-outlined" style="font-size: 18px;">send</span>
                             </button>
                             <div id="contact-alert" style="display: none; font-size: 13.5px; color: #059669; text-align: center; margin-top: 8px;">
                                 Terima kasih! Permintaan demo berhasil dikirim.
@@ -289,14 +273,13 @@
             </div>
         </section>
 
-        <!-- Footer (Full Width) -->
+        <!-- Footer (Full Width, Zero Icons) -->
         <footer class="lp-footer-section">
             <div class="lp-container">
                 <div class="lp-footer">
                     <div class="lp-footer-left">
                         <span>&copy; {{ date('Y') }} POS Garam. Hak cipta dilindungi.</span>
                         <span class="lp-status-badge">
-                            <span class="lp-status-dot"></span>
                             <span>Sistem Aktif &amp; Terhubung</span>
                         </span>
                     </div>

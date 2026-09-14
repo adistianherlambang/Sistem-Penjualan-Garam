@@ -6,7 +6,6 @@
 @section('topbar-actions')
     @if(auth()->user()->isAdmin())
         <a href="{{ route('suppliers.create') }}" class="md-btn md-btn-primary md-btn-sm">
-            <span class="material-symbols-outlined">add</span>
             <span>Tambah</span>
         </a>
     @endif

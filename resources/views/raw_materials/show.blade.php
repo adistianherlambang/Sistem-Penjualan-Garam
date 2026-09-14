@@ -13,9 +13,6 @@
 @section('content')
 <div class="kpi-grid">
     <div class="kpi-card">
-        <div class="kpi-icon-box primary">
-            <span class="material-symbols-outlined">warehouse</span>
-        </div>
         <div>
             <div class="kpi-label">Stok Tersedia</div>
             <div class="kpi-value">{{ $rawMaterial->formatted_stock }}</div>
@@ -23,9 +20,6 @@
     </div>
 
     <div class="kpi-card">
-        <div class="kpi-icon-box info">
-            <span class="material-symbols-outlined">straighten</span>
-        </div>
         <div>
             <div class="kpi-label">Satuan Dasar Internal</div>
             <div class="kpi-value">{{ number_format($rawMaterial->stock_gram, 0, ',', '.') }} gram</div>
@@ -33,9 +27,6 @@
     </div>
 
     <div class="kpi-card">
-        <div class="kpi-icon-box secondary">
-            <span class="material-symbols-outlined">notifications</span>
-        </div>
         <div>
             <div class="kpi-label">Batas Minimal</div>
             <div class="kpi-value">{{ \App\Helpers\WeightFormatter::format($rawMaterial->min_stock_gram) }}</div>

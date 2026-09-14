@@ -6,7 +6,6 @@
 @section('topbar-actions')
     @if(auth()->user()->isAdmin())
         <a href="{{ route('raw-materials.create') }}" class="md-btn md-btn-primary md-btn-sm">
-            <span class="material-symbols-outlined">add</span>
             <span>Tambah</span>
         </a>
     @endif
@@ -15,9 +14,6 @@
 @section('content')
 <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
     <div class="kpi-card">
-        <div class="kpi-icon-box primary">
-            <span class="material-symbols-outlined">warehouse</span>
-        </div>
         <div>
             <div class="kpi-label">Total Stok Mentah</div>
             <div class="kpi-value">{{ $formattedTotalStock }}</div>

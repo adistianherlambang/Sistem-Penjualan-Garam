@@ -1,6 +1,6 @@
 /* ==========================================================================
-   LANDING PAGE STYLING - FULL WIDTH FLAT MODERN BENTO & SAAS AESTHETIC
-   Zero Box-Shadows: Clean lines, 1px crisp borders, pure flat design,
+   LANDING PAGE STYLING - ZERO ICONS & ZERO BOX-SHADOW (FLAT CLEAN)
+   Pure typography-focused, crisp 1px borders, numbered steps (01, 02, 03),
    100% Full-Width Edge-to-Edge Canvas.
    ========================================================================== */
 
@@ -32,6 +32,16 @@
     margin: 0;
     padding: 0;
     box-shadow: none !important;
+}
+
+/* Strict Zero Icons Rule */
+.material-symbols-outlined,
+.material-icons,
+[class*="material-symbols"],
+[class*="material-icons"],
+svg.icon,
+.icon {
+    display: none !important;
 }
 
 html, body {
@@ -74,7 +84,7 @@ body.landing-page-body {
 }
 
 /* --------------------------------------------------------------------------
-   HEADER & NAVBAR (100% Full Width)
+   HEADER & NAVBAR (100% Full Width, Zero Icons)
    -------------------------------------------------------------------------- */
 .lp-header-wrap {
     width: 100%;
@@ -95,27 +105,16 @@ body.landing-page-body {
 .lp-brand {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     text-decoration: none;
     color: var(--lp-text-heading);
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 800;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.6px;
 }
 
-.lp-brand-logo {
-    width: 36px;
-    height: 36px;
-    background: linear-gradient(135deg, var(--lp-primary) 0%, #7693ff 100%);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-}
-
-.lp-brand-logo svg, .lp-brand-logo span {
-    font-size: 22px;
+.lp-brand-dot {
+    color: var(--lp-primary);
 }
 
 .lp-nav-links {
@@ -141,7 +140,6 @@ body.landing-page-body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
     background-color: var(--lp-primary);
     color: #ffffff !important;
     text-decoration: none;
@@ -160,7 +158,7 @@ body.landing-page-body {
 }
 
 /* --------------------------------------------------------------------------
-   HERO SECTION (100% Full Width)
+   HERO SECTION (100% Full Width, Zero Icons)
    -------------------------------------------------------------------------- */
 .lp-hero-section {
     width: 100%;
@@ -201,7 +199,7 @@ body.landing-page-body {
 .lp-hero-actions {
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 24px;
     flex-wrap: wrap;
 }
 
@@ -213,17 +211,16 @@ body.landing-page-body {
 .lp-link-arrow {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
     text-decoration: none;
     color: var(--lp-primary);
     font-size: 15px;
     font-weight: 600;
-    transition: gap 0.2s ease, color 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 .lp-link-arrow:hover {
     color: var(--lp-primary-hover);
-    gap: 10px;
+    text-decoration: underline;
 }
 
 .lp-hero-visual {
@@ -255,11 +252,11 @@ body.landing-page-body {
 }
 
 /* --------------------------------------------------------------------------
-   3 FEATURE COLUMNS (TRIO)
+   3 FEATURE COLUMNS (Numbered 01, 02, 03 instead of icons)
    -------------------------------------------------------------------------- */
 .lp-features-section {
     width: 100%;
-    padding: 32px 0;
+    padding: 36px 0;
     border-top: 1px solid var(--lp-border-light);
     border-bottom: 1px solid var(--lp-border-light);
     background-color: #ffffff;
@@ -278,31 +275,18 @@ body.landing-page-body {
     gap: 12px;
 }
 
-.lp-trio-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.lp-trio-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    background-color: var(--lp-pill-bg);
-    color: var(--lp-primary);
-    display: flex;
+.lp-trio-num {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
-    transition: all 0.2s ease;
-    border: 1px solid var(--lp-border-light);
-}
-
-.lp-trio-item:hover .lp-trio-icon {
-    background-color: var(--lp-primary);
-    color: #ffffff;
-    border-color: var(--lp-primary);
-    transform: translateY(-2px);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--lp-primary);
+    background-color: var(--lp-primary-subtle);
+    border: 1px solid rgba(79, 117, 255, 0.2);
+    padding: 4px 12px;
+    border-radius: var(--lp-radius-pill);
+    margin-bottom: 2px;
 }
 
 .lp-trio-title {
@@ -318,7 +302,7 @@ body.landing-page-body {
 }
 
 /* --------------------------------------------------------------------------
-   BENTO GRID SHOWCASE (5 CELLS)
+   BENTO GRID SHOWCASE (5 CELLS, Zero Icons)
    -------------------------------------------------------------------------- */
 .lp-bento-section {
     width: 100%;
@@ -506,7 +490,7 @@ body.landing-page-body {
 }
 
 /* --------------------------------------------------------------------------
-   LOWER SECTION: ACCORDION LIST + CONTACT FORM (100% Full Width)
+   LOWER SECTION: ACCORDION LIST + CONTACT FORM (Zero Icons)
    -------------------------------------------------------------------------- */
 .lp-bottom-section {
     width: 100%;
@@ -595,10 +579,10 @@ body.landing-page-body {
     color: var(--lp-text-heading);
 }
 
-.lp-accordion-chevron {
+.lp-accordion-status {
+    font-size: 12px;
+    font-weight: 600;
     color: var(--lp-text-muted);
-    font-size: 20px;
-    transition: transform 0.2s ease;
 }
 
 .lp-accordion-item.active {
@@ -607,8 +591,7 @@ body.landing-page-body {
     background-color: #fafbfe;
 }
 
-.lp-accordion-item.active .lp-accordion-chevron {
-    transform: rotate(180deg);
+.lp-accordion-item.active .lp-accordion-status {
     color: var(--lp-primary);
 }
 
@@ -652,7 +635,7 @@ body.landing-page-body {
     background-color: var(--lp-canvas);
     border: 1px solid var(--lp-border);
     border-radius: var(--lp-radius-pill);
-    padding: 14px 44px 14px 22px;
+    padding: 14px 22px;
     font-family: var(--lp-font-main);
     font-size: 14px;
     font-weight: 500;
@@ -666,21 +649,10 @@ body.landing-page-body {
     border-color: var(--lp-primary);
 }
 
-.lp-select-arrow {
-    position: absolute;
-    right: 18px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-    color: var(--lp-text-muted);
-    font-size: 20px;
-}
-
 .lp-btn-pill-dark {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
     width: 100%;
     background-color: var(--lp-dark);
     color: #ffffff;
@@ -701,7 +673,7 @@ body.landing-page-body {
 }
 
 /* --------------------------------------------------------------------------
-   FOOTER (100% Full Width)
+   FOOTER (100% Full Width, Zero Icons)
    -------------------------------------------------------------------------- */
 .lp-footer-section {
     width: 100%;
@@ -728,7 +700,6 @@ body.landing-page-body {
 .lp-status-badge {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
     background-color: #ecfdf5;
     color: #059669;
     padding: 4px 12px;
@@ -736,14 +707,6 @@ body.landing-page-body {
     font-size: 12px;
     font-weight: 600;
     border: 1px solid #d1fae5;
-}
-
-.lp-status-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background-color: #10b981;
-    display: inline-block;
 }
 
 /* --------------------------------------------------------------------------

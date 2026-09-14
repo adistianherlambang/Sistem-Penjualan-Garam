@@ -234,7 +234,7 @@
                         {{ $movement->transaction_type }}
                     </div>
                 </div>
-                <div style="font-weight: 700; font-size: 13px; color: {{ $movement->quantity_delta >= 0 ? '#059669' : '#dc2626' }};">
+                <div class="{{ $movement->quantity_delta >= 0 ? 'ux-delta-pos' : 'ux-delta-neg' }}">
                     {{ $movement->formatted_delta }}
                 </div>
             </div>

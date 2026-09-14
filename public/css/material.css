@@ -674,6 +674,19 @@ body {
   color: var(--ux-pill-restock-text);
 }
 
+/* Movement Deltas */
+.ux-delta-pos {
+  font-weight: 700;
+  font-size: 13px;
+  color: #059669;
+}
+
+.ux-delta-neg {
+  font-weight: 700;
+  font-size: 13px;
+  color: #dc2626;
+}
+
 /* --------------------------------------------------------------------------
    BOTTOM PAGINATION (ROYAL BLUE ACTIVE)
    -------------------------------------------------------------------------- */

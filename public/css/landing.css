@@ -1,14 +1,14 @@
 /* ==========================================================================
-   LANDING PAGE STYLING - MODERN BENTO & SAAS AESTHETIC
-   Inspiration: Modern SaaS Clean Aesthetic (Off-white canvas, Blue Pill CTA,
-   Bento Grid, Curved Portrait Hero, and Interactive Pill Accordion)
+   LANDING PAGE STYLING - FULL WIDTH MODERN BENTO & SAAS AESTHETIC
+   Clean 100% Full-Width Canvas, Edge-to-Edge Sections, Modern Bento Grid,
+   Hero Portrait Card with Gradient Fade, and Pill Components.
    ========================================================================== */
 
 :root {
-    --lp-bg: #eef2f7;
+    --lp-bg: #ffffff;
     --lp-canvas: #ffffff;
     --lp-primary: #4f75ff;
-    --lp-primary-hover: #3d62eb;
+    --lp-primary-hover: #3b62eb;
     --lp-primary-subtle: rgba(79, 117, 255, 0.08);
     --lp-dark: #1b212d;
     --lp-dark-hover: #12161f;
@@ -16,12 +16,11 @@
     --lp-text-body: #4b5563;
     --lp-text-muted: #6b7280;
     --lp-border: #e5e9f2;
-    --lp-border-light: #f0f3f8;
+    --lp-border-light: #f1f4f9;
     --lp-card-bg: #f8fafc;
     --lp-pill-bg: #f1f4f9;
     --lp-radius-pill: 9999px;
-    --lp-radius-card: 24px;
-    --lp-radius-canvas: 32px;
+    --lp-radius-card: 22px;
     --lp-font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --lp-shadow-sm: 0 2px 8px rgba(18, 24, 38, 0.04);
     --lp-shadow-md: 0 8px 24px rgba(18, 24, 38, 0.06);
@@ -34,50 +33,69 @@
     padding: 0;
 }
 
+html, body {
+    width: 100%;
+    min-height: 100vh;
+}
+
 body.landing-page-body {
     background-color: var(--lp-bg);
     font-family: var(--lp-font-main);
     color: var(--lp-text-body);
     line-height: 1.5;
-    padding: 32px 24px;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Master Canvas Wrap */
+/* 100% Full-Width Master Wrapper */
 .lp-wrapper {
     width: 100%;
-    max-width: 1220px;
-    background-color: var(--lp-canvas);
-    border-radius: var(--lp-radius-canvas);
-    box-shadow: var(--lp-shadow-lg);
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    overflow: hidden;
-    padding: 24px 44px 48px;
+    min-height: 100vh;
+    background-color: var(--lp-bg);
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* Fluid Content Container (Centered with modern padding) */
+.lp-container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 4.5vw, 64px);
 }
 
 /* --------------------------------------------------------------------------
-   HEADER & NAVBAR
+   HEADER & NAVBAR (100% Full Width)
    -------------------------------------------------------------------------- */
+.lp-header-wrap {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--lp-border-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
 .lp-navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 0 20px;
-    border-bottom: 1px solid var(--lp-border-light);
+    height: 78px;
 }
 
 .lp-brand {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     text-decoration: none;
     color: var(--lp-text-heading);
     font-size: 22px;
@@ -86,8 +104,8 @@ body.landing-page-body {
 }
 
 .lp-brand-logo {
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
     background: linear-gradient(135deg, var(--lp-primary) 0%, #7693ff 100%);
     border-radius: 10px;
     display: flex;
@@ -97,16 +115,14 @@ body.landing-page-body {
     box-shadow: 0 4px 12px rgba(79, 117, 255, 0.3);
 }
 
-.lp-brand-logo svg {
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
+.lp-brand-logo svg, .lp-brand-logo span {
+    font-size: 22px;
 }
 
 .lp-nav-links {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 36px;
     list-style: none;
 }
 
@@ -147,49 +163,53 @@ body.landing-page-body {
 }
 
 /* --------------------------------------------------------------------------
-   HERO SECTION
+   HERO SECTION (100% Full Width)
    -------------------------------------------------------------------------- */
+.lp-hero-section {
+    width: 100%;
+    padding: 56px 0 40px;
+}
+
 .lp-hero {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
-    gap: 40px;
+    gap: 48px;
     align-items: center;
-    padding: 16px 0 8px;
 }
 
 .lp-hero-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-right: 20px;
+    padding-right: 24px;
 }
 
 .lp-hero-title {
-    font-size: clamp(38px, 4.2vw, 56px);
+    font-size: clamp(38px, 4.4vw, 60px);
     font-weight: 800;
     line-height: 1.12;
     color: var(--lp-text-heading);
-    letter-spacing: -1.2px;
+    letter-spacing: -1.4px;
     margin-bottom: 24px;
 }
 
 .lp-hero-desc {
-    font-size: 16px;
+    font-size: 16.5px;
     color: var(--lp-text-muted);
-    line-height: 1.65;
-    max-width: 480px;
-    margin-bottom: 32px;
+    line-height: 1.7;
+    max-width: 520px;
+    margin-bottom: 36px;
 }
 
 .lp-hero-actions {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 22px;
     flex-wrap: wrap;
 }
 
 .lp-btn-pill-hero {
-    padding: 14px 32px;
+    padding: 14px 34px;
     font-size: 15px;
 }
 
@@ -212,7 +232,7 @@ body.landing-page-body {
 .lp-hero-visual {
     position: relative;
     width: 100%;
-    height: 440px;
+    height: 460px;
     border-radius: var(--lp-radius-card);
     overflow: hidden;
     background-color: #f1f4f9;
@@ -227,27 +247,31 @@ body.landing-page-body {
     display: block;
 }
 
-/* Gradient fade at bottom of hero image to blend seamlessly into white card */
 .lp-hero-gradient-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 120px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 100%);
+    height: 130px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.98) 100%);
     pointer-events: none;
 }
 
 /* --------------------------------------------------------------------------
-   3 FEATURE COLUMNS
+   3 FEATURE COLUMNS (TRIO)
    -------------------------------------------------------------------------- */
+.lp-features-section {
+    width: 100%;
+    padding: 32px 0;
+    border-top: 1px solid var(--lp-border-light);
+    border-bottom: 1px solid var(--lp-border-light);
+    background-color: #ffffff;
+}
+
 .lp-features-trio {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    padding: 12px 0;
-    border-top: 1px solid var(--lp-border-light);
-    border-bottom: 1px solid var(--lp-border-light);
+    gap: 40px;
 }
 
 .lp-trio-item {
@@ -264,15 +288,15 @@ body.landing-page-body {
 }
 
 .lp-trio-icon {
-    width: 38px;
-    height: 38px;
-    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
     background-color: var(--lp-pill-bg);
     color: var(--lp-primary);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 22px;
     transition: all 0.2s ease;
 }
 
@@ -283,24 +307,29 @@ body.landing-page-body {
 }
 
 .lp-trio-title {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 700;
     color: var(--lp-text-heading);
 }
 
 .lp-trio-text {
-    font-size: 14px;
+    font-size: 14.5px;
     color: var(--lp-text-muted);
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 /* --------------------------------------------------------------------------
    BENTO GRID SHOWCASE (5 CELLS)
    -------------------------------------------------------------------------- */
+.lp-bento-section {
+    width: 100%;
+    padding: 56px 0;
+}
+
 .lp-bento-grid {
     display: grid;
     grid-template-columns: 1.25fr 0.9fr 1fr 1.15fr 1.3fr;
-    gap: 16px;
+    gap: 18px;
     align-items: stretch;
 }
 
@@ -322,11 +351,11 @@ body.landing-page-body {
 .lp-bento-dark {
     background-color: var(--lp-dark);
     color: #ffffff;
-    padding: 28px 24px;
+    padding: 30px 24px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 260px;
+    min-height: 270px;
     border: none;
 }
 
@@ -334,11 +363,12 @@ body.landing-page-body {
     font-size: 11.5px;
     font-weight: 600;
     color: #94a3b8;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    display: block;
 }
 
 .lp-bento-dark-title {
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 700;
     line-height: 1.3;
     color: #ffffff;
@@ -346,15 +376,15 @@ body.landing-page-body {
 }
 
 .lp-bento-dark-desc {
-    font-size: 12.5px;
+    font-size: 13px;
     color: #94a3b8;
-    line-height: 1.5;
+    line-height: 1.55;
     margin-bottom: 24px;
 }
 
 .lp-bento-dark-btn {
     align-self: flex-start;
-    padding: 8px 20px;
+    padding: 9px 22px;
     font-size: 13px;
     border-radius: var(--lp-radius-pill);
     background-color: var(--lp-primary);
@@ -389,7 +419,7 @@ body.landing-page-body {
     position: relative;
     border: 1px solid var(--lp-border);
     background-color: var(--lp-card-bg);
-    min-height: 124px;
+    min-height: 128px;
     transition: transform 0.2s ease;
 }
 
@@ -418,7 +448,7 @@ body.landing-page-body {
 
 /* Bento Cell 3: Portrait card */
 .lp-bento-portrait {
-    min-height: 260px;
+    min-height: 270px;
 }
 
 .lp-bento-portrait-img {
@@ -431,16 +461,16 @@ body.landing-page-body {
 /* Bento Cell 4: Productivity metric */
 .lp-bento-stat {
     background-color: #ffffff;
-    padding: 24px 20px;
+    padding: 28px 22px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border: 1px solid var(--lp-border);
-    min-height: 260px;
+    min-height: 270px;
 }
 
 .lp-stat-label {
-    font-size: 13.5px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--lp-text-heading);
     line-height: 1.35;
@@ -448,7 +478,7 @@ body.landing-page-body {
 }
 
 .lp-stat-number {
-    font-size: 46px;
+    font-size: 50px;
     font-weight: 800;
     color: var(--lp-text-heading);
     letter-spacing: -1.5px;
@@ -457,14 +487,14 @@ body.landing-page-body {
 }
 
 .lp-stat-subtext {
-    font-size: 12px;
+    font-size: 12.5px;
     color: var(--lp-text-muted);
     font-weight: 500;
 }
 
 /* Bento Cell 5: Tablet POS screen */
 .lp-bento-pos {
-    min-height: 260px;
+    min-height: 270px;
     background-color: #f8fafc;
 }
 
@@ -476,25 +506,29 @@ body.landing-page-body {
 }
 
 /* --------------------------------------------------------------------------
-   LOWER SECTION: ACCORDION LIST + CONTACT FORM
+   LOWER SECTION: ACCORDION LIST + CONTACT FORM (100% Full Width)
    -------------------------------------------------------------------------- */
+.lp-bottom-section {
+    width: 100%;
+    padding: 48px 0 64px;
+}
+
 .lp-bottom-grid {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
-    gap: 40px;
+    gap: 48px;
     align-items: flex-start;
-    padding-top: 12px;
 }
 
 /* Workflow Accordion Column */
 .lp-workflow-col {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 18px;
 }
 
 .lp-section-title {
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 800;
     color: var(--lp-text-heading);
     letter-spacing: -0.5px;
@@ -504,7 +538,7 @@ body.landing-page-body {
 .lp-accordion-list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
 }
 
 .lp-accordion-item {
@@ -525,14 +559,14 @@ body.landing-page-body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 20px;
+    padding: 14px 22px;
     user-select: none;
 }
 
 .lp-accordion-lead {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
 }
 
 .lp-pill-badge {
@@ -540,15 +574,15 @@ body.landing-page-body {
     color: var(--lp-text-heading);
     font-size: 13px;
     font-weight: 700;
-    padding: 6px 16px;
+    padding: 6px 18px;
     border-radius: var(--lp-radius-pill);
-    min-width: 90px;
+    min-width: 96px;
     text-align: center;
 }
 
 .lp-avatar-thumb {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     object-fit: cover;
     display: inline-block;
@@ -557,14 +591,14 @@ body.landing-page-body {
 }
 
 .lp-accordion-title {
-    font-size: 13.5px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--lp-text-heading);
 }
 
 .lp-accordion-chevron {
     color: var(--lp-text-muted);
-    font-size: 18px;
+    font-size: 20px;
     transition: transform 0.2s ease;
 }
 
@@ -581,13 +615,13 @@ body.landing-page-body {
 
 .lp-accordion-content {
     display: none;
-    padding: 0 20px 16px 20px;
-    font-size: 13px;
+    padding: 0 22px 18px 22px;
+    font-size: 13.5px;
     color: var(--lp-text-body);
-    line-height: 1.55;
+    line-height: 1.6;
     border-top: 1px dashed var(--lp-border);
     margin-top: 6px;
-    padding-top: 12px;
+    padding-top: 14px;
 }
 
 .lp-accordion-item.active .lp-accordion-content {
@@ -598,13 +632,13 @@ body.landing-page-body {
 .lp-contact-col {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 18px;
 }
 
 .lp-contact-form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
 }
 
 .lp-select-pill-wrap {
@@ -619,9 +653,9 @@ body.landing-page-body {
     background-color: var(--lp-canvas);
     border: 1px solid var(--lp-border);
     border-radius: var(--lp-radius-pill);
-    padding: 13px 42px 13px 20px;
+    padding: 14px 44px 14px 22px;
     font-family: var(--lp-font-main);
-    font-size: 13.5px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--lp-text-heading);
     cursor: pointer;
@@ -641,7 +675,7 @@ body.landing-page-body {
     transform: translateY(-50%);
     pointer-events: none;
     color: var(--lp-text-muted);
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .lp-btn-pill-dark {
@@ -654,13 +688,13 @@ body.landing-page-body {
     color: #ffffff;
     border: none;
     border-radius: var(--lp-radius-pill);
-    padding: 14px 24px;
+    padding: 15px 26px;
     font-family: var(--lp-font-main);
-    font-size: 14px;
+    font-size: 14.5px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.25s ease;
-    margin-top: 4px;
+    margin-top: 6px;
     box-shadow: 0 4px 14px rgba(27, 33, 45, 0.2);
 }
 
@@ -671,22 +705,28 @@ body.landing-page-body {
 }
 
 /* --------------------------------------------------------------------------
-   FOOTER
+   FOOTER (100% Full Width)
    -------------------------------------------------------------------------- */
+.lp-footer-section {
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid var(--lp-border-light);
+    padding: 28px 0;
+    margin-top: auto;
+}
+
 .lp-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 24px;
-    border-top: 1px solid var(--lp-border-light);
-    font-size: 13px;
+    font-size: 13.5px;
     color: var(--lp-text-muted);
 }
 
 .lp-footer-left {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 18px;
 }
 
 .lp-status-badge {
@@ -695,15 +735,15 @@ body.landing-page-body {
     gap: 6px;
     background-color: #ecfdf5;
     color: #059669;
-    padding: 4px 10px;
+    padding: 4px 12px;
     border-radius: var(--lp-radius-pill);
-    font-size: 11.5px;
+    font-size: 12px;
     font-weight: 600;
 }
 
 .lp-status-dot {
-    width: 6px;
-    height: 6px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background-color: #10b981;
     display: inline-block;
@@ -722,23 +762,21 @@ body.landing-page-body {
 }
 
 @media (max-width: 860px) {
-    body.landing-page-body {
-        padding: 16px 12px;
-    }
-
-    .lp-wrapper {
-        padding: 20px 24px 36px;
-        border-radius: 24px;
-        gap: 36px;
+    .lp-hero-section {
+        padding: 36px 0 28px;
     }
 
     .lp-hero {
         grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 32px;
+    }
+
+    .lp-hero-content {
+        padding-right: 0;
     }
 
     .lp-hero-visual {
-        height: 320px;
+        height: 340px;
     }
 
     .lp-features-trio {
@@ -756,7 +794,7 @@ body.landing-page-body {
 
     .lp-bottom-grid {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 36px;
     }
 
     .lp-nav-links {

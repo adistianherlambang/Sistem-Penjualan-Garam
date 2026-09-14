@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Sistem') - POS Garam</title>
-    <!-- Google Fonts: Roboto & Material Symbols -->
+    <!-- Google Fonts: Plus Jakarta Sans & Material Symbols -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="{{ asset('css/material.css') }}">
     @stack('styles')
@@ -17,13 +17,15 @@
         <!-- Navigation Drawer -->
         <aside class="app-drawer">
             <div class="drawer-header">
-                <div class="logo-icon">
-                    <span class="material-symbols-outlined">grain</span>
-                </div>
-                <div>
-                    <div class="app-title">POS Garam</div>
-                    <div class="app-subtitle">Sistem Penjualan</div>
-                </div>
+                <a href="{{ url('/') }}" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <div class="logo-icon">
+                        <span class="material-symbols-outlined" style="font-size: 22px;">grain</span>
+                    </div>
+                    <div>
+                        <div class="app-title">Garam.</div>
+                        <div class="app-subtitle">Sistem POS &amp; Inventori</div>
+                    </div>
+                </a>
             </div>
 
             <div class="drawer-content">
@@ -73,7 +75,7 @@
                     <span>Penjualan</span>
                 </a>
 
-                <div class="drawer-section-title">Analitik & Laporan</div>
+                <div class="drawer-section-title">Analitik &amp; Laporan</div>
 
                 <a href="{{ route('reports.index') }}" class="drawer-nav-item {{ request()->routeIs('reports.*') ? 'active' : '' }}">
                     <span class="material-symbols-outlined">analytics</span>
@@ -97,12 +99,14 @@
                     </div>
                     <div class="user-info">
                         <div class="user-name">{{ auth()->user()->name }}</div>
-                        <div class="user-role">{{ auth()->user()->isAdmin() ? 'Admin' : 'Owner' }}</div>
+                        <div class="user-role-badge {{ auth()->user()->isAdmin() ? 'role-admin' : 'role-owner' }}">
+                            {{ auth()->user()->isAdmin() ? 'Admin' : 'Owner' }}
+                        </div>
                     </div>
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
-                        <button type="submit" class="md-btn md-btn-text md-btn-sm" title="Keluar">
-                            <span class="material-symbols-outlined">logout</span>
+                        <button type="submit" class="logout-btn" title="Keluar">
+                            <span class="material-symbols-outlined" style="font-size: 20px;">logout</span>
                         </button>
                     </form>
                 </div>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POS Garam - Sistem Penjualan dan Pengolahan Garam</title>
+    <title>PT Niaga Garam Cemerlang - Industri Garam Kredibel &amp; Terpercaya</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -19,13 +19,13 @@
             <div class="lp-container">
                 <nav class="lp-navbar">
                     <a href="{{ url('/') }}" class="lp-brand">
-                        <span>Garam</span><span class="lp-brand-dot">.</span>
+                        <span>Niaga Garam Cemerlang</span><span class="lp-brand-dot">.</span>
                     </a>
 
                     <ul class="lp-nav-links">
-                        <li><a href="#fitur" class="lp-nav-link">Fitur</a></li>
-                        <li><a href="#alur" class="lp-nav-link">Alur Kerja</a></li>
-                        <li><a href="#bento" class="lp-nav-link">Produksi</a></li>
+                        <li><a href="#tentang" class="lp-nav-link">Tentang Kami</a></li>
+                        <li><a href="#keunggulan" class="lp-nav-link">Keunggulan</a></li>
+                        <li><a href="#produk" class="lp-nav-link">Produk</a></li>
                         <li><a href="#kontak" class="lp-nav-link">Kontak</a></li>
                     </ul>
 
@@ -44,33 +44,36 @@
             </div>
         </header>
 
-        <!-- Hero Section (Full Width, Zero Icons) -->
+        <!-- Hero Section (Full Width, Real Authentic Photo, Zero Icons) -->
         <section class="lp-hero-section">
             <div class="lp-container">
                 <div class="lp-hero">
                     <div class="lp-hero-content">
-                        <h1 class="lp-hero-title">Elevate Your Workflow</h1>
+                        <div style="display: inline-block; padding: 6px 14px; background-color: var(--lp-primary-subtle); color: var(--lp-primary); border-radius: 9999px; font-size: 12.5px; font-weight: 700; margin-bottom: 16px; border: 1px solid rgba(79, 117, 255, 0.15);">
+                            Perusahaan Industri Garam Kredibel, Berpengalaman dan Terpercaya
+                        </div>
+                        <h1 class="lp-hero-title">Solusi Garam Industri &amp; Konsumsi Berkualitas</h1>
                         <p class="lp-hero-desc">
-                            Tingkatkan efisiensi alur bisnis garam dari penerimaan bahan mentah, otomasi konversi kemasan 300 gram, kasir penjualan cepat, hingga monitoring analitik secara real-time.
+                            PT Niaga Garam Cemerlang adalah perusahaan pengolahan garam modern dengan bahan baku pilihan, proses terstandarisasi FSSC 22000, BPOM RI, ISO SNI, dan Halal, serta sistem operasional terintegrasi.
                         </p>
                         <div class="lp-hero-actions">
+                            <a href="#kontak" class="lp-btn-pill-primary lp-btn-pill-hero">
+                                <span>Konsultasi Sekarang</span>
+                            </a>
                             @auth
-                                <a href="{{ route('dashboard') }}" class="lp-btn-pill-primary lp-btn-pill-hero">
+                                <a href="{{ route('dashboard') }}" class="lp-link-arrow">
                                     <span>Buka Dashboard</span>
                                 </a>
                             @else
-                                <a href="{{ route('login') }}" class="lp-btn-pill-primary lp-btn-pill-hero">
-                                    <span>Mulai Sekarang</span>
+                                <a href="{{ route('login') }}" class="lp-link-arrow">
+                                    <span>Masuk Sistem</span>
                                 </a>
                             @endauth
-                            <a href="#alur" class="lp-link-arrow">
-                                <span>Pelajari Alur</span>
-                            </a>
                         </div>
                     </div>
 
                     <div class="lp-hero-visual">
-                        <img src="{{ asset('images/hero_manager.jpg') }}" alt="Operations Manager" class="lp-hero-img">
+                        <img src="{{ asset('images/hero_real.png') }}" alt="Pabrik dan Fasilitas PT Niaga Garam Cemerlang" class="lp-hero-img">
                         <div class="lp-hero-gradient-overlay"></div>
                     </div>
                 </div>
@@ -78,194 +81,198 @@
         </section>
 
         <!-- 3 Feature Columns Section (Numbered 01, 02, 03 - Zero Icons) -->
-        <section class="lp-features-section" id="fitur">
+        <section class="lp-features-section" id="keunggulan">
             <div class="lp-container">
                 <div class="lp-features-trio">
                     <div class="lp-trio-item">
                         <div class="lp-trio-header">
                             <span class="lp-trio-num">01</span>
-                            <h3 class="lp-trio-title">Manajemen Stok</h3>
+                            <h3 class="lp-trio-title">Standar Mutu Resmi</h3>
                         </div>
                         <p class="lp-trio-text">
-                            Pencatatan akurat bahan mentah dalam gram, kilogram, atau ton dengan konversi otomatis dan kartu stok terperinci.
+                            Tersertifikasi FSSC 22000 v6, BPOM RI, ISO SNI 2018, dan Halal untuk menjamin kemurnian serta kepatuhan regulasi keamanan pangan nasional.
                         </p>
                     </div>
 
                     <div class="lp-trio-item">
                         <div class="lp-trio-header">
                             <span class="lp-trio-num">02</span>
-                            <h3 class="lp-trio-title">Kolaborasi Alur</h3>
+                            <h3 class="lp-trio-title">Kapasitas 150.000 Ton</h3>
                         </div>
                         <p class="lp-trio-text">
-                            Sinkronisasi data langsung antara bagian penerimaan gudang, divisi pengolahan, hingga operator kasir tanpa selisih.
+                            Kapasitas pasokan mencapai 150.000 ton per tahun dengan kontinuitas pasokan terjamin dan dukungan armada logistik muatan besar hingga 38,4 ton.
                         </p>
                     </div>
 
                     <div class="lp-trio-item">
                         <div class="lp-trio-header">
                             <span class="lp-trio-num">03</span>
-                            <h3 class="lp-trio-title">Otomasi Produksi</h3>
+                            <h3 class="lp-trio-title">Pengolahan Modern</h3>
                         </div>
                         <p class="lp-trio-text">
-                            Kalkulasi presisi standar kemasan 300g per bungkus dengan proteksi pencegahan stok minus secara otomatis.
+                            Pabrik modern dengan proses pencucian, pengeringan, iodisasi, dan pengemasan presisi mulai dari kemasan 250g-300g hingga jumbo bag 1.200kg.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Bento Grid Section (Full Width, Zero Icons) -->
-        <section class="lp-bento-section" id="bento">
+        <!-- Bento Grid Section (Full Width, Real Photos, Zero Icons) -->
+        <section class="lp-bento-section" id="tentang">
             <div class="lp-container">
                 <div class="lp-bento-grid">
                     <!-- Cell 1: Dark Navy Card -->
                     <div class="lp-bento-card lp-bento-dark">
                         <div>
-                            <span class="lp-bento-dark-badge">Sistem Terpadu</span>
-                            <h4 class="lp-bento-dark-title">Produksi &amp; POS Siap 300g</h4>
+                            <span class="lp-bento-dark-badge">Berkomitmen pada Kualitas</span>
+                            <h4 class="lp-bento-dark-title">PT Niaga Garam Cemerlang</h4>
                             <p class="lp-bento-dark-desc">
-                                Kontrol seluruh alur produksi dan distribusi garam dalam satu platform terintegrasi.
+                                Berlokasi di Jl. Raya Cirebon – Tegal Km 11 Astanamukti, Pangenan, Cirebon. Menghadirkan garam berkualitas dengan bahan baku dan proses terstandarisasi.
                             </p>
                         </div>
-                        <a href="{{ route('login') }}" class="lp-bento-dark-btn">Kelola Sistem</a>
+                        <a href="#kontak" class="lp-bento-dark-btn">Hubungi Kami</a>
                     </div>
 
-                    <!-- Cell 2: Stacked Imagery -->
+                    <!-- Cell 2: Stacked Real Imagery -->
                     <div class="lp-bento-stacked">
                         <div class="lp-bento-stack-item">
-                            <img src="{{ asset('images/bento_salt.jpg') }}" alt="Quality Inspection" class="lp-bento-stack-img">
-                            <div class="lp-stack-caption">Pemeriksaan Kualitas</div>
+                            <img src="{{ asset('images/about_real.png') }}" alt="Gedung Pabrik PT Niaga Garam Cemerlang" class="lp-bento-stack-img">
+                            <div class="lp-stack-caption">Gedung Pabrik Cirebon</div>
                         </div>
                         <div class="lp-bento-stack-item">
-                            <img src="{{ asset('images/bento_laptop.jpg') }}" alt="Administrasi Operasional" class="lp-bento-stack-img" style="object-position: top center;">
-                            <div class="lp-stack-caption">Operasional Gudang</div>
+                            <img src="{{ asset('images/processing_real.png') }}" alt="Fasilitas Pengolahan Garam" class="lp-bento-stack-img">
+                            <div class="lp-stack-caption">Fasilitas Pengolahan Modern</div>
                         </div>
                     </div>
 
-                    <!-- Cell 3: Portrait card -->
+                    <!-- Cell 3: Real Industrial Salt Packaging -->
                     <div class="lp-bento-card lp-bento-portrait">
-                        <img src="{{ asset('images/bento_laptop.jpg') }}" alt="Manajer Produksi" class="lp-bento-portrait-img">
+                        <img src="{{ asset('images/product_ghb.png') }}" alt="Produk Garam Halus Industri GHB" class="lp-bento-portrait-img">
+                        <div class="lp-stack-caption">Garam Industri Beryodium (GHB)</div>
                     </div>
 
                     <!-- Cell 4: Productivity metric -->
                     <div class="lp-bento-card lp-bento-stat">
-                        <div class="lp-stat-label">Peningkatan Efisiensi Kerja</div>
-                        <div class="lp-stat-number">30%</div>
-                        <div class="lp-stat-subtext">Akurat, Cepat &amp; Otomatis</div>
+                        <div class="lp-stat-label">Kapasitas Pasokan Garam Tahunan</div>
+                        <div class="lp-stat-number">150.000</div>
+                        <div class="lp-stat-subtext">Ton / Tahun Industri &amp; Konsumsi</div>
                     </div>
 
-                    <!-- Cell 5: Tablet POS screen -->
+                    <!-- Cell 5: Real Consumer Salt Packaging -->
                     <div class="lp-bento-card lp-bento-pos">
-                        <img src="{{ asset('images/bento_pos.jpg') }}" alt="Aplikasi POS Garam" class="lp-bento-pos-img">
+                        <img src="{{ asset('images/product_pack.png') }}" alt="Garam Konsumsi Kemasan" class="lp-bento-pos-img">
+                        <div class="lp-stack-caption">Garam Konsumsi Kemasan Higienis</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Lower Section: Workflow Accordion & Contact (Zero Icons) -->
-        <section class="lp-bottom-section" id="alur">
+        <!-- Lower Section: Products & Consultation Form (Zero Icons) -->
+        <section class="lp-bottom-section" id="produk">
             <div class="lp-container">
                 <div class="lp-bottom-grid">
-                    <!-- Left: Workflow List -->
+                    <!-- Left: Products Catalog Accordion -->
                     <div class="lp-workflow-col">
-                        <h3 class="lp-section-title">Alur Sistem</h3>
+                        <h3 class="lp-section-title">Katalog Produk Unggulan</h3>
                         <div class="lp-accordion-list">
                             
                             <div class="lp-accordion-item active" onclick="toggleAccordion(this)">
                                 <div class="lp-accordion-header">
                                     <div class="lp-accordion-lead">
-                                        <span class="lp-pill-badge">Bahan Mentah</span>
-                                        <img src="{{ asset('images/hero_manager.jpg') }}" class="lp-avatar-thumb" alt="Gudang">
-                                        <span class="lp-accordion-title">Pencatatan garam mentah (g, kg, ton)</span>
+                                        <span class="lp-pill-badge">Industri Pangan</span>
+                                        <span class="lp-accordion-title">Garam Halus Industri (GHA &amp; GHB)</span>
                                     </div>
                                     <span class="lp-accordion-status">Detail</span>
                                 </div>
                                 <div class="lp-accordion-content">
-                                    Pencatatan pengiriman dari petani dan supplier garam dengan otomatisasi konversi satuan berat presisi serta kartu mutasi stok real-time.
+                                    Garam murni dengan kadar NaCl tinggi untuk industri biskuit, mie instan, bumbu makanan, dan margarin. Tersedia pilihan non-yodium (GHA) dan beryodium (GHB) dalam kemasan karung 25kg, 50kg, dan jumbo bag 1.200kg.
                                 </div>
                             </div>
 
                             <div class="lp-accordion-item" onclick="toggleAccordion(this)">
                                 <div class="lp-accordion-header">
                                     <div class="lp-accordion-lead">
-                                        <span class="lp-pill-badge">Produksi</span>
-                                        <img src="{{ asset('images/bento_laptop.jpg') }}" class="lp-avatar-thumb" alt="Pabrik">
-                                        <span class="lp-accordion-title">Konversi pengemasan standar 300g</span>
+                                        <span class="lp-pill-badge">Bahan Baku</span>
+                                        <span class="lp-accordion-title">Garam Krosok Premium &amp; Lokal (GKP/GKL)</span>
                                     </div>
                                     <span class="lp-accordion-status">Detail</span>
                                 </div>
                                 <div class="lp-accordion-content">
-                                    Proses pencucian, iodisasi, dan pengemasan otomatis dengan rasio standar 1 bungkus = 300 gram dan validasi stok bahan baku.
+                                    Kristal garam alami kualitas pilihan untuk kebutuhan industri penyamakan kulit, pengawetan hasil laut, pakan ternak, water treatment, dan bahan baku industri kimia.
                                 </div>
                             </div>
 
                             <div class="lp-accordion-item" onclick="toggleAccordion(this)">
                                 <div class="lp-accordion-header">
                                     <div class="lp-accordion-lead">
-                                        <span class="lp-pill-badge">Barang Jadi</span>
-                                        <img src="{{ asset('images/bento_salt.jpg') }}" class="lp-avatar-thumb" alt="Produk">
-                                        <span class="lp-accordion-title">Katalog SKU garam siap jual</span>
+                                        <span class="lp-pill-badge">Konsumsi</span>
+                                        <span class="lp-accordion-title">Garam Dapur &amp; Meja Beryodium</span>
                                     </div>
                                     <span class="lp-accordion-status">Detail</span>
                                 </div>
                                 <div class="lp-accordion-content">
-                                    Pengelolaan varian garam dapur beryodium, garam halus, serta garam kemasan siap edar lengkap dengan harga jual dan ambang batas minimum stok.
+                                    Garam kemasan konsumsi keluarga standar 250g dan 300g dengan fortifikasi Iodium (KIO3) terstandarisasi SNI, putih bersih, halus, dan higienis untuk kebutuhan dapur dan meja makan.
                                 </div>
                             </div>
 
                             <div class="lp-accordion-item" onclick="toggleAccordion(this)">
                                 <div class="lp-accordion-header">
                                     <div class="lp-accordion-lead">
-                                        <span class="lp-pill-badge">Kasir POS</span>
-                                        <img src="{{ asset('images/bento_pos.jpg') }}" class="lp-avatar-thumb" alt="Kasir">
-                                        <span class="lp-accordion-title">Transaksi cepat, kembalian &amp; faktur cetak</span>
+                                        <span class="lp-pill-badge">Distribusi &amp; POS</span>
+                                        <span class="lp-accordion-title">Sistem Penjualan &amp; Kasir Terpadu</span>
                                     </div>
                                     <span class="lp-accordion-status">Detail</span>
                                 </div>
                                 <div class="lp-accordion-content">
-                                    Layanan kasir responsif untuk transaksi grosir dan eceran dengan kalkulasi kembalian otomatis dan pencetakan faktur/nota format kasir.
+                                    Platform Point of Sale dan monitoring gudang real-time untuk pencatatan penerimaan garam mentah, hasil produksi kemasan, transaksi faktur kasir, hingga mutasi stok tanpa selisih.
                                 </div>
                             </div>
 
                         </div>
                     </div>
 
-                    <!-- Right: Let's Talk Form (Zero Icons) -->
+                    <!-- Right: Consultation Form (Zero Icons) -->
                     <div class="lp-contact-col" id="kontak">
-                        <h3 class="lp-section-title">Konsultasi Cepat</h3>
+                        <h3 class="lp-section-title">Konsultasi Kebutuhan Garam</h3>
+                        <p style="font-size: 13.5px; color: var(--lp-text-muted); margin-bottom: 20px; line-height: 1.5;">
+                            Butuh garam berkualitas untuk industri Anda? Tim kami siap membantu memberikan spesifikasi produk dan penawaran terbaik.
+                        </p>
                         <form class="lp-contact-form" onsubmit="handleContactSubmit(event)">
                             <div class="lp-select-pill-wrap">
                                 <select class="lp-select-pill" required>
-                                    <option value="" disabled selected>Pilih Skala Bisnis</option>
-                                    <option value="pabrik">Pabrik &amp; Pengolahan Garam</option>
-                                    <option value="distributor">Distributor &amp; Gudang Besar</option>
-                                    <option value="grosir">Toko Grosir / Eceran</option>
+                                    <option value="" disabled selected>Pilih Sektor Industri</option>
+                                    <option value="makanan">Industri Makanan &amp; Minuman</option>
+                                    <option value="kimia">Industri Kimia, Farmasi &amp; Tekstil</option>
+                                    <option value="pakan">Industri Pakan &amp; Perikanan</option>
+                                    <option value="distributor">Distributor / Retail Konsumsi</option>
                                 </select>
                             </div>
 
                             <div class="lp-select-pill-wrap">
                                 <select class="lp-select-pill" required>
-                                    <option value="" disabled selected>Kebutuhan Utama</option>
-                                    <option value="pos">Sistem Kasir &amp; Penjualan POS</option>
-                                    <option value="produksi">Manajemen Konversi &amp; Pengemasan 300g</option>
-                                    <option value="full">Paket Lengkap Terintegrasi</option>
+                                    <option value="" disabled selected>Kebutuhan Produk</option>
+                                    <option value="gha">Garam Halus Industri Non-Yodium (GHA)</option>
+                                    <option value="ghb">Garam Halus Industri Beryodium (GHB)</option>
+                                    <option value="gkp">Garam Krosok Premium (GKP)</option>
+                                    <option value="konsumsi">Garam Konsumsi Kemasan 250g/300g</option>
+                                    <option value="pos">Sistem Manajemen &amp; Kasir POS</option>
                                 </select>
                             </div>
 
                             <div class="lp-select-pill-wrap">
                                 <select class="lp-select-pill" required>
-                                    <option value="" disabled selected>Rencana Implementasi</option>
-                                    <option value="segera">Segera (Minggu Ini)</option>
-                                    <option value="bulan_ini">Bulan Ini</option>
-                                    <option value="eksplorasi">Uji Coba &amp; Demo Sistem</option>
+                                    <option value="" disabled selected>Estimasi Volume Kebutuhan</option>
+                                    <option value="5ton">&lt; 5 Ton / Pengiriman</option>
+                                    <option value="25ton">5 - 25 Ton / Pengiriman</option>
+                                    <option value="kontrak">Kontrak Pasokan Rutin Tahunan</option>
                                 </select>
                             </div>
 
                             <button type="submit" class="lp-btn-pill-dark">
-                                <span>Kirim Permintaan Demo</span>
+                                <span>Kirim Permintaan Konsultasi</span>
                             </button>
-                            <div id="contact-alert" style="display: none; font-size: 13.5px; color: #059669; text-align: center; margin-top: 8px;">
-                                Terima kasih! Permintaan demo berhasil dikirim.
+                            <div id="contact-alert" style="display: none; font-size: 13.5px; color: #059669; text-align: center; margin-top: 10px; font-weight: 600;">
+                                Terima kasih! Tim PT Niaga Garam Cemerlang akan segera menghubungi Anda.
                             </div>
                         </form>
                     </div>
@@ -278,13 +285,13 @@
             <div class="lp-container">
                 <div class="lp-footer">
                     <div class="lp-footer-left">
-                        <span>&copy; {{ date('Y') }} POS Garam. Hak cipta dilindungi.</span>
+                        <span>&copy; {{ date('Y') }} PT Niaga Garam Cemerlang - POS Garam. Hak cipta dilindungi.</span>
                         <span class="lp-status-badge">
-                            <span>Sistem Aktif &amp; Terhubung</span>
+                            <span>Sertifikasi FSSC 22000 &bull; BPOM RI &bull; SNI &bull; Halal</span>
                         </span>
                     </div>
                     <div>
-                        <a href="{{ route('login') }}" style="color: var(--lp-text-muted); text-decoration: none; font-size: 13.5px;">Login Karyawan</a>
+                        <a href="{{ route('login') }}" style="color: var(--lp-text-muted); text-decoration: none; font-size: 13.5px; font-weight: 600;">Login Sistem POS</a>
                     </div>
                 </div>
             </div>
@@ -310,8 +317,8 @@
             const alertBox = document.getElementById('contact-alert');
             alertBox.style.display = 'block';
             setTimeout(() => {
-                window.location.href = "{{ route('login') }}";
-            }, 1000);
+                alertBox.style.display = 'none';
+            }, 5000);
         }
     </script>
 </body>

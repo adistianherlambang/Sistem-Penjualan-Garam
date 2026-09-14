@@ -17,7 +17,6 @@
             background: #fff;
             padding: 20px;
             border: 1px solid #e2e8f0;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
             font-size: 12.5px;
             color: #000;
         }

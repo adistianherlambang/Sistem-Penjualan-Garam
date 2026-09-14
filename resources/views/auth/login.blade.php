@@ -24,7 +24,6 @@
             max-width: 440px;
             background-color: #ffffff;
             border-radius: 24px;
-            box-shadow: 0 16px 40px rgba(18, 24, 38, 0.06);
             border: 1px solid #e5e9f2;
             padding: 40px 36px;
         }
@@ -42,7 +41,6 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto 16px;
-            box-shadow: 0 8px 18px rgba(79, 117, 255, 0.28);
         }
         .login-brand-title {
             font-size: 24px;
@@ -75,11 +73,10 @@
             color: #121826;
             background-color: #ffffff;
             outline: none;
-            transition: all 0.2s ease;
+            transition: border-color 0.2s ease;
         }
         .login-input:focus {
             border-color: #4f75ff;
-            box-shadow: 0 0 0 3px rgba(79, 117, 255, 0.12);
         }
         .login-submit-btn {
             width: 100%;
@@ -90,20 +87,18 @@
             font-family: inherit;
             font-size: 14.5px;
             font-weight: 600;
-            border: none;
+            border: 1px solid transparent;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            box-shadow: 0 4px 14px rgba(79, 117, 255, 0.3);
-            transition: all 0.25s ease;
+            transition: all 0.2s ease;
             margin-top: 8px;
         }
         .login-submit-btn:hover {
             background-color: #3b62eb;
             transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(79, 117, 255, 0.38);
         }
         .demo-accounts-card {
             margin-top: 28px;

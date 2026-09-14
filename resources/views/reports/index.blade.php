@@ -15,7 +15,7 @@
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
         <!-- Laporan Penjualan -->
         <a href="{{ route('reports.sales') }}" style="text-decoration: none; color: inherit;">
-            <div class="md-card" style="margin-bottom: 0; height: 100%; transition: transform 0.15s ease, box-shadow 0.15s ease;" onmouseover="this.style.boxShadow='var(--md-elevation-2)'" onmouseout="this.style.boxShadow='var(--md-elevation-1)'">
+            <div class="md-card" style="margin-bottom: 0; height: 100%; transition: transform 0.15s ease, border-color 0.15s ease;" onmouseover="this.style.borderColor='var(--md-sys-color-primary)'" onmouseout="this.style.borderColor='var(--md-sys-color-outline-variant)'">
                 <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
                     <div class="kpi-icon-box success">
                         <span class="material-symbols-outlined">point_of_sale</span>
@@ -33,7 +33,7 @@
 
         <!-- Laporan Pembelian -->
         <a href="{{ route('reports.purchases') }}" style="text-decoration: none; color: inherit;">
-            <div class="md-card" style="margin-bottom: 0; height: 100%; transition: transform 0.15s ease, box-shadow 0.15s ease;" onmouseover="this.style.boxShadow='var(--md-elevation-2)'" onmouseout="this.style.boxShadow='var(--md-elevation-1)'">
+            <div class="md-card" style="margin-bottom: 0; height: 100%; transition: transform 0.15s ease, border-color 0.15s ease;" onmouseover="this.style.borderColor='var(--md-sys-color-primary)'" onmouseout="this.style.borderColor='var(--md-sys-color-outline-variant)'">
                 <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
                     <div class="kpi-icon-box primary">
                         <span class="material-symbols-outlined">shopping_cart</span>
@@ -51,7 +51,7 @@
 
         <!-- Laporan Produksi -->
         <a href="{{ route('reports.productions') }}" style="text-decoration: none; color: inherit;">
-            <div class="md-card" style="margin-bottom: 0; height: 100%; transition: transform 0.15s ease, box-shadow 0.15s ease;" onmouseover="this.style.boxShadow='var(--md-elevation-2)'" onmouseout="this.style.boxShadow='var(--md-elevation-1)'">
+            <div class="md-card" style="margin-bottom: 0; height: 100%; transition: transform 0.15s ease, border-color 0.15s ease;" onmouseover="this.style.borderColor='var(--md-sys-color-primary)'" onmouseout="this.style.borderColor='var(--md-sys-color-outline-variant)'">
                 <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
                     <div class="kpi-icon-box info">
                         <span class="material-symbols-outlined">precision_manufacturing</span>
@@ -69,7 +69,7 @@
 
         <!-- Laporan Stok -->
         <a href="{{ route('reports.stocks') }}" style="text-decoration: none; color: inherit;">
-            <div class="md-card" style="margin-bottom: 0; height: 100%; transition: transform 0.15s ease, box-shadow 0.15s ease;" onmouseover="this.style.boxShadow='var(--md-elevation-2)'" onmouseout="this.style.boxShadow='var(--md-elevation-1)'">
+            <div class="md-card" style="margin-bottom: 0; height: 100%; transition: transform 0.15s ease, border-color 0.15s ease;" onmouseover="this.style.borderColor='var(--md-sys-color-primary)'" onmouseout="this.style.borderColor='var(--md-sys-color-outline-variant)'">
                 <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
                     <div class="kpi-icon-box secondary">
                         <span class="material-symbols-outlined">inventory</span>
@@ -87,7 +87,7 @@
 
         <!-- Laporan Laba Rugi -->
         <a href="{{ route('reports.profit') }}" style="text-decoration: none; color: inherit;">
-            <div class="md-card" style="margin-bottom: 0; height: 100%; transition: transform 0.15s ease, box-shadow 0.15s ease;" onmouseover="this.style.boxShadow='var(--md-elevation-2)'" onmouseout="this.style.boxShadow='var(--md-elevation-1)'">
+            <div class="md-card" style="margin-bottom: 0; height: 100%; transition: transform 0.15s ease, border-color 0.15s ease;" onmouseover="this.style.borderColor='var(--md-sys-color-primary)'" onmouseout="this.style.borderColor='var(--md-sys-color-outline-variant)'">
                 <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
                     <div class="kpi-icon-box success">
                         <span class="material-symbols-outlined">trending_up</span>

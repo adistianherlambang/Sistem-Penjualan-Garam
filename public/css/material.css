@@ -1,7 +1,8 @@
 /* ==========================================================================
-   UNIFIED MODERN SAAS & BENTO DESIGN SYSTEM (POS GARAM)
-   Matches Landing Page: Plus Jakarta Sans, Royal Blue (#4f75ff), Dark Navy (#1b212d),
-   Sleek Pill Buttons, Clean Cards with 18px radius, and Refined Tables.
+   UNIFIED MODERN SAAS & BENTO DESIGN SYSTEM (POS GARAM) - ZERO BOX-SHADOW
+   Clean flat styling: Plus Jakarta Sans, Royal Blue (#4f75ff), Dark Navy (#1b212d),
+   Sleek Pill Buttons, Clean Cards with 18px radius, Refined Tables, and
+   ZERO Box-Shadows throughout the entire application.
    ========================================================================== */
 
 :root {
@@ -42,9 +43,9 @@
   --md-shape-corner-large: 18px;
   --md-shape-corner-full: 9999px;
 
-  --md-elevation-1: 0 2px 8px rgba(18, 24, 38, 0.04);
-  --md-elevation-2: 0 6px 18px rgba(18, 24, 38, 0.06);
-  --md-elevation-3: 0 12px 32px rgba(18, 24, 38, 0.08);
+  --md-elevation-1: none;
+  --md-elevation-2: none;
+  --md-elevation-3: none;
 
   --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --sidebar-width: 260px;
@@ -55,6 +56,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-shadow: none !important;
 }
 
 body {
@@ -107,7 +109,6 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(79, 117, 255, 0.3);
 }
 
 .drawer-header .app-title {
@@ -148,7 +149,8 @@ body {
   font-size: 13.5px;
   font-weight: 500;
   margin-bottom: 4px;
-  transition: all 0.2s ease;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  border: 1px solid transparent;
 }
 
 .drawer-nav-item:hover {
@@ -160,6 +162,7 @@ body {
   background-color: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-primary);
   font-weight: 700;
+  border-color: rgba(79, 117, 255, 0.2);
 }
 
 .drawer-nav-item.active .material-symbols-outlined {
@@ -169,7 +172,7 @@ body {
 .drawer-nav-item .material-symbols-outlined {
   font-size: 20px;
   color: #64748b;
-  transition: color 0.2s ease;
+  transition: color 0.15s ease;
 }
 
 .drawer-footer {
@@ -195,7 +198,6 @@ body {
   border-radius: var(--md-shape-corner-full);
   font-weight: 700;
   font-size: 14px;
-  box-shadow: 0 4px 10px rgba(79, 117, 255, 0.25);
 }
 
 .user-info {
@@ -219,11 +221,13 @@ body {
   padding: 2px 8px;
   border-radius: var(--md-shape-corner-full);
   margin-top: 2px;
+  border: 1px solid transparent;
 }
 
 .user-role-badge.role-admin {
   background-color: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-primary);
+  border-color: rgba(79, 117, 255, 0.2);
 }
 
 .user-role-badge.role-owner {
@@ -233,7 +237,7 @@ body {
 
 .logout-btn {
   background: none;
-  border: none;
+  border: 1px solid var(--md-sys-color-outline-variant);
   cursor: pointer;
   color: #94a3b8;
   padding: 6px;
@@ -241,11 +245,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
 }
 
 .logout-btn:hover {
   background-color: #fee2e2;
+  border-color: #fca5a5;
   color: #ef4444;
 }
 
@@ -297,12 +302,11 @@ body {
   flex: 1;
 }
 
-/* Modern Cards */
+/* Modern Flat Cards */
 .md-card {
   background-color: var(--md-sys-color-surface-container);
   border-radius: var(--md-shape-corner-large);
   border: 1px solid var(--md-sys-color-outline-variant);
-  box-shadow: var(--md-elevation-1);
   padding: 24px;
   margin-bottom: 24px;
 }
@@ -337,17 +341,16 @@ body {
   background-color: var(--md-sys-color-surface-container);
   border-radius: var(--md-shape-corner-large);
   border: 1px solid var(--md-sys-color-outline-variant);
-  box-shadow: var(--md-elevation-1);
   padding: 20px 22px;
   display: flex;
   align-items: center;
   gap: 18px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .kpi-card:hover {
   transform: translateY(-2px);
-  box-shadow: var(--md-elevation-2);
+  border-color: var(--md-sys-color-primary);
 }
 
 .kpi-icon-box {
@@ -358,26 +361,31 @@ body {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  border: 1px solid transparent;
 }
 
 .kpi-icon-box.primary {
   background-color: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-primary);
+  border-color: rgba(79, 117, 255, 0.15);
 }
 
 .kpi-icon-box.secondary {
   background-color: var(--md-sys-color-secondary-container);
   color: var(--md-sys-color-secondary);
+  border-color: rgba(15, 118, 110, 0.15);
 }
 
 .kpi-icon-box.info {
   background-color: var(--md-sys-color-info-container);
   color: var(--md-sys-color-info);
+  border-color: rgba(2, 132, 199, 0.15);
 }
 
 .kpi-icon-box.success {
   background-color: var(--md-sys-color-success-container);
   color: var(--md-sys-color-success);
+  border-color: rgba(16, 185, 129, 0.15);
 }
 
 .kpi-label {
@@ -394,7 +402,7 @@ body {
   letter-spacing: -0.5px;
 }
 
-/* Buttons (Modern Pill Style) */
+/* Buttons (Modern Pill Style, Zero Box Shadow) */
 .md-btn {
   display: inline-flex;
   align-items: center;
@@ -408,29 +416,31 @@ body {
   cursor: pointer;
   text-decoration: none;
   border: 1px solid transparent;
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
   line-height: 1.2;
 }
 
 .md-btn-primary {
   background-color: var(--md-sys-color-primary);
   color: #ffffff !important;
-  box-shadow: 0 4px 12px rgba(79, 117, 255, 0.25);
+  border-color: var(--md-sys-color-primary);
 }
 
 .md-btn-primary:hover {
   background-color: var(--md-sys-color-primary-hover);
+  border-color: var(--md-sys-color-primary-hover);
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(79, 117, 255, 0.32);
 }
 
 .md-btn-secondary {
   background-color: var(--md-sys-color-dark);
   color: #ffffff !important;
+  border-color: var(--md-sys-color-dark);
 }
 
 .md-btn-secondary:hover {
   background-color: var(--md-sys-color-dark-hover);
+  border-color: var(--md-sys-color-dark-hover);
   transform: translateY(-1px);
 }
 
@@ -459,10 +469,12 @@ body {
 .md-btn-danger {
   background-color: var(--md-sys-color-error);
   color: #ffffff !important;
+  border-color: var(--md-sys-color-error);
 }
 
 .md-btn-danger:hover {
   background-color: #dc2626;
+  border-color: #dc2626;
 }
 
 .md-btn-sm {
@@ -570,12 +582,11 @@ body {
   border: 1px solid var(--md-sys-color-outline);
   border-radius: 12px;
   outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease;
 }
 
 .form-input:focus, .form-select:focus, .form-textarea:focus {
   border-color: var(--md-sys-color-primary);
-  box-shadow: 0 0 0 3px rgba(79, 117, 255, 0.12);
 }
 
 .form-input.is-invalid, .form-select.is-invalid {
@@ -645,7 +656,6 @@ body {
   padding: 22px;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--md-elevation-1);
 }
 
 .pos-total-row {
@@ -686,7 +696,6 @@ body {
 
   .md-card {
     border: none !important;
-    box-shadow: none !important;
     padding: 0 !important;
   }
 }

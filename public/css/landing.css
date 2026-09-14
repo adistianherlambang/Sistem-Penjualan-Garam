@@ -1,7 +1,7 @@
 /* ==========================================================================
-   LANDING PAGE STYLING - FULL WIDTH MODERN BENTO & SAAS AESTHETIC
-   Clean 100% Full-Width Canvas, Edge-to-Edge Sections, Modern Bento Grid,
-   Hero Portrait Card with Gradient Fade, and Pill Components.
+   LANDING PAGE STYLING - FULL WIDTH FLAT MODERN BENTO & SAAS AESTHETIC
+   Zero Box-Shadows: Clean lines, 1px crisp borders, pure flat design,
+   100% Full-Width Edge-to-Edge Canvas.
    ========================================================================== */
 
 :root {
@@ -22,15 +22,16 @@
     --lp-radius-pill: 9999px;
     --lp-radius-card: 22px;
     --lp-font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --lp-shadow-sm: 0 2px 8px rgba(18, 24, 38, 0.04);
-    --lp-shadow-md: 0 8px 24px rgba(18, 24, 38, 0.06);
-    --lp-shadow-lg: 0 16px 40px rgba(18, 24, 38, 0.08);
+    --lp-shadow-sm: none;
+    --lp-shadow-md: none;
+    --lp-shadow-lg: none;
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-shadow: none !important;
 }
 
 html, body {
@@ -61,11 +62,10 @@ body.landing-page-body {
     margin: 0;
     padding: 0;
     border: none;
-    box-shadow: none;
     border-radius: 0;
 }
 
-/* Fluid Content Container (Centered with modern padding) */
+/* Fluid Content Container */
 .lp-container {
     width: 100%;
     max-width: 1320px;
@@ -112,7 +112,6 @@ body.landing-page-body {
     align-items: center;
     justify-content: center;
     color: #ffffff;
-    box-shadow: 0 4px 12px rgba(79, 117, 255, 0.3);
 }
 
 .lp-brand-logo svg, .lp-brand-logo span {
@@ -150,16 +149,14 @@ body.landing-page-body {
     font-weight: 600;
     padding: 10px 24px;
     border-radius: var(--lp-radius-pill);
-    border: none;
+    border: 1px solid transparent;
     cursor: pointer;
-    box-shadow: 0 4px 14px rgba(79, 117, 255, 0.28);
-    transition: all 0.25s ease;
+    transition: all 0.2s ease;
 }
 
 .lp-btn-pill-primary:hover {
     background-color: var(--lp-primary-hover);
     transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(79, 117, 255, 0.36);
 }
 
 /* --------------------------------------------------------------------------
@@ -236,7 +233,7 @@ body.landing-page-body {
     border-radius: var(--lp-radius-card);
     overflow: hidden;
     background-color: #f1f4f9;
-    box-shadow: var(--lp-shadow-sm);
+    border: 1px solid var(--lp-border);
 }
 
 .lp-hero-img {
@@ -298,11 +295,13 @@ body.landing-page-body {
     justify-content: center;
     font-size: 22px;
     transition: all 0.2s ease;
+    border: 1px solid var(--lp-border-light);
 }
 
 .lp-trio-item:hover .lp-trio-icon {
     background-color: var(--lp-primary);
     color: #ffffff;
+    border-color: var(--lp-primary);
     transform: translateY(-2px);
 }
 
@@ -339,12 +338,12 @@ body.landing-page-body {
     position: relative;
     background-color: var(--lp-card-bg);
     border: 1px solid var(--lp-border);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
 .lp-bento-card:hover {
     transform: translateY(-3px);
-    box-shadow: var(--lp-shadow-md);
+    border-color: var(--lp-primary);
 }
 
 /* Bento Cell 1: Dark Charcoal Card */
@@ -356,7 +355,7 @@ body.landing-page-body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 270px;
-    border: none;
+    border: 1px solid var(--lp-dark);
 }
 
 .lp-bento-dark-badge {
@@ -391,6 +390,7 @@ body.landing-page-body {
     color: #ffffff;
     text-decoration: none;
     font-weight: 600;
+    border: 1px solid transparent;
     transition: background 0.2s ease;
 }
 
@@ -409,7 +409,6 @@ body.landing-page-body {
 
 .lp-bento-stacked:hover {
     transform: none;
-    box-shadow: none;
 }
 
 .lp-bento-stack-item {
@@ -420,11 +419,12 @@ body.landing-page-body {
     border: 1px solid var(--lp-border);
     background-color: var(--lp-card-bg);
     min-height: 128px;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .lp-bento-stack-item:hover {
     transform: translateY(-2px);
+    border-color: var(--lp-primary);
 }
 
 .lp-bento-stack-img {
@@ -552,7 +552,6 @@ body.landing-page-body {
 
 .lp-accordion-item:hover {
     border-color: var(--lp-primary);
-    box-shadow: var(--lp-shadow-sm);
 }
 
 .lp-accordion-header {
@@ -578,6 +577,7 @@ body.landing-page-body {
     border-radius: var(--lp-radius-pill);
     min-width: 96px;
     text-align: center;
+    border: 1px solid var(--lp-border-light);
 }
 
 .lp-avatar-thumb {
@@ -586,8 +586,7 @@ body.landing-page-body {
     border-radius: 50%;
     object-fit: cover;
     display: inline-block;
-    border: 1.5px solid #ffffff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 1.5px solid var(--lp-border);
 }
 
 .lp-accordion-title {
@@ -659,13 +658,12 @@ body.landing-page-body {
     font-weight: 500;
     color: var(--lp-text-heading);
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: border-color 0.2s ease;
     outline: none;
 }
 
 .lp-select-pill:focus {
     border-color: var(--lp-primary);
-    box-shadow: 0 0 0 3px var(--lp-primary-subtle);
 }
 
 .lp-select-arrow {
@@ -686,22 +684,20 @@ body.landing-page-body {
     width: 100%;
     background-color: var(--lp-dark);
     color: #ffffff;
-    border: none;
+    border: 1px solid var(--lp-dark);
     border-radius: var(--lp-radius-pill);
     padding: 15px 26px;
     font-family: var(--lp-font-main);
     font-size: 14.5px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition: all 0.2s ease;
     margin-top: 6px;
-    box-shadow: 0 4px 14px rgba(27, 33, 45, 0.2);
 }
 
 .lp-btn-pill-dark:hover {
     background-color: var(--lp-dark-hover);
     transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(27, 33, 45, 0.3);
 }
 
 /* --------------------------------------------------------------------------
@@ -739,6 +735,7 @@ body.landing-page-body {
     border-radius: var(--lp-radius-pill);
     font-size: 12px;
     font-weight: 600;
+    border: 1px solid #d1fae5;
 }
 
 .lp-status-dot {

@@ -18,7 +18,6 @@
             padding: 36px;
             border: 1px solid #e2e8f0;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         .invoice-header {
             display: flex;

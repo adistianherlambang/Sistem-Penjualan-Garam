@@ -1,0 +1,66 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pos_garam_app
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html/public
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - pos_network
+
+  db:
+    image: mariadb:10.4.32
+    container_name: pos_garam_db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: pos_garam
+      MYSQL_USER: pos_user
+      MYSQL_PASSWORD: pos_password
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    networks:
+      - pos_network
+
+  phpmyadmin:
+    image: phpmyadmin:5.2.1
+    container_name: pos_garam_pma
+    restart: unless-stopped
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: root
+      UPLOAD_LIMIT: 64M
+    ports:
+      - "8081:80"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - pos_network
+
+volumes:
+  mariadb_data:
+    driver: local
+
+networks:
+  pos_network:
+    driver: bridge

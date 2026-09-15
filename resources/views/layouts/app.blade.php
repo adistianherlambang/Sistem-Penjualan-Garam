@@ -194,6 +194,52 @@
                 drawer.classList.toggle('collapsed');
             }
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('global-search-input');
+            const searchKbd = document.querySelector('.drawer-search-kbd');
+            const navItems = document.querySelectorAll('.drawer-nav-item');
+            const sectionTitles = document.querySelectorAll('.drawer-section-title');
+
+            if (searchInput) {
+                // Filter sidebar items live as user types
+                searchInput.addEventListener('input', (e) => {
+                    const query = e.target.value.toLowerCase().trim();
+                    navItems.forEach(item => {
+                        const text = item.textContent.toLowerCase();
+                        if (!query || text.includes(query)) {
+                            item.style.display = '';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+
+                // Clear on Escape
+                searchInput.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        searchInput.value = '';
+                        navItems.forEach(item => item.style.display = '');
+                        searchInput.blur();
+                    }
+                });
+
+                // Focus on clicking shortcut badge
+                if (searchKbd) {
+                    searchKbd.style.cursor = 'pointer';
+                    searchKbd.addEventListener('click', () => searchInput.focus());
+                }
+
+                // Global Cmd+K / Ctrl+K shortcut
+                document.addEventListener('keydown', (e) => {
+                    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+                        e.preventDefault();
+                        searchInput.focus();
+                        searchInput.select();
+                    }
+                });
+            }
+        });
     </script>
     @stack('scripts')
 </body>

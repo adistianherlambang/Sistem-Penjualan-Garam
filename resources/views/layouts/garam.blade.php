@@ -50,11 +50,20 @@
         .btns_more_fcs:hover { background: #002d7a; color: #fff !important; }
         .btn_blue_def { background-color: #003ea9; color: #fff; border: 0; padding: 12px 26px; font-weight: 600; text-transform: uppercase; display: inline-block; }
         .btn_blue_def:hover { background-color: #002d7a; color: #fff; text-decoration: none; }
-        .btn-top-admin:hover { background-color: #fff; color: #003ea9 !important; border-color: #fff; }
+        .btn-top-admin { color: #003ea9 !important; background: #fff !important; border: 1.5px solid #003ea9 !important; padding: 6px 16px; border-radius: 20px; font-size: 11px; font-weight: 700; text-decoration: none !important; letter-spacing: 0.5px; transition: all 0.2s; display: inline-block; }
+        .btn-top-admin:hover { background-color: #003ea9 !important; color: #fff !important; border-color: #003ea9 !important; }
     </style>
     @stack('styles')
 </head>
 <body>
+
+@php
+  $isSolidHeaderPage = Request::is('berita*') || Request::is('blog*') || Request::is('home/blogs*');
+@endphp
+
+@if($isSolidHeaderPage)
+<div class="outers_heads_blue">
+@endif
 
 <!-- Top Header Outers (Identical to garam.co.id) -->
 <div class="outers_back_headers">
@@ -71,11 +80,11 @@
             <div class="col-lg-6 col-md-6">
               <div class="text-right rights_block_topRght_menu" style="display: flex; justify-content: flex-end; align-items: center; gap: 16px;">
                 @auth
-                  <a href="{{ route('dashboard') }}" class="btn-top-admin" style="color: #fff; border: 1px solid rgba(255,255,255,0.8); padding: 6px 16px; border-radius: 20px; font-size: 11px; font-weight: 700; text-decoration: none; letter-spacing: 0.5px; transition: all 0.2s;">
+                  <a href="{{ route('dashboard') }}" class="btn-top-admin">
                     <i class="fa fa-tachometer"></i> DASHBOARD
                   </a>
                 @else
-                  <a href="{{ route('login') }}" class="btn-top-admin" style="color: #fff; border: 1px solid rgba(255,255,255,0.8); padding: 6px 16px; border-radius: 20px; font-size: 11px; font-weight: 700; text-decoration: none; letter-spacing: 0.5px; transition: all 0.2s;">
+                  <a href="{{ route('login') }}" class="btn-top-admin">
                     <i class="fa fa-lock"></i> LOGIN ADMIN
                   </a>
                 @endauth
@@ -109,7 +118,7 @@
               <li class="{{ Request::is('produk') || Request::is('home/productlanding') ? 'active' : '' }}"><a href="{{ url('/produk') }}">GARAM BANYU MILI</a></li>
               <li class="{{ Request::is('tentang-kami') || Request::is('home/about') ? 'active' : '' }}"><a href="{{ url('/tentang-kami') }}">TENTANG KAMI</a></li>
               <li class="{{ Request::is('industri') || Request::is('home/industry') ? 'active' : '' }}"><a href="{{ url('/industri') }}">INDUSTRI</a></li>
-              <li class="{{ Request::is('berita') || Request::is('blog*') || Request::is('home/blogs') ? 'active' : '' }}"><a href="{{ url('/berita') }}">BERITA & ARTIKEL</a></li>
+              <li class="{{ Request::is('berita*') || Request::is('blog*') ? 'active' : '' }}"><a href="{{ url('/berita') }}">BERITA & ARTIKEL</a></li>
               <li class="{{ Request::is('kontak') || Request::is('home/contact') ? 'active' : '' }}"><a href="{{ url('/kontak') }}">HUBUNGI KAMI</a></li>
               @auth
                 <li><a href="{{ route('dashboard') }}" style="color: #003ea9; font-weight: 700;"><i class="fa fa-tachometer"></i> DASHBOARD</a></li>
@@ -127,6 +136,11 @@
     <div class="clear"></div>
   </header>
 </div>
+
+@if($isSolidHeaderPage)
+</div>
+<div class="clear"></div>
+@endif
 
 <!-- Sticky Affix Navigation Bar (Identical to garam.co.id) -->
 <script type="text/javascript">

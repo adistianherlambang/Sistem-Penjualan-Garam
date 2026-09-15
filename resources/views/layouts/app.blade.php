@@ -152,11 +152,6 @@
                 <div class="topbar-right">
                     @yield('topbar-actions')
 
-                    <div class="topbar-avatars-group">
-                        <div class="topbar-avatar-bubble" style="background-color: #dbeafe; color: #1e40af;">AD</div>
-                        <div class="topbar-avatar-bubble" style="background-color: #e0e7ff; color: #3730a3;">OW</div>
-                    </div>
-
                     <a href="{{ url('/') }}" class="ux-btn-outline" style="font-size: 12px; text-decoration: none;">
                         <span>Landing</span>
                     </a>

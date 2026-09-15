@@ -50,6 +50,7 @@
         .btns_more_fcs:hover { background: #002d7a; color: #fff !important; }
         .btn_blue_def { background-color: #003ea9; color: #fff; border: 0; padding: 12px 26px; font-weight: 600; text-transform: uppercase; display: inline-block; }
         .btn_blue_def:hover { background-color: #002d7a; color: #fff; text-decoration: none; }
+        .btn-top-admin:hover { background-color: #fff; color: #003ea9 !important; border-color: #fff; }
     </style>
     @stack('styles')
 </head>
@@ -68,7 +69,16 @@
               </div>
             </div>
             <div class="col-lg-6 col-md-6">
-              <div class="text-right rights_block_topRght_menu">
+              <div class="text-right rights_block_topRght_menu" style="display: flex; justify-content: flex-end; align-items: center; gap: 16px;">
+                @auth
+                  <a href="{{ route('dashboard') }}" class="btn-top-admin" style="color: #fff; border: 1px solid rgba(255,255,255,0.8); padding: 6px 16px; border-radius: 20px; font-size: 11px; font-weight: 700; text-decoration: none; letter-spacing: 0.5px; transition: all 0.2s;">
+                    <i class="fa fa-tachometer"></i> DASHBOARD
+                  </a>
+                @else
+                  <a href="{{ route('login') }}" class="btn-top-admin" style="color: #fff; border: 1px solid rgba(255,255,255,0.8); padding: 6px 16px; border-radius: 20px; font-size: 11px; font-weight: 700; text-decoration: none; letter-spacing: 0.5px; transition: all 0.2s;">
+                    <i class="fa fa-lock"></i> LOGIN ADMIN
+                  </a>
+                @endauth
                 <a href="javascript:;" class="nav_showMenu showmenu_barresponsive" title="Buka Menu"></a>
                 <div class="clear"></div>
               </div>
@@ -101,6 +111,11 @@
               <li class="{{ Request::is('industri') || Request::is('home/industry') ? 'active' : '' }}"><a href="{{ url('/industri') }}">INDUSTRI</a></li>
               <li class="{{ Request::is('berita') || Request::is('blog*') || Request::is('home/blogs') ? 'active' : '' }}"><a href="{{ url('/berita') }}">BERITA & ARTIKEL</a></li>
               <li class="{{ Request::is('kontak') || Request::is('home/contact') ? 'active' : '' }}"><a href="{{ url('/kontak') }}">HUBUNGI KAMI</a></li>
+              @auth
+                <li><a href="{{ route('dashboard') }}" style="color: #003ea9; font-weight: 700;"><i class="fa fa-tachometer"></i> DASHBOARD</a></li>
+              @else
+                <li><a href="{{ route('login') }}" style="color: #003ea9; font-weight: 700;"><i class="fa fa-lock"></i> LOGIN ADMIN</a></li>
+              @endauth
             </ul>
             <div class="clear height-10"></div>
           </div>
@@ -151,6 +166,11 @@
               <li class="{{ Request::is('industri') || Request::is('home/industry') ? 'active' : '' }}"><a href="{{ url('/industri') }}">INDUSTRI</a></li>
               <li class="{{ Request::is('berita') || Request::is('blog*') || Request::is('home/blogs') ? 'active' : '' }}"><a href="{{ url('/berita') }}">BERITA & ARTIKEL</a></li>
               <li class="{{ Request::is('kontak') || Request::is('home/contact') ? 'active' : '' }}"><a href="{{ url('/kontak') }}">HUBUNGI KAMI</a></li>
+              @auth
+                <li><a href="{{ route('dashboard') }}" style="color: #003ea9; font-weight: 700;"><i class="fa fa-tachometer"></i> DASHBOARD</a></li>
+              @else
+                <li><a href="{{ route('login') }}" style="color: #003ea9; font-weight: 700;"><i class="fa fa-lock"></i> LOGIN ADMIN</a></li>
+              @endauth
             </ul>
           </div>
         </div>
@@ -176,6 +196,11 @@
         <li><a href="{{ url('/industri') }}">INDUSTRI</a></li>
         <li><a href="{{ url('/berita') }}">BERITA & ARTIKEL</a></li>
         <li><a href="{{ url('/kontak') }}">HUBUNGI KAMI</a></li>
+        @auth
+          <li><a href="{{ route('dashboard') }}" style="color: #93c5fd;"><i class="fa fa-tachometer"></i> DASHBOARD ADMIN</a></li>
+        @else
+          <li><a href="{{ route('login') }}" style="color: #93c5fd;"><i class="fa fa-lock"></i> LOGIN ADMIN</a></li>
+        @endauth
       </ul>
     </div>
     <div class="clear"></div>
@@ -289,13 +314,6 @@
 		</div>
 	</div>
 </footer>
-
-<!-- Floating WhatsApp Action -->
-<div class="float_callwa_contact">
-	<a target="_blank" href="https://wa.me/628113181167?text=Halo%20CV%20BANYU%20MILI,%20saya%20ingin%20mendapatkan%20informasi%20mengenai%20produk%20garam%20dan%20kerjasama." title="Hubungi Kami via WhatsApp">
-    <img src="{{ asset('asset/images/whatsapp-512.png') }}" alt="WhatsApp Contact" class="img img-responsive">
-  </a>
-</div>
 
 <!-- Back to Top Button -->
 <div id="back-top" class="t-backtop">

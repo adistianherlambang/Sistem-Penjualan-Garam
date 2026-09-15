@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FinishedProductController;
@@ -11,21 +12,34 @@ use App\Http\Controllers\SaleController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\StockMovementController;
 use App\Http\Controllers\SupplierController;
+use App\Models\Article;
+use App\Models\FinishedProduct;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-// Public Routes - PT Garam Website (All Pages)
+// Public Routes - CV. Banyu Mili Website
 Route::get('/', function () {
-    return view('landing');
+    $featuredProducts = FinishedProduct::where('is_active', true)->take(4)->get();
+    $latestArticles = Article::where('is_published', true)->latest('published_at')->take(4)->get();
+    return view('landing', compact('featuredProducts', 'latestArticles'));
 })->name('landing');
+
 Route::get('/home/index', function () {
-    return view('landing');
+    $featuredProducts = FinishedProduct::where('is_active', true)->take(4)->get();
+    $latestArticles = Article::where('is_published', true)->latest('published_at')->take(4)->get();
+    return view('landing', compact('featuredProducts', 'latestArticles'));
 });
 
 Route::get('/produk', function () {
-    return view('product');
+    $products = FinishedProduct::where('is_active', true)->latest()->get();
+    $productsGrouped = $products->groupBy('category');
+    return view('product', compact('products', 'productsGrouped'));
 })->name('public.products');
+
 Route::get('/home/productlanding', function () {
-    return view('product');
+    $products = FinishedProduct::where('is_active', true)->latest()->get();
+    $productsGrouped = $products->groupBy('category');
+    return view('product', compact('products', 'productsGrouped'));
 });
 
 Route::get('/tentang-kami', function () {
@@ -42,14 +56,52 @@ Route::get('/home/industry', function () {
     return view('industry');
 });
 
-Route::get('/berita', function () {
-    return view('blog');
+Route::get('/berita', function (Request $request) {
+    $query = Article::where('is_published', true);
+    if ($request->filled('category')) {
+        $query->where('category', $request->category);
+    }
+    $articles = $query->latest('published_at')->paginate(9)->withQueryString();
+    return view('blog', compact('articles'));
 })->name('public.blog');
-Route::get('/blog/index', function () {
-    return view('blog');
+
+Route::get('/blog/index', function (Request $request) {
+    $query = Article::where('is_published', true);
+    if ($request->filled('category')) {
+        $query->where('category', $request->category);
+    }
+    $articles = $query->latest('published_at')->paginate(9)->withQueryString();
+    return view('blog', compact('articles'));
 });
-Route::get('/home/blogs', function () {
-    return view('blog');
+
+Route::get('/home/blogs', function (Request $request) {
+    $query = Article::where('is_published', true);
+    if ($request->filled('category')) {
+        $query->where('category', $request->category);
+    }
+    $articles = $query->latest('published_at')->paginate(9)->withQueryString();
+    return view('blog', compact('articles'));
+});
+
+// Single Article Detail Route
+Route::get('/berita/{slug}', function ($slug) {
+    $article = Article::where('slug', $slug)->orWhere('id', $slug)->firstOrFail();
+    $recentArticles = Article::where('is_published', true)
+        ->where('id', '!=', $article->id)
+        ->latest('published_at')
+        ->take(5)
+        ->get();
+    return view('blog_detail', compact('article', 'recentArticles'));
+})->name('public.blog.detail');
+
+Route::get('/blog/detail/{id}', function ($id) {
+    $article = Article::where('id', $id)->orWhere('slug', $id)->firstOrFail();
+    $recentArticles = Article::where('is_published', true)
+        ->where('id', '!=', $article->id)
+        ->latest('published_at')
+        ->take(5)
+        ->get();
+    return view('blog_detail', compact('article', 'recentArticles'));
 });
 
 Route::get('/kontak', function () {
@@ -120,6 +172,10 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::post('/finished-products', [FinishedProductController::class, 'store'])->name('finished-products.store');
     Route::get('/finished-products/{finishedProduct}/edit', [FinishedProductController::class, 'edit'])->name('finished-products.edit');
     Route::put('/finished-products/{finishedProduct}', [FinishedProductController::class, 'update'])->name('finished-products.update');
+    Route::delete('/finished-products/{finishedProduct}', [FinishedProductController::class, 'destroy'])->name('finished-products.destroy');
+
+    // Articles / Berita & Konten CRUD
+    Route::resource('articles', ArticleController::class)->except(['show']);
 
     // Supplier CRUD
     Route::get('/suppliers-create', [SupplierController::class, 'create'])->name('suppliers.create');

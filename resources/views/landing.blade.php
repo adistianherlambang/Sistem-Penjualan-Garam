@@ -89,81 +89,54 @@
 
                 <div class="lists_default_product_dt list_home">
                     <div class="row">
-                        <!-- Product 1 -->
-                        <div class="col-md-3 col-sm-6">
-                            <div class="items">
-                                <div class="pict">
-                                    <a href="{{ url('/produk') }}">
-                                        <img src="{{ asset('asset/images/ptgaram/product-1.jpg') }}" alt="Garam Meja Beryodium" class="img-responsive center-block">
-                                    </a>
+                        @if(isset($featuredProducts) && $featuredProducts->isNotEmpty())
+                            @foreach($featuredProducts as $prod)
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="items">
+                                        <div class="pict">
+                                            <a href="{{ url('/produk') }}">
+                                                <img src="{{ $prod->image_url }}" alt="{{ $prod->name }}" class="img-responsive center-block" style="max-height: 200px; object-fit: contain; margin: 0 auto;">
+                                            </a>
+                                        </div>
+                                        <div class="info">
+                                            <h5 class="name">{{ $prod->name }}</h5>
+                                            <span class="used">{{ $prod->category ?? 'GARAM KONSUMSI BERYODIUM' }}</span>
+                                            <p>
+                                                @if($prod->notes)
+                                                    {{ Str::limit($prod->notes, 65) }}<br /><br />
+                                                @endif
+                                                @if($prod->packaging)
+                                                    Produk garam ini tersedia dalam ukuran:<br />
+                                                    {{ $prod->packaging }}
+                                                @else
+                                                    Kemasan standar: {{ $prod->weight_per_pack_gram }} gram
+                                                @endif
+                                            </p>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="info">
-                                    <h5 class="name">GARAM KERAPAN SAPI</h5>
-                                    <span class="used">GARAM KONSUMSI BERYODIUM</span>
-                                    <p>Garam beryodium yang mengandung yodium minimum 30 ppm.<br /><br />
-                                    Produk garam ini tersedia dalam ukuran:<br />
-                                    150 gr, 200 gr, 250 gr, 500 gr</p>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Product 2 -->
-                        <div class="col-md-3 col-sm-6">
-                            <div class="items">
-                                <div class="pict">
-                                    <a href="{{ url('/produk') }}">
-                                        <img src="{{ asset('asset/images/ptgaram/product-2.jpg') }}" alt="Garam Sarcil" class="img-responsive center-block">
-                                    </a>
-                                </div>
-                                <div class="info">
-                                    <h5 class="name">GARAM SARCIL</h5>
-                                    <span class="used">GARAM KONSUMSI BERYODIUM</span>
-                                    <p>Garam beryodium yang mengandung yodium minimum 30 ppm.<br /><br />
-                                    Produk garam ini tersedia dalam ukuran:<br />
-                                    200 gr, 250 gr, 500 gr</p>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Product 3 -->
-                        <div class="col-md-3 col-sm-6">
-                            <div class="items">
-                                <div class="pict">
-                                    <a href="{{ url('/produk') }}">
-                                        <img src="{{ asset('asset/images/ptgaram/product-3.jpg') }}" alt="Garam Banyu Mili" class="img-responsive center-block">
-                                    </a>
-                                </div>
-                                <div class="info">
-                                    <h5 class="name">GARAM BANYU MILI</h5>
-                                    <span class="used">GARAM KONSUMSI BERYODIUM</span>
-                                    <p>Garam beryodium yang mengandung yodium minimum 30 ppm.<br /><br />
-                                    Produk garam ini tersedia dalam ukuran:<br />
-                                    250 gr, 500 gr, 1.000 gr</p>
-                                    <div class="clear"></div>
+                            @endforeach
+                        @else
+                            <!-- Product 1 -->
+                            <div class="col-md-3 col-sm-6">
+                                <div class="items">
+                                    <div class="pict">
+                                        <a href="{{ url('/produk') }}">
+                                            <img src="{{ asset('asset/images/ptgaram/product-1.jpg') }}" alt="Garam Meja Beryodium" class="img-responsive center-block">
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <h5 class="name">GARAM KERAPAN SAPI</h5>
+                                        <span class="used">GARAM KONSUMSI BERYODIUM</span>
+                                        <p>Garam beryodium yang mengandung yodium minimum 30 ppm.<br /><br />
+                                        Produk garam ini tersedia dalam ukuran:<br />
+                                        150 gr, 200 gr, 250 gr, 500 gr</p>
+                                        <div class="clear"></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- Product 4 -->
-                        <div class="col-md-3 col-sm-6">
-                            <div class="items">
-                                <div class="pict">
-                                    <a href="{{ url('/produk') }}">
-                                        <img src="{{ asset('asset/images/ptgaram/product-4.jpg') }}" alt="Garam Kemilau" class="img-responsive center-block">
-                                    </a>
-                                </div>
-                                <div class="info">
-                                    <h5 class="name">GARAM KEMILAU LOSARANG</h5>
-                                    <span class="used">GARAM KONSUMSI BERYODIUM</span>
-                                    <p>Garam beryodium yang mengandung yodium minimum 30 ppm.<br /><br />
-                                    Produk garam ini tersedia dalam ukuran:<br />
-                                    200 gr dan 250 gr</p>
-                                    <div class="clear"></div>
-                                </div>
-                            </div>
-                        </div>
+                        @endif
                     </div>
                 </div>
 
@@ -281,81 +254,46 @@
                 </div>
 
                 <div class="block_list_newsf_default">
-                    <!-- News 1 -->
-                    <div class="items">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-3">
-                                <span class="dates">15 / 09 / 2026</span>
+                    @if(isset($latestArticles) && $latestArticles->isNotEmpty())
+                        @foreach($latestArticles as $art)
+                            <div class="items">
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-3">
+                                        <span class="dates">{{ optional($art->published_at)->format('d / m / Y') ?? date('d / m / Y') }}</span>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <p><a href="{{ url('/berita/' . $art->slug) }}" style="color: inherit; text-decoration: none;">{{ $art->title }}</a></p>
+                                    </div>
+                                    <div class="col-md-3 col-sm-3">
+                                        <div class="text-right">
+                                            <div class="links_more_news">
+                                                <a href="{{ url('/berita/' . $art->slug) }}"><img src="{{ asset('asset/images/backs_btn_icons_sq_blue.png') }}" alt="Baca Berita" class="img-responsive"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-6 col-sm-6">
-                                <p>CV. Banyu Mili Kembangkan Industri Garam untuk Menjawab Kebutuhan Pasar Nasional</p>
-                            </div>
-                            <div class="col-md-3 col-sm-3">
-                                <div class="text-right">
-                                    <div class="links_more_news">
-                                        <a href="{{ url('/berita') }}"><img src="{{ asset('asset/images/backs_btn_icons_sq_blue.png') }}" alt="Baca Berita" class="img-responsive"></a>
+                        @endforeach
+                    @else
+                        <!-- News 1 -->
+                        <div class="items">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-3">
+                                    <span class="dates">15 / 09 / 2026</span>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <p>CV. Banyu Mili Kembangkan Industri Garam untuk Menjawab Kebutuhan Pasar Nasional</p>
+                                </div>
+                                <div class="col-md-3 col-sm-3">
+                                    <div class="text-right">
+                                        <div class="links_more_news">
+                                            <a href="{{ url('/berita') }}"><img src="{{ asset('asset/images/backs_btn_icons_sq_blue.png') }}" alt="Baca Berita" class="img-responsive"></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- News 2 -->
-                    <div class="items">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-3">
-                                <span class="dates">14 / 09 / 2026</span>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <p>Garam Berkualitas dan Industri Masa Depan: Strategi CV. Banyu Mili Menatap Peluang</p>
-                            </div>
-                            <div class="col-md-3 col-sm-3">
-                                <div class="text-right">
-                                    <div class="links_more_news">
-                                        <a href="{{ url('/berita') }}"><img src="{{ asset('asset/images/backs_btn_icons_sq_blue.png') }}" alt="Baca Berita" class="img-responsive"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- News 3 -->
-                    <div class="items">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-3">
-                                <span class="dates">13 / 09 / 2026</span>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <p>Ketepatan Produksi Menjadi Kekuatan CV. Banyu Mili dalam Menjawab Kebutuhan Industri</p>
-                            </div>
-                            <div class="col-md-3 col-sm-3">
-                                <div class="text-right">
-                                    <div class="links_more_news">
-                                        <a href="{{ url('/berita') }}"><img src="{{ asset('asset/images/backs_btn_icons_sq_blue.png') }}" alt="Baca Berita" class="img-responsive"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- News 4 -->
-                    <div class="items">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-3">
-                                <span class="dates">12 / 09 / 2026</span>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <p>Menjaga Mutu di Tengah Perubahan Industri, CV. Banyu Mili Memperkuat Arah Bisnis</p>
-                            </div>
-                            <div class="col-md-3 col-sm-3">
-                                <div class="text-right">
-                                    <div class="links_more_news">
-                                        <a href="{{ url('/berita') }}"><img src="{{ asset('asset/images/backs_btn_icons_sq_blue.png') }}" alt="Baca Berita" class="img-responsive"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endif
                 </div>
 
                 <div class="clear height-30"></div>

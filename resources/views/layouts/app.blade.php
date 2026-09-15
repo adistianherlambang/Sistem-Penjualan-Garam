@@ -18,9 +18,9 @@
             <!-- Company Header -->
             <div class="drawer-header">
                 <a href="{{ url('/') }}" class="drawer-company-wrap">
-                    <div class="drawer-logo-badge">G.</div>
+                    <div class="drawer-logo-badge">BM</div>
                     <div>
-                        <div class="drawer-company-name">Garam Inc.</div>
+                        <div class="drawer-company-name">CV BANYU MILI</div>
                     </div>
                 </a>
                 <button type="button" class="drawer-collapse-btn" title="Ciutkan" onclick="toggleSidebar()">«</button>
@@ -46,10 +46,19 @@
 
                 <a href="{{ route('finished-products.index') }}" class="drawer-nav-item {{ request()->routeIs('finished-products.*') ? 'active' : '' }}">
                     <div class="drawer-nav-left">
-                        <span>Stok Jadi</span>
+                        <span>Produk Jadi</span>
                     </div>
                     <span class="drawer-pill-counter">{{ \App\Models\FinishedProduct::count() }}</span>
                 </a>
+
+                @if(auth()->user()->isAdmin())
+                <a href="{{ route('articles.index') }}" class="drawer-nav-item {{ request()->routeIs('articles.*') ? 'active' : '' }}">
+                    <div class="drawer-nav-left">
+                        <span>Berita & Artikel</span>
+                    </div>
+                    <span class="drawer-pill-counter">{{ \App\Models\Article::count() }}</span>
+                </a>
+                @endif
 
                 <a href="{{ route('sales.index') }}" class="drawer-nav-item {{ request()->routeIs('sales.*') ? 'active' : '' }}">
                     <div class="drawer-nav-left">

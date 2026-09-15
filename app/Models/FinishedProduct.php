@@ -13,12 +13,16 @@ class FinishedProduct extends Model
     protected $fillable = [
         'code',
         'name',
+        'category',
         'weight_per_pack_gram',
+        'packaging',
         'stock_packs',
         'price_per_pack',
         'cost_per_pack',
         'min_stock_packs',
         'notes',
+        'image',
+        'is_active',
     ];
 
     protected function casts(): array
@@ -29,7 +33,23 @@ class FinishedProduct extends Model
             'price_per_pack' => 'decimal:2',
             'cost_per_pack' => 'decimal:2',
             'min_stock_packs' => 'integer',
+            'is_active' => 'boolean',
         ];
+    }
+
+    public function getImageUrlAttribute(): string
+    {
+        if (!empty($this->image)) {
+            if (str_starts_with($this->image, 'http://') || str_starts_with($this->image, 'https://')) {
+                return $this->image;
+            }
+            if (str_starts_with($this->image, 'asset/')) {
+                return asset($this->image);
+            }
+            return asset('storage/' . $this->image);
+        }
+
+        return asset('asset/images/ptgaram/product-1.jpg');
     }
 
     public function productions(): HasMany

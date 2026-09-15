@@ -304,6 +304,17 @@
 </div>
 
 <script type="text/javascript">
+function initDataBg() {
+  $('[data-bg]').each(function(){
+    var bg = $(this).attr('data-bg');
+    if (bg) {
+      $(this).css('background-image', 'url(' + bg + ')');
+    }
+  });
+}
+$(document).ready(initDataBg);
+initDataBg();
+
 $(function(){
   var $win = $(window);
   var $backTop = $('#back-top');

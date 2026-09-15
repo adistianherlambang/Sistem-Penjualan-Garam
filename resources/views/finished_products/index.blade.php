@@ -66,9 +66,15 @@
                     </td>
                     <td>{{ $prod->packaging ?? ($prod->weight_per_pack_gram . ' gram') }}</td>
                     <td>
-                        <strong style="font-size: 14px; color: {{ $prod->stock_packs <= $prod->min_stock_packs ? '#b91c1c' : 'var(--md-sys-color-secondary)' }};">
-                            {{ number_format($prod->stock_packs, 0, ',', '.') }}
-                        </strong>
+                        @if($prod->stock_packs <= $prod->min_stock_packs)
+                            <strong style="font-size: 14px; color: #b91c1c;">
+                                {{ number_format($prod->stock_packs, 0, ',', '.') }}
+                            </strong>
+                        @else
+                            <strong style="font-size: 14px; color: var(--md-sys-color-secondary);">
+                                {{ number_format($prod->stock_packs, 0, ',', '.') }}
+                            </strong>
+                        @endif
                     </td>
                     <td>Rp {{ number_format($prod->price_per_pack, 0, ',', '.') }}</td>
                     <td>

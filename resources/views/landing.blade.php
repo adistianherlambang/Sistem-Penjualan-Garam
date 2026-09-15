@@ -15,7 +15,7 @@
                 </ol>
                 <div class="carousel-inner">
                     <!-- Slide 1 -->
-                    <div class="item active" style="background-image: url('{{ asset('asset/images/ptgaram/slide-1.jpg') }}');">
+                    <div class="item active" data-bg="{{ asset('asset/images/ptgaram/slide-1.jpg') }}">
                         <div class="carousel-caption">
                             <div class="prelatife container">
                                 <div class="bxsl_tx_fcs">
@@ -34,7 +34,7 @@
                     </div>
 
                     <!-- Slide 2 -->
-                    <div class="item" style="background-image: url('{{ asset('asset/images/ptgaram/slide-2.jpg') }}');">
+                    <div class="item" data-bg="{{ asset('asset/images/ptgaram/slide-2.jpg') }}">
                         <div class="carousel-caption">
                             <div class="prelatife container">
                                 <div class="bxsl_tx_fcs">
@@ -53,7 +53,7 @@
                     </div>
 
                     <!-- Slide 3 -->
-                    <div class="item" style="background-image: url('{{ asset('asset/images/ptgaram/slide-3.jpg') }}');">
+                    <div class="item" data-bg="{{ asset('asset/images/ptgaram/slide-3.jpg') }}">
                         <div class="carousel-caption">
                             <div class="prelatife container">
                                 <div class="bxsl_tx_fcs">
@@ -165,7 +165,7 @@
             <div class="row" style="margin: 0;">
                 <!-- Industry 1: Makanan -->
                 <div class="col-md-4 col-sm-6" style="padding: 0;">
-                    <div class="items prelatife" onclick="location.href='{{ url('/industri#makanan') }}';" style="cursor: pointer;">
+                    <a href="{{ url('/industri#makanan') }}" class="items prelatife" style="display: block; cursor: pointer; text-decoration: none; color: inherit;">
                         <img src="{{ asset('asset/images/ptgaram/industry-food.jpg') }}" alt="Garam Industri Makanan" class="img-responsive">
                         <div class="ins_text">
                             <div class="inset info">
@@ -173,12 +173,12 @@
                                 <h3>Makanan</h3>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- Industry 2: Aneka Industri & Pabrik -->
                 <div class="col-md-4 col-sm-6" style="padding: 0;">
-                    <div class="items prelatife" onclick="location.href='{{ url('/industri#pabrik') }}';" style="cursor: pointer;">
+                    <a href="{{ url('/industri#pabrik') }}" class="items prelatife" style="display: block; cursor: pointer; text-decoration: none; color: inherit;">
                         <img src="{{ asset('asset/images/ptgaram/industry-factory.jpg') }}" alt="Garam Industri Aneka Industri & Pabrik" class="img-responsive">
                         <div class="ins_text">
                             <div class="inset info">
@@ -186,12 +186,12 @@
                                 <h3>Aneka Industri & Pabrik</h3>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- Industry 3: Kolam Renang -->
                 <div class="col-md-4 col-sm-6" style="padding: 0;">
-                    <div class="items prelatife" onclick="location.href='{{ url('/industri#kolam-renang') }}';" style="cursor: pointer;">
+                    <a href="{{ url('/industri#kolam-renang') }}" class="items prelatife" style="display: block; cursor: pointer; text-decoration: none; color: inherit;">
                         <img src="{{ asset('asset/images/ptgaram/industry-pool.jpg') }}" alt="Garam Industri Kolam Renang" class="img-responsive">
                         <div class="ins_text">
                             <div class="inset info">
@@ -199,12 +199,12 @@
                                 <h3>Kolam Renang</h3>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- Industry 4: Pengawetan -->
                 <div class="col-md-4 col-sm-6" style="padding: 0;">
-                    <div class="items prelatife" onclick="location.href='{{ url('/industri#pengawetan') }}';" style="cursor: pointer;">
+                    <a href="{{ url('/industri#pengawetan') }}" class="items prelatife" style="display: block; cursor: pointer; text-decoration: none; color: inherit;">
                         <img src="{{ asset('asset/images/ptgaram/industry-preservation.jpg') }}" alt="Garam Industri Pengawetan" class="img-responsive">
                         <div class="ins_text">
                             <div class="inset info">
@@ -212,12 +212,12 @@
                                 <h3>Pengawetan</h3>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- Industry 5: Pakan Ternak -->
                 <div class="col-md-4 col-sm-6" style="padding: 0;">
-                    <div class="items prelatife" onclick="location.href='{{ url('/industri#pakan-ternak') }}';" style="cursor: pointer;">
+                    <a href="{{ url('/industri#pakan-ternak') }}" class="items prelatife" style="display: block; cursor: pointer; text-decoration: none; color: inherit;">
                         <img src="{{ asset('asset/images/ptgaram/industry-livestock.jpg') }}" alt="Garam Industri Pakan Ternak" class="img-responsive">
                         <div class="ins_text">
                             <div class="inset info">
@@ -225,12 +225,12 @@
                                 <h3>Pakan Ternak</h3>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- Industry 6: Perawatan Tubuh -->
                 <div class="col-md-4 col-sm-6" style="padding: 0;">
-                    <div class="items prelatife" onclick="location.href='{{ url('/industri#perawatan-tubuh') }}';" style="cursor: pointer;">
+                    <a href="{{ url('/industri#perawatan-tubuh') }}" class="items prelatife" style="display: block; cursor: pointer; text-decoration: none; color: inherit;">
                         <img src="{{ asset('asset/images/ptgaram/industry-spa.jpg') }}" alt="Garam Industri Perawatan Tubuh" class="img-responsive">
                         <div class="ins_text">
                             <div class="inset info">
@@ -238,7 +238,7 @@
                                 <h3>Perawatan Tubuh</h3>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

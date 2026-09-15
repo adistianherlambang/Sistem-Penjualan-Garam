@@ -37,23 +37,185 @@
     <script type="text/javascript" src="{{ asset('asset/js/bootstrap-3/js/bootstrap.js') }}"></script>
 
     <style>
-        body { font-family: Rubik, sans-serif; }
-        .head .in_header { padding-top: 15px; }
-        .menu-sheader-datals ul li a { font-size: 24px; font-weight: 500; }
-        .header-affixs { position: fixed; top: -100px; transition: top 0.3s ease; }
-        .header-affixs.affix { top: 0 !important; visibility: visible !important; }
+        body {
+            font-family: Rubik, sans-serif;
+            padding-top: 75px !important;
+        }
+
+        /* Fixed Top Navigation Bar */
+        .main-header-navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75px;
+            background-color: #ffffff;
+            border-bottom: 3px solid #19387e;
+            z-index: 10000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .main-header-navbar .lgo-web-brand {
+            margin-top: 8px;
+            max-width: 280px;
+        }
+
+        .main-header-navbar .lgo-web-brand img {
+            max-height: 58px;
+            width: auto;
+            display: inline-block;
+        }
+
+        .main-header-navbar .menu-taffix {
+            text-align: right;
+            padding-top: 15px;
+        }
+
+        .main-header-navbar .menu-taffix ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: inline-block;
+        }
+
+        .main-header-navbar .menu-taffix ul li {
+            display: inline-block;
+            padding: 5px 10px;
+        }
+
+        .main-header-navbar .menu-taffix ul li a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #353535;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+            position: relative;
+            padding-bottom: 4px;
+        }
+
+        .main-header-navbar .menu-taffix ul li a:hover,
+        .main-header-navbar .menu-taffix ul li.active a {
+            color: #003ea9;
+            text-decoration: none;
+        }
+
+        .main-header-navbar .menu-taffix ul li.active a::after,
+        .main-header-navbar .menu-taffix ul li a:hover::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #003ea9;
+        }
+
+        .staff-login-btn {
+            display: inline-block !important;
+            margin-left: 12px;
+            padding: 7px 16px !important;
+            background: #003ea9 !important;
+            color: #ffffff !important;
+            border-radius: 4px;
+            font-size: 12px !important;
+            font-weight: 700 !important;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 6px rgba(0, 62, 169, 0.3);
+            transition: all 0.2s ease !important;
+        }
+
+        .staff-login-btn::after {
+            display: none !important;
+        }
+
+        .staff-login-btn:hover {
+            background: #002d7a !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 12px rgba(0, 62, 169, 0.4);
+            transform: translateY(-1px);
+        }
+
+        .nav-burger-btn {
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: middle;
+            background: #f0f4fc;
+            padding: 8px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            color: #003ea9;
+            font-size: 16px;
+            border: 1px solid #d0e0fc;
+            transition: all 0.2s ease;
+        }
+
+        .nav-burger-btn:hover {
+            background: #003ea9;
+            color: #fff;
+        }
+
+        /* Mobile navbar header */
+        .mobile-header-bar {
+            display: none;
+            background: #ffffff;
+            border-bottom: 3px solid #19387e;
+            padding: 10px 15px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 991px) {
+            .main-header-navbar { display: none; }
+            .mobile-header-bar { display: block; }
+            body { padding-top: 65px !important; }
+        }
+
+        /* Fullscreen slide overlay menu */
+        .outer-blok-black-menuresponss-hides {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999999;
+            background-color: rgba(0, 62, 169, 0.97);
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .menu-sheader-datals ul li a {
+            font-size: 22px;
+            font-weight: 500;
+            color: #fff;
+            padding: 10px 0;
+            display: inline-block;
+            transition: color 0.2s ease;
+        }
+
+        .menu-sheader-datals ul li a:hover {
+            color: #ffdd59;
+            text-decoration: none;
+        }
+
+        /* Hero Carousel & Typography */
         .bxsl_tx_fcs h2 { font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.6); }
         .bxsl_tx_fcs h4 { font-family: 'Playfair Display', serif; font-size: 26px; line-height: 1.3; text-shadow: 0 2px 8px rgba(0,0,0,0.6); margin-bottom: 20px; color: #fff; }
         .bxsl_tx_fcs p { font-size: 16px; line-height: 1.6; text-shadow: 0 2px 6px rgba(0,0,0,0.6); margin-bottom: 25px; }
         .btns_more_fcs { background: #003ea9; color: #fff !important; padding: 12px 28px; font-weight: 600; text-decoration: none !important; display: inline-block; letter-spacing: 1px; }
         .btns_more_fcs:hover { background: #002d7a; color: #fff !important; }
-        .carousel.fade .item { height: 100vh; min-height: 550px; background-size: cover; background-position: center center; }
+        .carousel.fade .item { height: calc(100vh - 75px); min-height: 550px; background-size: cover; background-position: center center; }
         .carousel.fade .item::before { content: ""; position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(10, 30, 60, 0.45); }
-        .carousel-caption { bottom: 20%; z-index: 10; }
+        .carousel-caption { bottom: 18%; z-index: 10; }
         .block_list_used_sals_defHome .items img { width: 100%; height: 380px; object-fit: cover; }
         .lists_default_product_dt .items .pict img { width: 100%; height: 260px; object-fit: cover; border-radius: 4px; }
-        .staff-login-link { display: inline-block; margin-left: 15px; padding: 6px 14px; background: #003ea9; color: #fff !important; border-radius: 3px; font-size: 13px; font-weight: 600; text-transform: uppercase; }
-        .staff-login-link:hover { background: #002d7a; text-decoration: none; }
         .btn_blue_def { background-color: #003ea9; color: #fff; border: 0; padding: 12px 26px; font-weight: 600; text-transform: uppercase; display: inline-block; }
         .btn_blue_def:hover { background-color: #002d7a; color: #fff; text-decoration: none; }
     </style>
@@ -61,106 +223,65 @@
 </head>
 <body>
 
-<div class="outers_back_headers">
-  <header class="head">
-    <div class="visible-lg visible-md">
-      <div class="in_header">
-        <div class="prelatife container">
-          <div class="row">
-            <div class="col-lg-6 col-md-6">
-              <div class="d-inline lgo_webHeaders">
-                <a href="{{ url('/') }}"><img src="{{ asset('asset/images/logo_webs_header.png') }}" alt="CV. Banyu Mili" class="img-responsive"></a>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-              <div class="text-right rights_block_topRght_menu" style="margin-top: 15px;">
-                <a href="javascript:;" class="nav_showMenu showmenu_barresponsive" title="Buka Menu"></a>
-                <div class="clear"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="visible-sm visible-xs">
-      <nav class="navbar navbar-default" style="background: rgba(0, 62, 169, 0.95); border: none; border-radius: 0;">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="border-color: #fff;">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar" style="background-color: #fff;"></span>
-              <span class="icon-bar" style="background-color: #fff;"></span>
-              <span class="icon-bar" style="background-color: #fff;"></span>
-            </button>
-            <a class="navbar-brand" href="{{ url('/') }}">
-              <img src="{{ asset('asset/images/logo_webs_header_res.png') }}" alt="CV. Banyu Mili" class="img-responsive" style="max-height: 40px; filter: brightness(0) invert(1);">
-            </a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="{{ url('/') }}" style="color:#fff;">HOME</a></li>
-              <li><a href="{{ url('/produk') }}" style="color:#fff;">GARAM BANYU MILI</a></li>
-              <li><a href="{{ url('/tentang-kami') }}" style="color:#fff;">TENTANG KAMI</a></li>
-              <li><a href="{{ url('/industri') }}" style="color:#fff;">INDUSTRI</a></li>
-              <li><a href="{{ url('/berita') }}" style="color:#fff;">BERITA & ARTIKEL</a></li>
-              <li><a href="{{ url('/kontak') }}" style="color:#fff;">HUBUNGI KAMI</a></li>
-              <li><a href="{{ route('login') }}" style="color:#ffdd59; font-weight: bold;"><i class="fa fa-lock"></i> LOGIN OPERASIONAL</a></li>
-            </ul>
-            <div class="clear height-10"></div>
-          </div>
-        </div>
-      </nav>
-      <div class="clear"></div>
-    </div>
-
-    <div class="clear"></div>
-  </header>
-</div>
-
-<!-- Sticky Affix Navbar -->
-<section id="myAffix" class="header-affixs affix-top">
-  <div class="clear height-5"></div>
+<!-- Desktop Top Navigation Bar (Always Visible at Top & Sticky) -->
+<header class="main-header-navbar visible-lg visible-md">
   <div class="prelatife container">
     <div class="row">
-      <div class="col-md-3 col-sm-3">
-        <div class="lgo-web-web_affix" style="margin-top: 10px;">
+      <div class="col-md-3 col-lg-3">
+        <div class="lgo-web-brand">
           <a href="{{ url('/') }}">
-            <img src="{{ asset('asset/images/logo_webs_header_res.png') }}" alt="CV. Banyu Mili" class="img-responsive d-inline">
+            <img src="{{ asset('asset/images/logo_webs_header_res.png') }}" alt="CV BANYU MILI" class="img-responsive">
           </a>
         </div>
       </div>
-      <div class="col-md-9 col-sm-9">
-        <div class="text-right"> 
-          <div class="clear height-20"></div>
-          <div class="menu-taffix">
-            <ul class="list-inline">
-              <li><a href="{{ url('/') }}">HOME</a></li>
-              <li><a href="{{ url('/produk') }}">GARAM BANYU MILI</a></li>
-              <li><a href="{{ url('/tentang-kami') }}">TENTANG KAMI</a></li>
-              <li><a href="{{ url('/industri') }}">INDUSTRI</a></li>
-              <li><a href="{{ url('/berita') }}">BERITA & ARTIKEL</a></li>
-              <li><a href="{{ url('/kontak') }}">HUBUNGI KAMI</a></li>
-              <li><a href="{{ route('login') }}" class="staff-login-link"><i class="fa fa-lock"></i> LOGIN</a></li>
-            </ul>
-          </div>
+      <div class="col-md-9 col-lg-9">
+        <div class="menu-taffix">
+          <ul class="list-inline">
+            <li class="{{ Request::is('/') || Request::is('home/index') ? 'active' : '' }}"><a href="{{ url('/') }}">HOME</a></li>
+            <li class="{{ Request::is('produk') || Request::is('home/productlanding') ? 'active' : '' }}"><a href="{{ url('/produk') }}">GARAM BANYU MILI</a></li>
+            <li class="{{ Request::is('tentang-kami') || Request::is('home/about') ? 'active' : '' }}"><a href="{{ url('/tentang-kami') }}">TENTANG KAMI</a></li>
+            <li class="{{ Request::is('industri') || Request::is('home/industry') ? 'active' : '' }}"><a href="{{ url('/industri') }}">INDUSTRI</a></li>
+            <li class="{{ Request::is('berita') || Request::is('blog*') ? 'active' : '' }}"><a href="{{ url('/berita') }}">BERITA & ARTIKEL</a></li>
+            <li class="{{ Request::is('kontak') || Request::is('home/contact') ? 'active' : '' }}"><a href="{{ url('/kontak') }}">HUBUNGI KAMI</a></li>
+            <li><a href="{{ route('login') }}" class="staff-login-btn"><i class="fa fa-lock"></i> LOGIN</a></li>
+            <li><a href="javascript:;" class="nav-burger-btn showmenu_barresponsive" title="Buka Menu Lengkap"><i class="fa fa-bars"></i></a></li>
+          </ul>
         </div>
       </div>
     </div>
-    <div class="clear"></div>
   </div>
-</section>
+</header>
+
+<!-- Mobile Navigation Bar -->
+<div class="mobile-header-bar visible-sm visible-xs">
+  <div class="container-fluid">
+    <div class="row" style="display: flex; align-items: center;">
+      <div class="col-xs-8">
+        <a href="{{ url('/') }}">
+          <img src="{{ asset('asset/images/logo_webs_header_res.png') }}" alt="CV BANYU MILI" style="max-height: 45px; width: auto;">
+        </a>
+      </div>
+      <div class="col-xs-4 text-right">
+        <button type="button" class="btn btn-default showmenu_barresponsive" style="background: #003ea9; color: #fff; border: 0; padding: 8px 14px; border-radius: 4px;">
+          <i class="fa fa-bars" style="font-size: 18px;"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Full-screen Slide Overlay Menu -->
 <div class="outer-blok-black-menuresponss-hides">
   <div class="prelatife container">
     <div class="clear height-45"></div>
     <div class="fright">
-      <div class="hidesmenu-frightd"><a href="javascript:;" class="closemrespobtn"><img src="{{ asset('asset/images/back-bt-shidemenuw.png') }}" alt="Tutup Menu"></a></div>
+      <div class="hidesmenu-frightd"><a href="javascript:;" class="closemrespobtn" style="color: #fff; font-size: 30px;"><i class="fa fa-times"></i></a></div>
     </div>
     <div class="clear height-50"></div><div class="height-30"></div>
-    <div class="menu-sheader-datals">
+    <div class="menu-sheader-datals text-center">
+      <div style="margin-bottom: 30px;">
+        <img src="{{ asset('asset/images/logo_webs_footernl.png') }}" alt="CV BANYU MILI" style="max-height: 60px;">
+      </div>
       <ul class="list-unstyled">
         <li><a href="{{ url('/') }}">HOME</a></li>
         <li><a href="{{ url('/produk') }}">GARAM BANYU MILI</a></li>
@@ -168,12 +289,11 @@
         <li><a href="{{ url('/industri') }}">INDUSTRI</a></li>
         <li><a href="{{ url('/berita') }}">BERITA & ARTIKEL</a></li>
         <li><a href="{{ url('/kontak') }}">HUBUNGI KAMI</a></li>
-        <li style="margin-top: 20px;"><a href="{{ route('login') }}" style="color: #ffdd59; font-size: 20px;"><i class="fa fa-lock"></i> MASUK SISTEM OPERASIONAL</a></li>
+        <li style="margin-top: 25px;"><a href="{{ route('login') }}" style="color: #ffdd59; font-size: 20px; font-weight: 700;"><i class="fa fa-lock"></i> MASUK SISTEM OPERASIONAL</a></li>
       </ul>
     </div>
     <div class="clear"></div>
   </div>
-  <div class="clear"></div>
 </div>
 
 <div class="clear"></div>
@@ -228,7 +348,7 @@
               </dd>
 						  <div class="clear"></div>
 						  <dt><i class="fa fa-envelope"></i></dt>
-						  <dd><a href="mailto:info@banyumili.co.id">INFO@PTGARAM.CO.ID</a></dd>
+						  <dd><a href="mailto:info@banyumili.co.id">INFO@BANYUMILI.CO.ID</a></dd>
 						  <div class="clear"></div>
 						</dl>
 					</div>
@@ -261,7 +381,7 @@
 				</div>
 				<div class="col-md-3 col-sm-3">
 					<div class="lgo_footers text-right">
-						<a href="{{ url('/') }}"><img src="{{ asset('asset/images/logo_webs_footernl.png') }}" alt="CV. Banyu Mili" class="img-responsive"></a>
+						<a href="{{ url('/') }}"><img src="{{ asset('asset/images/logo_webs_footernl.png') }}" alt="CV BANYU MILI" class="img-responsive"></a>
 					</div>
 				</div>
 			</div>
@@ -285,33 +405,33 @@
 <script type="text/javascript">
 $(function(){
   // Menu Overlay Toggle
-  $(document).on('click', 'a.showmenu_barresponsive', function(e) {
+  $(document).on('click', '.showmenu_barresponsive', function(e) {
     e.preventDefault();
-    $('.outer-blok-black-menuresponss-hides').slideDown(350);
+    $('.outer-blok-black-menuresponss-hides').fadeIn(250);
   });
-  $(document).on('click', 'a.closemrespobtn', function(e) {
+  $(document).on('click', '.closemrespobtn', function(e) {
     e.preventDefault();
-    $('.outer-blok-black-menuresponss-hides').slideUp(250);
+    $('.outer-blok-black-menuresponss-hides').fadeOut(200);
   });
 
-  // Sticky Navbar Scroll
-  var $affix = $('#myAffix');
+  // Sticky Navbar shadow effect on scroll
+  var $navbar = $('.main-header-navbar');
   var $win = $(window);
   var $backTop = $('#back-top');
 
-  function checkScroll() {
+  function handleScroll() {
     var top = $win.scrollTop();
-    if (top > 400) {
-      $affix.addClass('affix').removeClass('affix-top');
+    if (top > 50) {
+      $navbar.css('box-shadow', '0 4px 20px rgba(0, 0, 0, 0.12)');
       $backTop.fadeIn(200);
     } else {
-      $affix.removeClass('affix').addClass('affix-top');
+      $navbar.css('box-shadow', '0 2px 10px rgba(0, 0, 0, 0.08)');
       $backTop.fadeOut(200);
     }
   }
 
-  $win.on('scroll', checkScroll);
-  checkScroll();
+  $win.on('scroll', handleScroll);
+  handleScroll();
 
   $backTop.on('click', function(e) {
     e.preventDefault();

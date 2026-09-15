@@ -13,10 +13,51 @@ use App\Http\Controllers\StockMovementController;
 use App\Http\Controllers\SupplierController;
 use Illuminate\Support\Facades\Route;
 
-// Public Routes
+// Public Routes - PT Garam Website (All Pages)
 Route::get('/', function () {
     return view('landing');
 })->name('landing');
+Route::get('/home/index', function () {
+    return view('landing');
+});
+
+Route::get('/produk', function () {
+    return view('product');
+})->name('public.products');
+Route::get('/home/productlanding', function () {
+    return view('product');
+});
+
+Route::get('/tentang-kami', function () {
+    return view('about');
+})->name('public.about');
+Route::get('/home/about', function () {
+    return view('about');
+});
+
+Route::get('/industri', function () {
+    return view('industry');
+})->name('public.industry');
+Route::get('/home/industry', function () {
+    return view('industry');
+});
+
+Route::get('/berita', function () {
+    return view('blog');
+})->name('public.blog');
+Route::get('/blog/index', function () {
+    return view('blog');
+});
+Route::get('/home/blogs', function () {
+    return view('blog');
+});
+
+Route::get('/kontak', function () {
+    return view('contact');
+})->name('public.contact');
+Route::get('/home/contact', function () {
+    return view('contact');
+});
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('login.submit');

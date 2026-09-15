@@ -3,13 +3,6 @@
 @section('title', 'Laporan Pembelian')
 @section('page-title', 'Laporan Pembelian')
 
-@section('topbar-actions')
-    <a href="{{ route('reports.index') }}" class="md-btn md-btn-outlined md-btn-sm">Kembali</a>
-    <button onclick="window.print()" class="md-btn md-btn-primary md-btn-sm no-print">
-        <span>Cetak</span>
-    </button>
-@endsection
-
 @section('content')
 <div class="kpi-grid">
     <div class="kpi-card">
@@ -29,8 +22,14 @@
 </div>
 
 <div class="md-card">
-    <div class="md-card-header no-print">
-        <div class="md-card-title">Filter</div>
+    <div class="md-card-header no-print" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+        <div class="md-card-title">Rekapitulasi Pembelian Garam Mentah</div>
+        <div style="display: flex; gap: 8px; align-items: center;">
+            <a href="{{ route('reports.index') }}" class="md-btn md-btn-outlined md-btn-sm">Kembali</a>
+            <button onclick="window.print()" class="md-btn md-btn-primary md-btn-sm no-print">
+                <span>Cetak Laporan</span>
+            </button>
+        </div>
     </div>
 
     <form action="{{ route('reports.purchases') }}" method="GET" class="no-print" style="display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;">

@@ -3,13 +3,6 @@
 @section('title', 'Laporan Stok')
 @section('page-title', 'Laporan Stok')
 
-@section('topbar-actions')
-    <a href="{{ route('reports.index') }}" class="md-btn md-btn-outlined md-btn-sm">Kembali</a>
-    <button onclick="window.print()" class="md-btn md-btn-primary md-btn-sm no-print">
-        <span>Cetak</span>
-    </button>
-@endsection
-
 @section('content')
 <div class="kpi-grid">
     <div class="kpi-card">
@@ -25,8 +18,14 @@
 
 <!-- 1. Tabel Stok Bahan Mentah -->
 <div class="md-card" style="margin-bottom: 24px;">
-    <div class="md-card-header">
-        <div class="md-card-title">Stok Mentah</div>
+    <div class="md-card-header no-print" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+        <div class="md-card-title">Laporan Saldo Stok Garam</div>
+        <div style="display: flex; gap: 8px; align-items: center;">
+            <a href="{{ route('reports.index') }}" class="md-btn md-btn-outlined md-btn-sm">Kembali</a>
+            <button onclick="window.print()" class="md-btn md-btn-primary md-btn-sm no-print">
+                <span>Cetak Laporan</span>
+            </button>
+        </div>
     </div>
     <div class="table-responsive">
         <table class="md-table">

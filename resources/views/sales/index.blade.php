@@ -3,14 +3,6 @@
 @section('title', 'Penjualan')
 @section('page-title', 'Penjualan')
 
-@section('topbar-actions')
-    @if(auth()->user()->isAdmin())
-        <a href="{{ route('sales.create') }}" class="md-btn md-btn-primary md-btn-sm">
-            <span>Kasir</span>
-        </a>
-    @endif
-@endsection
-
 @section('content')
 <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
     <div class="kpi-card">
@@ -20,8 +12,13 @@
 </div>
 
 <div class="md-card">
-    <div class="md-card-header">
-        <div class="md-card-title">Penjualan</div>
+    <div class="md-card-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+        <div class="md-card-title">Daftar Transaksi Penjualan</div>
+        @if(auth()->user()->isAdmin())
+            <a href="{{ route('sales.create') }}" class="md-btn md-btn-primary md-btn-sm">
+                <span>+ Transaksi Kasir POS</span>
+            </a>
+        @endif
     </div>
 
     <!-- Filter Bar -->

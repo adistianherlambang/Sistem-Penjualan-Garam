@@ -3,17 +3,6 @@
 @section('title', 'Produk & Barang Jadi')
 @section('page-title', 'Produk Jadi')
 
-@section('topbar-actions')
-    <a href="{{ url('/produk') }}" target="_blank" class="md-btn md-btn-outlined md-btn-sm" style="margin-right: 8px;">
-        <span>Lihat di Web</span>
-    </a>
-    @if(auth()->user()->isAdmin())
-        <a href="{{ route('finished-products.create') }}" class="md-btn md-btn-primary md-btn-sm">
-            <span>Tambah Produk</span>
-        </a>
-    @endif
-@endsection
-
 @section('content')
 <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
     <div class="kpi-card">
@@ -27,8 +16,18 @@
 </div>
 
 <div class="md-card">
-    <div class="md-card-header" style="display: flex; justify-content: space-between; align-items: center;">
+    <div class="md-card-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
         <div class="md-card-title">Katalog Produk & Barang Jadi</div>
+        <div style="display: flex; gap: 8px; align-items: center;">
+            <a href="{{ url('/produk') }}" target="_blank" class="md-btn md-btn-outlined md-btn-sm">
+                <span>Lihat di Web</span>
+            </a>
+            @if(auth()->user()->isAdmin())
+                <a href="{{ route('finished-products.create') }}" class="md-btn md-btn-primary md-btn-sm">
+                    <span>+ Tambah Produk</span>
+                </a>
+            @endif
+        </div>
     </div>
 
     <div class="table-responsive">

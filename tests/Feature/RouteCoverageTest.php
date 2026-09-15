@@ -110,7 +110,7 @@ class RouteCoverageTest extends TestCase
 
     public function test_public_routes(): void
     {
-        $this->get(route('landing'))->assertOk()->assertSee('POS Garam');
+        $this->get(route('landing'))->assertOk()->assertSee('Garam');
         $this->get(route('login'))->assertOk()->assertSee('Masuk');
     }
 

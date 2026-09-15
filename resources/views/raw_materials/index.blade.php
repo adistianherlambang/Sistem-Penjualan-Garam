@@ -3,14 +3,6 @@
 @section('title', 'Barang Mentah')
 @section('page-title', 'Barang Mentah')
 
-@section('topbar-actions')
-    @if(auth()->user()->isAdmin())
-        <a href="{{ route('raw-materials.create') }}" class="md-btn md-btn-primary md-btn-sm">
-            <span>Tambah</span>
-        </a>
-    @endif
-@endsection
-
 @section('content')
 <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
     <div class="kpi-card">
@@ -20,8 +12,13 @@
 </div>
 
 <div class="md-card">
-    <div class="md-card-header">
-        <div class="md-card-title">Stok Mentah</div>
+    <div class="md-card-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+        <div class="md-card-title">Inventori Bahan Baku & Garam Mentah</div>
+        @if(auth()->user()->isAdmin())
+            <a href="{{ route('raw-materials.create') }}" class="md-btn md-btn-primary md-btn-sm">
+                <span>+ Tambah Bahan Baku</span>
+            </a>
+        @endif
     </div>
 
     <div class="table-responsive">

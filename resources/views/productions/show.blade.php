@@ -3,14 +3,11 @@
 @section('title', 'Detail Batch Produksi')
 @section('page-title', 'Detail')
 
-@section('topbar-actions')
-    <a href="{{ route('productions.index') }}" class="md-btn md-btn-outlined md-btn-sm">Kembali</a>
-@endsection
-
 @section('content')
 <div class="md-card" style="max-width: 800px; margin: 0 auto;">
-    <div class="md-card-header">
+    <div class="md-card-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
         <div class="md-card-title">Produksi: {{ $production->production_number }}</div>
+        <a href="{{ route('productions.index') }}" class="md-btn md-btn-outlined md-btn-sm">Kembali</a>
     </div>
 
     <div class="kpi-grid">

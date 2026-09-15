@@ -3,20 +3,19 @@
 @section('title', 'Detail Penjualan')
 @section('page-title', 'Detail')
 
-@section('topbar-actions')
-    <a href="{{ route('sales.index') }}" class="md-btn md-btn-outlined md-btn-sm">Kembali</a>
-    <a href="{{ route('sales.receipt', $sale) }}" target="_blank" class="md-btn md-btn-secondary md-btn-sm">
-        <span>Nota</span>
-    </a>
-    <a href="{{ route('sales.invoice', $sale) }}" target="_blank" class="md-btn md-btn-primary md-btn-sm">
-        <span>Faktur</span>
-    </a>
-@endsection
-
 @section('content')
 <div class="md-card" style="max-width: 780px; margin: 0 auto;">
-    <div class="md-card-header">
+    <div class="md-card-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
         <div class="md-card-title">Nota: {{ $sale->transaction_number }}</div>
+        <div style="display: flex; gap: 6px; align-items: center;">
+            <a href="{{ route('sales.index') }}" class="md-btn md-btn-outlined md-btn-sm">Kembali</a>
+            <a href="{{ route('sales.receipt', $sale) }}" target="_blank" class="md-btn md-btn-secondary md-btn-sm">
+                <span>Nota</span>
+            </a>
+            <a href="{{ route('sales.invoice', $sale) }}" target="_blank" class="md-btn md-btn-primary md-btn-sm">
+                <span>Faktur</span>
+            </a>
+        </div>
     </div>
 
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--md-sys-color-outline-variant); margin-bottom: 20px;">

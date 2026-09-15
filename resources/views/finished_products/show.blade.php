@@ -3,14 +3,19 @@
 @section('title', 'Detail Barang Jadi')
 @section('page-title', 'Detail')
 
-@section('topbar-actions')
-    <a href="{{ route('finished-products.index') }}" class="md-btn md-btn-outlined md-btn-sm">Kembali</a>
-    @if(auth()->user()->isAdmin())
-        <a href="{{ route('finished-products.edit', $finishedProduct) }}" class="md-btn md-btn-primary md-btn-sm">Ubah</a>
-    @endif
-@endsection
-
 @section('content')
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+    <div>
+        <h2 style="font-size: 1.25rem; font-weight: 700; margin: 0; color: var(--md-sys-color-on-surface);">{{ $finishedProduct->name }} ({{ $finishedProduct->product_code }})</h2>
+        <span style="font-size: 0.85rem; color: var(--md-sys-color-on-surface-variant);">Detail data dan riwayat mutasi produk jadi</span>
+    </div>
+    <div style="display: flex; gap: 8px;">
+        <a href="{{ route('finished-products.index') }}" class="md-btn md-btn-outlined md-btn-sm">Kembali</a>
+        @if(auth()->user()->isAdmin())
+            <a href="{{ route('finished-products.edit', $finishedProduct) }}" class="md-btn md-btn-primary md-btn-sm">Ubah</a>
+        @endif
+    </div>
+</div>
 <div class="kpi-grid">
     <div class="kpi-card">
         <div>

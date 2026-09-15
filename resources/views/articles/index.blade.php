@@ -3,15 +3,6 @@
 @section('title', 'Manajemen Berita & Artikel')
 @section('page-title', 'Berita & Artikel')
 
-@section('topbar-actions')
-    <a href="{{ url('/berita') }}" target="_blank" class="md-btn md-btn-outlined md-btn-sm" style="margin-right: 8px;">
-        <span>Lihat di Web</span>
-    </a>
-    <a href="{{ route('articles.create') }}" class="md-btn md-btn-primary md-btn-sm">
-        <span>Tulis Berita Baru</span>
-    </a>
-@endsection
-
 @section('content')
 <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
     <div class="kpi-card">
@@ -28,20 +19,29 @@
     <div class="md-card-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
         <div class="md-card-title">Daftar Publikasi & Berita Perusahaan</div>
 
-        <!-- Filter Form -->
-        <form action="{{ route('articles.index') }}" method="GET" style="display: flex; gap: 8px; align-items: center;">
-            <input type="text" name="q" value="{{ request('q') }}" placeholder="Cari judul berita..." class="form-input" style="width: 220px; padding: 6px 12px; font-size: 13px;">
-            <select name="category" class="form-input" style="width: 140px; padding: 6px 12px; font-size: 13px;" onchange="this.form.submit()">
-                <option value="">Semua Kategori</option>
-                <option value="Berita" {{ request('category') == 'Berita' ? 'selected' : '' }}>Berita</option>
-                <option value="Artikel" {{ request('category') == 'Artikel' ? 'selected' : '' }}>Artikel</option>
-                <option value="Resep" {{ request('category') == 'Resep' ? 'selected' : '' }}>Resep</option>
-            </select>
-            <button type="submit" class="md-btn md-btn-outlined md-btn-sm">Filter</button>
-            @if(request()->hasAny(['q', 'category']))
-                <a href="{{ route('articles.index') }}" class="md-btn md-btn-text md-btn-sm">Reset</a>
-            @endif
-        </form>
+        <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+            <!-- Filter Form -->
+            <form action="{{ route('articles.index') }}" method="GET" style="display: flex; gap: 8px; align-items: center;">
+                <input type="text" name="q" value="{{ request('q') }}" placeholder="Cari judul berita..." class="form-input" style="width: 200px; padding: 6px 12px; font-size: 13px;">
+                <select name="category" class="form-input" style="width: 140px; padding: 6px 12px; font-size: 13px;" onchange="this.form.submit()">
+                    <option value="">Semua Kategori</option>
+                    <option value="Berita" {{ request('category') == 'Berita' ? 'selected' : '' }}>Berita</option>
+                    <option value="Artikel" {{ request('category') == 'Artikel' ? 'selected' : '' }}>Artikel</option>
+                    <option value="Resep" {{ request('category') == 'Resep' ? 'selected' : '' }}>Resep</option>
+                </select>
+                <button type="submit" class="md-btn md-btn-outlined md-btn-sm">Filter</button>
+                @if(request()->hasAny(['q', 'category']))
+                    <a href="{{ route('articles.index') }}" class="md-btn md-btn-text md-btn-sm">Reset</a>
+                @endif
+            </form>
+
+            <a href="{{ url('/berita') }}" target="_blank" class="md-btn md-btn-outlined md-btn-sm">
+                <span>Lihat di Web</span>
+            </a>
+            <a href="{{ route('articles.create') }}" class="md-btn md-btn-primary md-btn-sm">
+                <span>+ Tulis Berita Baru</span>
+            </a>
+        </div>
     </div>
 
     <div class="table-responsive">

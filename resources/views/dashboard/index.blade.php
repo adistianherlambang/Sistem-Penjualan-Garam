@@ -4,21 +4,6 @@
 @section('page-title', 'Dashboard')
 
 @section('content')
-<!-- Toolbar Row -->
-<div class="ux-toolbar-row" style="justify-content: flex-end;">
-    <div class="ux-toolbar-right">
-        <a href="{{ route('reports.sales') }}" class="ux-btn-outline">
-            <span>Ekspor</span>
-        </a>
-
-        @if(auth()->user()->isAdmin())
-            <a href="{{ route('finished-products.create') }}" class="ux-btn-primary">
-                <span>+ Tambah</span>
-            </a>
-        @endif
-    </div>
-</div>
-
 <!-- 4 KPI Stat Cards (Short Titles, Zero Subtitles, Royal Blue Tone) -->
 <div class="ux-kpi-row" id="kpi-statistics-row">
     <!-- Stat 1: Stok Mentah -->
@@ -50,9 +35,15 @@
 <div class="ux-secondary-grid">
     <!-- Penjualan -->
     <div class="md-card">
-        <div class="md-card-header">
-            <div class="md-card-title">Penjualan</div>
-            <a href="{{ route('sales.index') }}" class="ux-btn-outline" style="font-size: 12px; padding: 4px 10px;">Semua</a>
+        <div class="md-card-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <div class="md-card-title">Penjualan Terkini</div>
+            <div style="display: flex; gap: 6px; align-items: center;">
+                <a href="{{ route('reports.sales') }}" class="ux-btn-outline" style="font-size: 12px; padding: 4px 10px;">Ekspor</a>
+                <a href="{{ route('sales.index') }}" class="ux-btn-outline" style="font-size: 12px; padding: 4px 10px;">Semua</a>
+                @if(auth()->user()->isAdmin())
+                    <a href="{{ route('sales.create') }}" class="ux-btn-primary" style="font-size: 12px; padding: 4px 10px; text-decoration: none;">+ Kasir</a>
+                @endif
+            </div>
         </div>
         <div style="overflow-x: auto;">
             <table class="ux-table">
@@ -84,9 +75,14 @@
 
     <!-- Mutasi Stok -->
     <div class="md-card">
-        <div class="md-card-header">
-            <div class="md-card-title">Mutasi Stok</div>
-            <a href="{{ route('stock-movements.index') }}" class="ux-btn-outline" style="font-size: 12px; padding: 4px 10px;">Semua</a>
+        <div class="md-card-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <div class="md-card-title">Mutasi Stok Terkini</div>
+            <div style="display: flex; gap: 6px; align-items: center;">
+                <a href="{{ route('stock-movements.index') }}" class="ux-btn-outline" style="font-size: 12px; padding: 4px 10px;">Semua</a>
+                @if(auth()->user()->isAdmin())
+                    <a href="{{ route('finished-products.create') }}" class="ux-btn-primary" style="font-size: 12px; padding: 4px 10px; text-decoration: none;">+ Produk</a>
+                @endif
+            </div>
         </div>
         <div style="display: flex; flex-direction: column; gap: 8px;">
             @forelse($recentMovements as $movement)

@@ -3,18 +3,15 @@
 @section('title', 'Supplier')
 @section('page-title', 'Supplier')
 
-@section('topbar-actions')
-    @if(auth()->user()->isAdmin())
-        <a href="{{ route('suppliers.create') }}" class="md-btn md-btn-primary md-btn-sm">
-            <span>Tambah</span>
-        </a>
-    @endif
-@endsection
-
 @section('content')
 <div class="md-card">
-    <div class="md-card-header">
-        <div class="md-card-title">Supplier</div>
+    <div class="md-card-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+        <div class="md-card-title">Daftar Supplier</div>
+        @if(auth()->user()->isAdmin())
+            <a href="{{ route('suppliers.create') }}" class="md-btn md-btn-primary md-btn-sm">
+                <span>+ Tambah Supplier</span>
+            </a>
+        @endif
     </div>
 
     <div class="table-responsive">

@@ -16,7 +16,7 @@
         <div class="md-card-title">Daftar Transaksi Penjualan</div>
         @if(auth()->user()->isAdmin())
             <a href="{{ route('sales.create') }}" class="md-btn md-btn-primary md-btn-sm">
-                <span>+ Transaksi Kasir POS</span>
+                <span>+ Tambah Transaksi</span>
             </a>
         @endif
     </div>

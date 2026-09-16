@@ -8,8 +8,11 @@
     background: #fff;
     padding: 35px 0 70px;
   }
+  .detail-page-wrapper .insides {
+    padding: 0 20px;
+  }
   .detail-breadcrumb-bar {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     padding-bottom: 14px;
     border-bottom: 1px solid #e2e8f0;
   }
@@ -27,6 +30,25 @@
   .detail-back-link:hover {
     color: #002d7a;
     gap: 12px;
+  }
+  /* Layout Grid with clear gap between left and right sections */
+  .detail-article-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 50px;
+    align-items: start;
+  }
+  .detail-main-col {
+    min-width: 0;
+  }
+  .detail-sidebar-col {
+    min-width: 0;
+  }
+  @media (max-width: 991px) {
+    .detail-article-layout {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 40px;
+    }
   }
   .detail-article-meta {
     font-family: Rubik, sans-serif;
@@ -94,7 +116,8 @@
     background: #f8fafc;
     border: 1px solid #e2e8f0;
     border-radius: 8px;
-    padding: 25px 22px;
+    padding: 28px 24px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
   }
   .detail-sidebar-heading {
     font-family: 'Playfair Display', serif;
@@ -150,9 +173,9 @@
         </a>
       </div>
 
-      <div class="row">
-        <!-- Main Article Column -->
-        <div class="col-md-8 col-sm-12">
+      <div class="detail-article-layout">
+        <!-- Main Article Column (Kiri) -->
+        <div class="detail-main-col">
           <article>
             <div class="detail-article-meta">
               <span class="detail-article-badge">{{ $article->category }}</span>
@@ -189,8 +212,8 @@
           </article>
         </div>
 
-        <!-- Sidebar Recent Articles Column -->
-        <div class="col-md-4 col-sm-12">
+        <!-- Sidebar Recent Articles Column (Kanan) -->
+        <div class="detail-sidebar-col">
           <aside class="detail-sidebar-card">
             <h3 class="detail-sidebar-heading">
               BERITA TERKINI LAINNYA

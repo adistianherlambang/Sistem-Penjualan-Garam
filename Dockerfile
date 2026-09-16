@@ -41,6 +41,9 @@ RUN echo '<Directory /var/www/html/public>\n\
 </Directory>' > /etc/apache2/conf-available/laravel.conf \
     && a2enconf laravel
 
+# Configure PHP error reporting & deprecation suppression for PHP 8.5
+RUN echo "error_reporting = E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED\ndisplay_errors = Off\nlog_errors = On" > /usr/local/etc/php/conf.d/laravel-error-reporting.ini
+
 # Install Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 

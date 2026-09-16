@@ -34,9 +34,11 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php scripts/fix-php85-compatibility.php",
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
+            "@php scripts/fix-php85-compatibility.php",
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
         ],
         "post-root-package-install": [

@@ -27,10 +27,10 @@ CV. Banyu Mili</h4>
           <div class="col-md-6">
             <div class="lefts_cont">
               <h2>Mengenal lebih lanjut tentang CV. Banyu Mili, produsen garam konsumsi beryodium berstandar SNI di Kabupaten Lampung Timur.</h2>
-<h5>CV. Banyu Mili berlokasi di Desa Banjar Rejo, Kabupaten Lampung Timur. Kami berfokus pada pengolahan dan produksi garam konsumsi beryodium bermutu tinggi yang memenuhi Standar Nasional Indonesia (SNI) untuk memenuhi kebutuhan masyarakat dan industri pangan.</h5>
-<p>
+              <p>CV. Banyu Mili berlokasi di Desa Banjar Rejo, Kabupaten Lampung Timur. Kami berfokus pada pengolahan dan produksi garam konsumsi beryodium bermutu tinggi yang memenuhi Standar Nasional Indonesia (SNI) untuk memenuhi kebutuhan masyarakat dan industri pangan.</p>
+              <p>
 	     Sejak awal, CV. Banyu Mili berkomitmen teguh dalam program fortifikasi iodisasi garam konsumsi, menyadari betapa pentingnya asupan yodium berkualitas untuk mencegah gangguan akibat kekurangan yodium, mendukung perkembangan otak, serta menjaga kesehatan kelenjar tiroid seluruh keluarga.
-</p>
+              </p>
 <p>
 	 <img src="{{ asset('asset/images/pict-about-4.jpg') }}" alt="Pabrik CV Banyu Mili" style="float: right; margin: 0px 0px 10px 10px;">
 </p>
@@ -73,7 +73,7 @@ CV. Banyu Mili</h4>
         <div class="row default middles_btm_about">
           <div class="col-md-9">
             <h2>Kultur budaya usaha CV. Banyu Mili dalam segala aktifitas produksi dan operasional sumber dayanya.</h2>
-<h5>Manajemen produsen garam CV. Banyu Mili merancang budaya kerja profesional yang membimbing segala aktifitas produksi dan layanan pelanggan untuk memastikan mutu garam konsumsi berstandar SNI terus terjaga secara berkelanjutan.</h5>            <div class="clear height-10"></div><div class="height-2"></div>
+            <p>Manajemen produsen garam CV. Banyu Mili merancang budaya kerja profesional yang membimbing segala aktifitas produksi dan layanan pelanggan untuk memastikan mutu garam konsumsi berstandar SNI terus terjaga secara berkelanjutan.</p>            <div class="clear height-10"></div><div class="height-2"></div>
             <div class="row">
               <div class="col-md-4">
                 <div class="texts">

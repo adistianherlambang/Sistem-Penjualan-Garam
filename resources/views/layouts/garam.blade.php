@@ -50,8 +50,6 @@
         .btns_more_fcs:hover { background: #002d7a; color: #fff !important; }
         .btn_blue_def { background-color: #003ea9; color: #fff; border: 0; padding: 12px 26px; font-weight: 600; text-transform: uppercase; display: inline-block; }
         .btn_blue_def:hover { background-color: #002d7a; color: #fff; text-decoration: none; }
-        .btn-top-admin { color: #003ea9 !important; background: #fff !important; border: 1.5px solid #003ea9 !important; padding: 6px 16px; border-radius: 20px; font-size: 11px; font-weight: 700; text-decoration: none !important; letter-spacing: 0.5px; transition: all 0.2s; display: inline-block; }
-        .btn-top-admin:hover { background-color: #003ea9 !important; color: #fff !important; border-color: #003ea9 !important; }
     </style>
     @stack('styles')
 </head>
@@ -78,16 +76,7 @@
               </div>
             </div>
             <div class="col-lg-6 col-md-6">
-              <div class="text-right rights_block_topRght_menu" style="display: flex; justify-content: flex-end; align-items: center; gap: 16px;">
-                @auth
-                  <a href="{{ route('dashboard') }}" class="btn-top-admin">
-                    <i class="fa fa-tachometer"></i> DASHBOARD
-                  </a>
-                @else
-                  <a href="{{ route('login') }}" class="btn-top-admin">
-                    <i class="fa fa-lock"></i> LOGIN ADMIN
-                  </a>
-                @endauth
+              <div class="text-right rights_block_topRght_menu">
                 <a href="javascript:;" class="nav_showMenu showmenu_barresponsive" title="Buka Menu"></a>
                 <div class="clear"></div>
               </div>

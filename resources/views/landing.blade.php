@@ -15,7 +15,7 @@
                 </ol>
                 <div class="carousel-inner">
                     <!-- Slide 1 -->
-                    <div class="item active" data-bg="{{ asset('asset/images/ptgaram/slide-1.jpg') }}">
+                    <div class="item active" data-bg="{{ asset('asset/images/ptgaram/slide-1.jpg') }}" style="background-image: url('{{ asset('asset/images/ptgaram/slide-1.jpg') }}');">
                         <div class="carousel-caption">
                             <div class="prelatife container">
                                 <div class="bxsl_tx_fcs">
@@ -34,7 +34,7 @@
                     </div>
 
                     <!-- Slide 2 -->
-                    <div class="item" data-bg="{{ asset('asset/images/ptgaram/slide-2.jpg') }}">
+                    <div class="item" data-bg="{{ asset('asset/images/ptgaram/slide-2.jpg') }}" style="background-image: url('{{ asset('asset/images/ptgaram/slide-2.jpg') }}');">
                         <div class="carousel-caption">
                             <div class="prelatife container">
                                 <div class="bxsl_tx_fcs">
@@ -53,7 +53,7 @@
                     </div>
 
                     <!-- Slide 3 -->
-                    <div class="item" data-bg="{{ asset('asset/images/ptgaram/slide-3.jpg') }}">
+                    <div class="item" data-bg="{{ asset('asset/images/ptgaram/slide-3.jpg') }}" style="background-image: url('{{ asset('asset/images/ptgaram/slide-3.jpg') }}');">
                         <div class="carousel-caption">
                             <div class="prelatife container">
                                 <div class="bxsl_tx_fcs">
@@ -240,6 +240,65 @@
                         </div>
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Pilar Penopang Usaha Garam -->
+    <section class="default_sc blocks_bottoms_about_pillarns" id="about_c2">
+        <div class="prelatife container">
+            <div class="insides content-text text-center">
+                <h2>Pilar penopang usaha garam<br />CV. Banyu Mili</h2>
+                <div class="clear height-50"></div>
+                <div class="lists_icons_pillars_def">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="items">
+                                <div class="pict" style="margin-bottom: 20px;">
+                                    <img src="{{ asset('asset/images/ptgaram/icons-pilars-1.jpg') }}" alt="Peladang Garam" class="img-responsive center-block">
+                                </div>
+                                <div class="info">
+                                    <span>PELADANG GARAM</span>
+                                    <p>SUMBER KAMI</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="items">
+                                <div class="pict" style="margin-bottom: 20px;">
+                                    <img src="{{ asset('asset/images/ptgaram/icons-pilars-2.jpg') }}" alt="Sumber Daya Manusia" class="img-responsive center-block">
+                                </div>
+                                <div class="info">
+                                    <span>SUMBER DAYA MANUSIA</span>
+                                    <p>KEKUATAN KAMI</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="items">
+                                <div class="pict" style="margin-bottom: 20px;">
+                                    <img src="{{ asset('asset/images/ptgaram/icons-pilars-3.jpg') }}" alt="Mutu Kualitas Terbaik" class="img-responsive center-block">
+                                </div>
+                                <div class="info">
+                                    <span>MUTU KUALITAS TERBAIK</span>
+                                    <p>KENDARAAN KAMI</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="items">
+                                <div class="pict" style="margin-bottom: 20px;">
+                                    <img src="{{ asset('asset/images/ptgaram/icons-pilars-4.jpg') }}" alt="Kepuasan Konsumen" class="img-responsive center-block">
+                                </div>
+                                <div class="info">
+                                    <span>KEPUASAN KONSUMEN</span>
+                                    <p>DESTINASI KAMI</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
             </div>
         </div>
     </section>

@@ -3,7 +3,7 @@
 @section('title', 'Tentang Kami - Pabrik Garam Industri & Konsumsi CV. Banyu Mili')
 
 @section('content')
-<section class="illutration_inside_page_top pg_about prelatife" data-bg="{{ asset('asset/images/ptgaram/about-hero.jpg') }}">
+<section class="illutration_inside_page_top pg_about prelatife" data-bg="{{ asset('asset/images/ptgaram/about-hero.jpg') }}" style="background-image: url('{{ asset('asset/images/ptgaram/about-hero.jpg') }}'); background-size: cover; background-position: center;">
   <div class="blocks_int_bottom">
     <div class="prelatife container">
       <div class="ins_text">
@@ -12,7 +12,7 @@
         <h4>Profil dan sejarah pabrik garam<br />
 CV. Banyu Mili</h4>
         <div class="clear divider"></div>
-        <div class="tsn_g_bottom"><a href="#"><img src="{{ asset('asset/') }}/images/b_icons_gt_bottom.png" alt="" class="img-responsive center-block"></a></div>
+        <div class="tsn_g_bottom"><a href="#"><img src="{{ asset('asset/images/b_icons_gt_bottom.png') }}" alt="" class="img-responsive center-block"></a></div>
       </div>
       <div class="clear"></div>
     </div>
@@ -120,7 +120,7 @@ CV. Banyu Mili</h2>
             
             <div class="col-md-3 col-sm-6">
               <div class="items">
-                <div class="pict"><img src="/images/static/.tmb/thumb_7bf5993066icons-pilars-1_resize_200_157.jpg" alt="" class="img-responsive center-block"></div>
+                <div class="pict" style="margin-bottom: 20px;"><img src="{{ asset('asset/images/ptgaram/icons-pilars-1.jpg') }}" alt="Peladang Garam" class="img-responsive center-block"></div>
                 <div class="info">
                   <span>PELADANG GARAM</span>
                   <p>SUMBER KAMI</p>
@@ -131,7 +131,7 @@ CV. Banyu Mili</h2>
             
             <div class="col-md-3 col-sm-6">
               <div class="items">
-                <div class="pict"><img src="/images/static/.tmb/thumb_60a3f1cdd8icons-pilars-2_resize_200_157.jpg" alt="" class="img-responsive center-block"></div>
+                <div class="pict" style="margin-bottom: 20px;"><img src="{{ asset('asset/images/ptgaram/icons-pilars-2.jpg') }}" alt="Sumber Daya Manusia" class="img-responsive center-block"></div>
                 <div class="info">
                   <span>SUMBER DAYA MANUSIA</span>
                   <p>KEKUATAN KAMI</p>
@@ -142,7 +142,7 @@ CV. Banyu Mili</h2>
             
             <div class="col-md-3 col-sm-6">
               <div class="items">
-                <div class="pict"><img src="/images/static/.tmb/thumb_96205b5b63icons-pilars-3_resize_200_157.jpg" alt="" class="img-responsive center-block"></div>
+                <div class="pict" style="margin-bottom: 20px;"><img src="{{ asset('asset/images/ptgaram/icons-pilars-3.jpg') }}" alt="Mutu Kualitas Terbaik" class="img-responsive center-block"></div>
                 <div class="info">
                   <span>MUTU KUALITAS TERBAIK</span>
                   <p>KENDARAAN KAMI</p>
@@ -153,7 +153,7 @@ CV. Banyu Mili</h2>
             
             <div class="col-md-3 col-sm-6">
               <div class="items">
-                <div class="pict"><img src="/images/static/.tmb/thumb_c239dea24cicons-pilars-4_resize_200_157.jpg" alt="" class="img-responsive center-block"></div>
+                <div class="pict" style="margin-bottom: 20px;"><img src="{{ asset('asset/images/ptgaram/icons-pilars-4.jpg') }}" alt="Kepuasan Konsumen" class="img-responsive center-block"></div>
                 <div class="info">
                   <span>KEPUASAN KONSUMEN</span>
                   <p>DESTINASI KAMI</p>

@@ -3,7 +3,7 @@
 @section('title', 'Hubungi Kami - Pabrik Garam Industri & Konsumsi CV. Banyu Mili')
 
 @section('content')
-<section class="illutration_inside_page_top pg_industri prelatife" data-bg="{{ asset('asset/images/ptgaram/about-hero.jpg') }}">
+<section class="illutration_inside_page_top pg_industri prelatife" data-bg="{{ asset('asset/images/ptgaram/about-hero.jpg') }}" style="background-image: url('{{ asset('asset/images/ptgaram/about-hero.jpg') }}'); background-size: cover; background-position: center;">
   <div class="blocks_int_bottom">
     <div class="prelatife container">
       <div class="ins_text">
@@ -12,7 +12,7 @@
         <h4>Tim layanan pelanggan kami akan<br />
 selalu siap membantu anda.</h4>
         <div class="clear divider"></div>
-        <div class="tsn_g_bottom"><a href="#"><img src="{{ asset('asset/') }}/images/b_icons_gt_bottom.png" alt="" class="img-responsive center-block"></a></div>
+        <div class="tsn_g_bottom"><a href="#"><img src="{{ asset('asset/images/b_icons_gt_bottom.png') }}" alt="" class="img-responsive center-block"></a></div>
       </div>
       <div class="clear"></div>
     </div>

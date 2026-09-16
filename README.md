@@ -4,9 +4,9 @@ Aplikasi Point of Sale (POS) dan manajemen rantai pasok garam yang dibangun meng
 
 ## Spesifikasi Environment
 
-- **Web Server**: Apache 2.4 (Debian container `php:8.2-apache`, `mod_rewrite` aktif, DocumentRoot: `/var/www/html/public`)
+- **Web Server**: Apache 2.4 (Debian container `php:8.5.10-apache`, `mod_rewrite` aktif, DocumentRoot: `/var/www/html/public`)
 - **Database**: MariaDB 10.4.32 (`mariadb:10.4.32`)
-- **PHP**: PHP 8.2 (`php:8.2-apache` + PEAR + PECL)
+- **PHP**: PHP 8.5.10 (`php:8.5.10-apache` + PEAR + PECL)
 - **Database Management Tool**: phpMyAdmin 5.2.1 (`phpmyadmin:5.2.1`)
 - **Frontend**: Laravel Blade, Vanilla CSS Material Design, Vanilla JavaScript (tanpa Tailwind, React, Vue, Inertia, Livewire, atau SPA)
 

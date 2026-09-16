@@ -1,4 +1,4 @@
-FROM php:8.2-apache
+FROM php:8.5.10-apache
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -14,17 +14,15 @@ RUN apt-get update && apt-get install -y \
     libjpeg62-turbo-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Configure & install PHP extensions
+# Configure & install PHP extensions (mbstring & opcache are built-in in PHP 8.5)
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) \
     pdo_mysql \
-    mbstring \
     zip \
     exif \
     pcntl \
     bcmath \
-    gd \
-    opcache
+    gd
 
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite

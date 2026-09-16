@@ -7,8 +7,8 @@
     <title>@yield('title', 'Pabrik Garam Industri & Konsumsi CV. Banyu Mili')</title>
 
     <meta name="language" content="id" />
-    <meta name="keywords" content="Pabrik Garam Industri & Konsumsi CV. Banyu Mili Surabaya, Garam Beryodium, Garam Konsumsi, Garam Industri, Garam Halus, Garam Kasar">
-    <meta name="description" content="CV. Banyu Mili adalah Pabrik Garam Industri berkualitas yang berdedikasi melayani pelanggan dengan memberikan produk dan layanan terbaik.">
+    <meta name="keywords" content="CV. Banyu Mili, Garam Konsumsi Beryodium, Garam Beryodium SNI, Produsen Garam Lampung Timur, Desa Banjar Rejo, Garam Meja, Garam Dapur SNI">
+    <meta name="description" content="CV. Banyu Mili berlokasi di Desa Banjar Rejo, Kabupaten Lampung Timur. Produsen garam konsumsi beryodium berkualitas tinggi yang memenuhi standar SNI.">
 
     <link rel="Shortcut Icon" href="{{ asset('asset/images/favicon.png') }}" />
     <link rel="icon" type="image/ico" href="{{ asset('asset/images/favicon.png') }}" />
@@ -254,8 +254,8 @@
 						<div class="bc_address">
 							<span>FACTORY & OFFICE</span>
 							<address>
-							Jl. Kalianak Barat Nomer 60<br>
-							Kota Surabaya, Jawa Timur 60183.<br>
+							Desa Banjar Rejo<br>
+							Kabupaten Lampung Timur, Lampung.<br>
 							Indonesia.
 							</address>
 						</div>
@@ -267,12 +267,9 @@
 						<div class="clear"></div>
 						<dl class="dl-horizontal">
               <dd>
-                <ul>
-                  <li><a href="https://wa.me/6285100477522" target="_blank">Layanan +62 851-0047-7522</a></li>
-                  <li><a href="https://wa.me/628113181167" target="_blank">Pemasaran +62 811-3181-167</a></li>
-                  <li><a href="https://wa.me/62811984376" target="_blank">Industri +62 811-984-376</a></li>
-                  <li><a href="https://wa.me/6283854734316" target="_blank">Distribusi +62 838-5473-4316</a></li>
-                  <li><a href="https://wa.me/6281333370415" target="_blank">Kemitraan +62 813-3337-0415</a></li>
+                <ul class="list-unstyled" style="padding-left: 0; line-height: 2;">
+                  <li><a href="tel:08136906089"><i class="fa fa-phone"></i> 08136906089</a></li>
+                  <li><a href="https://wa.me/628136906089" target="_blank"><i class="fa fa-whatsapp"></i> WA: 08136906089</a></li>
                 </ul>
               </dd>
 						  <div class="clear"></div>
@@ -304,8 +301,8 @@
 		<div class="prelatife container">
 			<div class="row">
 				<div class="col-md-9 col-sm-9">
-					<div class="t-copyrights">Copyright &copy; {{ date('Y') }}, CV BANYU MILI - Garam Meja, garam konsumsi berkualitas sejak 1970.
-					<br><small>Portal Resmi & Sistem Informasi CV BANYU MILI.</small>
+					<div class="t-copyrights">Copyright &copy; {{ date('Y') }}, CV. BANYU MILI - Garam Konsumsi Beryodium Berstandar SNI.
+					<br><small>Desa Banjar Rejo, Kabupaten Lampung Timur (Kontak: 08136906089).</small>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-3">

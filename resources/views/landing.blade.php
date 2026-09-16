@@ -1,6 +1,6 @@
 @extends('layouts.garam')
 
-@section('title', 'Pabrik Garam Industri & Konsumsi CV. Banyu Mili')
+@section('title', 'CV. Banyu Mili - Produsen Garam Konsumsi Beryodium SNI Lampung Timur')
 
 @section('content')
 <div class="middles_wrapper_cont tops_home">
@@ -20,10 +20,10 @@
                             <div class="prelatife container">
                                 <div class="bxsl_tx_fcs">
                                     <div class="texts text-left">
-                                        <h2>SELAMAT DATANG DI PABRIK GARAM INDUSTRI CV BANYU MILI</h2>
-                                        <h4>Kualitas hidup yang lebih baik dimulai dari konsumsi garam industri berkualitas yang lebih baik pada keseharian anda</h4>
+                                        <h2>PRODUSEN GARAM KONSUMSI BERYODIUM BERSTANDAR SNI CV. BANYU MILI</h2>
+                                        <h4>Kualitas hidup yang lebih baik dimulai dari konsumsi garam konsumsi beryodium berkualitas pada keseharian keluarga anda</h4>
                                         <p>
-                                            Pabrik garam industri CV. Banyu Mili memiliki semangat dan misi khusus untuk meningkatkan taraf kesejahteraan masyarakat di Indonesia, melalui kesehatan dan gizi yang lebih baik bagi seluruh konsumen kami. Selamat datang di CV. Banyu Mili.
+                                            CV. Banyu Mili berlokasi di Desa Banjar Rejo, Kabupaten Lampung Timur. Kami berdedikasi memproduksi garam konsumsi beryodium berstandar SNI yang bermutu tinggi, higienis, bersih, dan menyehatkan bagi seluruh keluarga Indonesia.
                                         </p>
                                         <a href="{{ url('/tentang-kami') }}" class="btn btn-link btns_more_fcs">PELAJARI LEBIH LANJUT TENTANG KAMI</a>
                                     </div>
@@ -39,10 +39,10 @@
                             <div class="prelatife container">
                                 <div class="bxsl_tx_fcs">
                                     <div class="texts text-left">
-                                        <h2>PRODUSEN GARAM MEJA & KONSUMSI BERMUTU TINGGI</h2>
-                                        <h4>Standar pemurnian higienis dengan kandungan iodium dan kemurnian teruji laboratorium nasional</h4>
+                                        <h2>GARAM KONSUMSI BERYODIUM BERMUTU TINGGI</h2>
+                                        <h4>Standar pemurnian higienis dengan jaminan kandungan iodium sesuai SNI</h4>
                                         <p>
-                                            Menghadirkan garam meja beryodium dan garam dapur berstandar mutu tinggi untuk keluarga Indonesia, diproduksi secara konsisten dengan pengawasan kualitas yang ketat.
+                                            Menghadirkan garam meja dan garam dapur beryodium berstandar SNI untuk keluarga Indonesia, diproduksi secara konsisten dengan pengawasan kualitas dan higienitas yang ketat di Lampung Timur.
                                         </p>
                                         <a href="{{ url('/produk') }}" class="btn btn-link btns_more_fcs">LIHAT KATALOG PRODUK GARAM</a>
                                     </div>
@@ -58,10 +58,10 @@
                             <div class="prelatife container">
                                 <div class="bxsl_tx_fcs">
                                     <div class="texts text-left">
-                                        <h2>PASOKAN GARAM INDUSTRI NASIONAL TERPERCAYA</h2>
-                                        <h4>Mitra strategis untuk aneka industri makanan, tekstil, pakan ternak, dan manufaktur</h4>
+                                        <h2>PASOKAN GARAM KONSUMSI BERYODIUM TERPERCAYA</h2>
+                                        <h4>Mitra terpercaya kebutuhan garam konsumsi bermutu tinggi untuk wilayah Lampung dan sekitarnya</h4>
                                         <p>
-                                            Kapasitas pasokan puluhan ribu ton per tahun dengan spesifikasi teknis NaCl presisi serta jaminan distribusi tepat waktu ke berbagai kota di Indonesia.
+                                            CV. Banyu Mili siap melayani pasokan garam konsumsi beryodium SNI dengan pasokan stabil, kualitas teruji, dan layanan terbaik. Hubungi kontak kami di 08136906089.
                                         </p>
                                         <a href="{{ url('/kontak') }}" class="btn btn-link btns_more_fcs">KONSULTASI & HUBUNGI KAMI</a>
                                     </div>
@@ -78,13 +78,13 @@
     <!-- End FCS Hero Carousel -->
 
     <!-- Section 1: Garam Konsumsi Beryodium -->
-    <h1 class="hidden hide">GARAM KONSUMSI BERYODIUM</h1>
+    <h1 class="hidden hide">GARAM KONSUMSI BERYODIUM SNI CV BANYU MILI</h1>
     <section class="default_sc backs_homesection_1" id="home_c1">
         <div class="prelatife container">
             <div class="insides content-text text-center">
                 <div class="top">
                     <h3 class="s_title">GARAM KONSUMSI BERYODIUM</h3>
-                    <h4>Produk garam berkualitas CV. Banyu Mili</h4>
+                    <h4>Produk garam berkualitas berstandar SNI CV. Banyu Mili</h4>
                 </div>
 
                 <div class="lists_default_product_dt list_home">

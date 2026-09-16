@@ -38,10 +38,10 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // 2. Settings
-        Setting::set('store_name', 'Garam Berkah Mandiri');
-        Setting::set('store_address', 'Jl. Samudera Raya No. 45, Sentra Garam, Madura');
-        Setting::set('store_phone', '0812-3456-7890');
-        Setting::set('receipt_footer', 'Terima kasih atas kunjungan Anda. Garam Murni & Sehat.');
+        Setting::set('store_name', 'CV. Banyu Mili');
+        Setting::set('store_address', 'Desa Banjar Rejo, Kabupaten Lampung Timur');
+        Setting::set('store_phone', '08136906089');
+        Setting::set('receipt_footer', 'Terima kasih atas kepercayaan Anda. Garam Konsumsi Beryodium SNI CV. Banyu Mili.');
 
         // 3. Suppliers
         $sup1 = Supplier::create([

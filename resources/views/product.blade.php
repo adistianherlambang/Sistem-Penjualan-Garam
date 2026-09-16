@@ -1,16 +1,16 @@
 @extends('layouts.garam')
 
-@section('title', 'Produk Kami - Pabrik Garam Industri & Konsumsi CV. Banyu Mili')
+@section('title', 'Produk Kami - CV. Banyu Mili Garam Konsumsi Beryodium SNI Lampung Timur')
 
 @section('content')
 <section class="illutration_inside_page_top pg_products prelatife" data-bg="{{ asset('asset/images/ptgaram/slide-2.jpg') }}">
   <div class="blocks_int_bottom">
     <div class="prelatife container">
       <div class="ins_text">
-        <h1 class="hide hidden">Jual Garam Industri - Pabrik Garam Aneka Pangan CV. Banyu Mili Surabaya</h1>
+        <h1 class="hide hidden">Garam Konsumsi Beryodium SNI - CV. Banyu Mili Kabupaten Lampung Timur</h1>
         <h3 class="c_title">GARAM BANYU MILI</h3>
-        <h4>Kami memproduksi beraneka merk garam<br />
-untuk berbagai segmentasi pasar.</h4>
+        <h4>Garam konsumsi beryodium berstandar SNI<br />
+untuk kebutuhan keluarga dan pangan berkualitas.</h4>
         <div class="clear divider"></div>
         <div class="tsn_g_bottom"><a href="#product_c1"><img src="{{ asset('asset/images/b_icons_gt_bottom.png') }}" alt="" class="img-responsive center-block"></a></div>
       </div>
@@ -24,7 +24,7 @@ untuk berbagai segmentasi pasar.</h4>
     <div class="prelatife container">
       <div class="insides content-text prelatife text-center">
         <h3 class="s_title_child">PRODUK KAMI</h3>
-        <h2>Produk garam berkualitas CV. Banyu Mili</h2>
+        <h2>Produk garam konsumsi beryodium berstandar SNI CV. Banyu Mili</h2>
         
         <div class="clear height-40"></div>
 
@@ -37,7 +37,7 @@ untuk berbagai segmentasi pasar.</h4>
                   <div class="col-md-3 col-sm-6">
                     <div class="items">
                       <div class="pict">
-                        <a href="https://api.whatsapp.com/send?phone=6281222280535&text=Halo%20CV.%20Banyu%20Mili,%20saya%20tertarik%20dengan%20produk%20{{ urlencode($product->name) }}" target="_blank">
+                        <a href="https://api.whatsapp.com/send?phone=628136906089&text=Halo%20CV.%20Banyu%20Mili,%20saya%20tertarik%20dengan%20produk%20{{ urlencode($product->name) }}" target="_blank">
                           <img src="{{ $product->image_url }}" alt="{{ $product->name }}" class="img-responsive center-block" style="max-height: 200px; object-fit: contain; margin: 0 auto;">
                         </a>
                       </div>
@@ -61,7 +61,7 @@ untuk berbagai segmentasi pasar.</h4>
                           </div>
                         @endif
                         <div style="margin-top: 8px;">
-                          <a href="https://api.whatsapp.com/send?phone=6281222280535&text=Halo%20CV.%20Banyu%20Mili,%20saya%20tertarik%20dengan%20produk%20{{ urlencode($product->name) }}" target="_blank" class="btn btn-default btn-xs" style="background: #19387e; color: #fff; border-radius: 4px; padding: 5px 12px; font-size: 11px; font-weight: 600;">
+                          <a href="https://api.whatsapp.com/send?phone=628136906089&text=Halo%20CV.%20Banyu%20Mili,%20saya%20tertarik%20dengan%20produk%20{{ urlencode($product->name) }}" target="_blank" class="btn btn-default btn-xs" style="background: #19387e; color: #fff; border-radius: 4px; padding: 5px 12px; font-size: 11px; font-weight: 600;">
                             Pesan via WhatsApp
                           </a>
                         </div>
@@ -82,8 +82,8 @@ untuk berbagai segmentasi pasar.</h4>
 
         <div class="clear height-10"></div>
         <div class="bottoms_inf_products">
-          <p>Pabrik GARAM BANYU MILI membuka segala macam kemungkinan untuk bekerja sama, baik dalam pasokan garam konsumsi, pasokan garam industri, maupun pesanan khusus seperti garam halus pabrik kami dengan merk white label anda (OEM).</p>
-          <p><strong>Silahkan klik link di bawah ini untuk inkuiri anda.</strong></p>
+          <p>CV. BANYU MILI yang berlokasi di Desa Banjar Rejo, Kabupaten Lampung Timur membuka kemitraan pasokan garam konsumsi beryodium berstandar SNI untuk distributor, agen sembako, maupun pengolahan pangan.</p>
+          <p><strong>Silahkan hubungi kami di 08136906089 atau klik tombol di bawah ini.</strong></p>
           <div class="clear height-20"></div>
           <a href="{{ url('/kontak') }}" class="btn btn-default btn_blue_def">HUBUNGI CV. BANYU MILI</a>
           <div class="clear"></div>

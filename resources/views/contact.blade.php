@@ -1,13 +1,13 @@
 @extends('layouts.garam')
 
-@section('title', 'Hubungi Kami - Pabrik Garam Industri & Konsumsi CV. Banyu Mili')
+@section('title', 'Hubungi Kami - CV. Banyu Mili Garam Konsumsi Beryodium SNI Lampung Timur')
 
 @section('content')
 <section class="illutration_inside_page_top pg_industri prelatife" data-bg="{{ asset('asset/images/ptgaram/about-hero.jpg') }}">
   <div class="blocks_int_bottom">
     <div class="prelatife container">
       <div class="ins_text">
-        <h1 class="hide hidden">Contact Us - Pabrik Garam Industri & Konsumsi CV. Banyu Mili Surabaya</h1>
+        <h1 class="hide hidden">Contact Us - CV. Banyu Mili Garam Konsumsi Beryodium SNI Lampung Timur</h1>
         <h3 class="c_title">HUBUNGI KAMI</h3>
         <h4>Tim layanan pelanggan kami akan<br />
 selalu siap membantu anda.</h4>
@@ -26,50 +26,46 @@ selalu siap membantu anda.</h4>
         <div class="clear height-25"></div>
         <div class="tops_info">
           <p>
-	                                    Hotline Sales dan Marketing  <strong><a href="Oky 08138288177" <strong=""><herf rina="" 0811984376"="" href="Oky 0813 828 8177 " <="" a=""></herf></a></strong>
-</p>
-<p email<br="">
-</p>
-<p>
-	 <a href="Oky 08138288177" <strong=""> </a><a href="mailto:info@banyumili.co.id"><strong>info@banyumili.co.id</strong></a>
-</p>          <div class="clear"></div>
+            Hotline Layanan & Pemasaran: <strong><a href="tel:08136906089" style="color: #003ea9; font-size: 24px;">08136906089</a></strong>
+          </p>
+          <p>
+            WhatsApp Resmi: <strong><a href="https://wa.me/628136906089" target="_blank" style="color: #128c7e; font-size: 18px;"><i class="fa fa-whatsapp"></i> Chat WhatsApp (08136906089)</a></strong>
+          </p>
+          <p>
+            Email: <a href="mailto:info@banyumili.co.id"><strong>info@banyumili.co.id</strong></a>
+          </p>
+          <div class="clear"></div>
         </div>
 
         <div class="clear height-50"></div>
-        <div class="clear height-50"></div>
-        <div class="clear height-10"></div>
+        <div class="clear height-30"></div>
         <div class="middles_info">
           <div class="row">
-                        <div class="col-md-6">
+            <div class="col-md-6">
               <div class="item">
                 <img src="{{ asset('asset/images/ptgaram/about-facility-1.jpg') }}" alt="" class="img-responsive center-block">
                 <div class="clear height-45"></div>
-                <h2>OFFICE</h2>
-                <address>Perum Graha Family Blok M – 62<br />
-Surabaya 60226, Jawa Timur. Indonesia.<br />
-Telepon.<br />
-Atik <a href="tel:+6285100477522">+62 851-0047-7522</a><br />
-Tuti <a href="tel:+628113181167">+62 811-3181-167</a><br />
-Rinawati <a href="tel:+62811984376">+62 811-984-376</a><br />
-Elsa <a href="tel:+6281333370415">+62 813-3337-0415</a></address>
-                <p><i class="fa fa-map-marker"></i><br />
-                  <a target="_blank" href="https://goo.gl/maps/AMzjzHxAJ7r">VIEW ON GOOGLE MAP</a></p>
+                <h2>KANTOR & LAYANAN</h2>
+                <address>Desa Banjar Rejo<br />
+Kabupaten Lampung Timur, Lampung, Indonesia.<br />
+Telepon / WhatsApp:<br />
+<a href="tel:08136906089"><strong>08136906089</strong></a><br />
+Email: <a href="mailto:info@banyumili.co.id">info@banyumili.co.id</a></address>
                 <div class="clear"></div>
               </div>
             </div>
-                        <div class="col-md-6">
+            <div class="col-md-6">
               <div class="item">
                 <img src="{{ asset('asset/images/ptgaram/about-facility-2.jpg') }}" alt="" class="img-responsive center-block">
                 <div class="clear height-45"></div>
-                <h2>FACTORY</h2>
-                <address>Jl. Kalianak Barat No.60, Kalianak<br />
-Surabaya 60183, Jawa Timur, Indonesia.</address>
-                <p><i class="fa fa-map-marker"></i><br />
-                  <a target="_blank" href="https://goo.gl/maps/FznhjeGimQM2">VIEW ON GOOGLE MAP</a></p>
+                <h2>PABRIK PENGOLAHAN</h2>
+                <address>Desa Banjar Rejo<br />
+Kabupaten Lampung Timur, Lampung, Indonesia.<br />
+Fasilitas Pemurnian & Pengemasan Garam Konsumsi Beryodium SNI</address>
                 <div class="clear"></div>
               </div>
             </div>
-                      </div>
+          </div>
           <div class="clear"></div>
         </div>
         <div class="clear height-30"></div>

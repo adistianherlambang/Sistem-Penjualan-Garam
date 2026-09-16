@@ -1,14 +1,14 @@
 @extends('layouts.garam')
 
-@section('title', 'Industri - Pabrik Garam Industri & Konsumsi CV. Banyu Mili')
+@section('title', 'Aplikasi & Industri - CV. Banyu Mili Garam Konsumsi Beryodium SNI Lampung Timur')
 
 @section('content')
 <section class="illutration_inside_page_top pg_industri prelatife" data-bg="{{ asset('asset/images/ptgaram/slide-3.jpg') }}">
   <div class="blocks_int_bottom">
     <div class="prelatife container">
       <div class="ins_text">
-        <h1 class="hide hidden">Industri - Pabrik Garam Industri & Konsumsi CV. Banyu Mili Surabaya</h1>
-        <h3 class="c_title">INDUSTRI</h3>
+        <h1 class="hide hidden">Industri & Pangan - CV. Banyu Mili Garam Konsumsi Beryodium SNI Lampung Timur</h1>
+        <h3 class="c_title">INDUSTRI & PANGAN</h3>
         <h4>Garam hadir di manapun<br />
 pada kehidupan kita sehari-hari</h4>
         <div class="clear divider"></div>
@@ -23,11 +23,11 @@ pada kehidupan kita sehari-hari</h4>
   <section class="default_sc back-white blocks_section_about_c1 industry_cont_1" id="industry_c1">
     <div class="prelatife container">
       <div class="insides content-text prelatife text-center">
-        <h2>Peranan garam berkualitas pada keberlangsungan industri<br />
-                       adalah sangat fatal, CV. Banyu Mili adalah rekan anda<br />
-                       untuk pasokan garam industri berkualitas.</h2>
+        <h2>Peranan garam konsumsi beryodium berkualitas pada kebutuhan pangan dan keluarga<br />
+                       adalah sangat penting, CV. Banyu Mili adalah rekan terpercaya anda<br />
+                       untuk pasokan garam bermutu standar SNI.</h2>
 <p>
-	              Kami memiliki hasrat dan semangat untuk membawa garam  berkualitas CV. Banyu Mili ke seluruh aspek kehidupan dan industri di  kehidupan sehari-hari. Lihat lebih lanjut tentang industri yang dapat  kami layani di bawah ini.
+	              Berlokasi di Desa Banjar Rejo, Kabupaten Lampung Timur, CV. Banyu Mili berkomitmen menghadirkan garam konsumsi beryodium bermutu standar SNI ke seluruh sektor pangan dan kehidupan sehari-hari. Lihat lebih lanjut aplikasi produk yang kami layani di bawah ini.
 </p>        <div class="clear height-50"></div>
         <div class="clear height-20"></div>
 

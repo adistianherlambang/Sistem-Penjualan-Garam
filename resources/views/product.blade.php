@@ -3,7 +3,7 @@
 @section('title', 'Produk Kami - Pabrik Garam Industri & Konsumsi CV. Banyu Mili')
 
 @section('content')
-<section class="illutration_inside_page_top pg_products prelatife" data-bg="{{ asset('asset/images/ptgaram/slide-2.jpg') }}" style="background-image: url('{{ asset('asset/images/ptgaram/slide-2.jpg') }}'); background-size: cover; background-position: center;">
+<section class="illutration_inside_page_top pg_products prelatife" data-bg="{{ asset('asset/images/ptgaram/slide-2.jpg') }}">
   <div class="blocks_int_bottom">
     <div class="prelatife container">
       <div class="ins_text">

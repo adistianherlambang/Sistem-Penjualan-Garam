@@ -15,7 +15,7 @@
                 </ol>
                 <div class="carousel-inner">
                     <!-- Slide 1 -->
-                    <div class="item active" data-bg="{{ asset('asset/images/ptgaram/slide-1.jpg') }}" style="background-image: url('{{ asset('asset/images/ptgaram/slide-1.jpg') }}');">
+                    <div class="item active" data-bg="{{ asset('asset/images/ptgaram/slide-1.jpg') }}">
                         <div class="carousel-caption">
                             <div class="prelatife container">
                                 <div class="bxsl_tx_fcs">
@@ -34,7 +34,7 @@
                     </div>
 
                     <!-- Slide 2 -->
-                    <div class="item" data-bg="{{ asset('asset/images/ptgaram/slide-2.jpg') }}" style="background-image: url('{{ asset('asset/images/ptgaram/slide-2.jpg') }}');">
+                    <div class="item" data-bg="{{ asset('asset/images/ptgaram/slide-2.jpg') }}">
                         <div class="carousel-caption">
                             <div class="prelatife container">
                                 <div class="bxsl_tx_fcs">
@@ -53,7 +53,7 @@
                     </div>
 
                     <!-- Slide 3 -->
-                    <div class="item" data-bg="{{ asset('asset/images/ptgaram/slide-3.jpg') }}" style="background-image: url('{{ asset('asset/images/ptgaram/slide-3.jpg') }}');">
+                    <div class="item" data-bg="{{ asset('asset/images/ptgaram/slide-3.jpg') }}">
                         <div class="carousel-caption">
                             <div class="prelatife container">
                                 <div class="bxsl_tx_fcs">

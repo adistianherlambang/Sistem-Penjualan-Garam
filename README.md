@@ -80,4 +80,97 @@ docker compose exec app php artisan migrate:fresh --seed
 ```bash
 docker compose exec app php artisan test
 ```
-# Sistem-Penjualan-Garam
+
+---
+
+## Panduan Instalasi & Menjalankan Tanpa Docker (Lokal / Native)
+
+Panduan ini digunakan jika Anda ingin menjalankan aplikasi secara langsung di sistem operasi lokal (misalnya menggunakan XAMPP, Laragon, Homebrew, atau PHP & MySQL native) tanpa Docker.
+
+### 1. Prasyarat Sistem
+Pastikan perangkat Anda telah terpasang:
+- **PHP**: Versi `>= 8.2` (mendukung hingga PHP 8.5)
+  - Ekstensi PHP wajib aktif: `pdo_mysql`, `bcmath`, `exif`, `gd`, `zip`, `pcntl`, `mbstring`
+- **Composer**: Versi `2.x`
+- **Database Server**: MySQL 8.0+ atau MariaDB 10.4+ (misal via XAMPP atau Laragon)
+- **Node.js & NPM** *(opsional)*: Node.js 18+ (jika ingin mengompilasi ulang aset Vite)
+
+---
+
+### 2. Langkah-Langkah Setup
+
+#### Langkah 1: Install Dependensi PHP (Composer)
+Buka terminal pada direktori proyek dan jalankan:
+```bash
+composer install
+```
+> *Catatan: Script patch kompatibilitas PHP 8.5 (`scripts/fix-php85-compatibility.php`) akan dijalankan secara otomatis saat proses dump-autoload.*
+
+#### Langkah 2: Salin File Konfigurasi Environment
+Salin file `.env.example` menjadi `.env`:
+```bash
+cp .env.example .env
+```
+
+Lalu generate application key:
+```bash
+php artisan key:generate
+```
+
+#### Langkah 3: Buat Database & Sesuaikan File `.env`
+1. Buka phpMyAdmin lokal Anda (misal `http://localhost/phpmyadmin`) atau terminal MySQL, lalu buat database baru:
+   ```sql
+   CREATE DATABASE pos_garam;
+   ```
+2. Buka file `.env` di editor teks Anda, dan sesuaikan pengaturan koneksi database (ubah `DB_HOST=db` menjadi `127.0.0.1`):
+   ```env
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=pos_garam
+   DB_USERNAME=root
+   DB_PASSWORD=
+   ```
+   *(Sesuaikan `DB_USERNAME` dan `DB_PASSWORD` dengan kredensial MySQL lokal Anda. Pada XAMPP/Laragon defaultnya user `root` tanpa password).*
+
+#### Langkah 4: Jalankan Migrasi Database & Seeder
+Isi struktur tabel dan data awal (akun Admin, Owner, data garam mentah, garam jadi, supplier, dll.):
+```bash
+php artisan migrate --seed
+```
+> Jika ingin mengosongkan dan mengatur ulang database dari awal:
+> ```bash
+> php artisan migrate:fresh --seed
+> ```
+
+#### Langkah 5: Install & Build Aset Frontend *(Opsional)*
+Jika Anda ingin memperbarui atau mengompilasi ulang aset statis CSS/JS:
+```bash
+npm install
+npm run build
+```
+
+---
+
+### 3. Menjalankan Aplikasi
+
+Jalankan web server lokal Laravel:
+```bash
+php artisan serve
+```
+
+Buka browser Anda dan akses:
+👉 **[http://127.0.0.1:8000](http://127.0.0.1:8000)** atau **[http://localhost:8000](http://localhost:8000)**
+
+Gunakan akun default berikut untuk masuk:
+- **Admin**: `admin@posgaram.com` | Password: `password123`
+- **Owner**: `owner@posgaram.com` | Password: `password123`
+
+---
+
+### 4. Menjalankan Pengujian (Testing) Otomatis
+Untuk memastikan semua fitur dan logika bisnis berfungsi dengan baik:
+```bash
+php artisan test
+```
+

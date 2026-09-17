@@ -126,9 +126,21 @@
             <p class="login-brand-desc">Sistem POS &amp; Pengolahan Garam</p>
         </div>
 
+        @if(session('success'))
+            <div style="background-color: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; padding: 12px 16px; border-radius: 12px; margin-bottom: 20px; font-size: 13.5px; font-weight: 500;">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        @if(session('message'))
+            <div style="background-color: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; padding: 12px 16px; border-radius: 12px; margin-bottom: 20px; font-size: 13.5px; font-weight: 500;">
+                {{ session('message') }}
+            </div>
+        @endif
+
         @if($errors->any())
-            <div class="md-alert md-alert-error" style="border-radius: 12px; margin-bottom: 20px;">
-                <div>{{ $errors->first() }}</div>
+            <div style="background-color: #fef2f2; color: #991b1b; border: 1px solid #fecaca; padding: 12px 16px; border-radius: 12px; margin-bottom: 20px; font-size: 13.5px; font-weight: 500;">
+                {{ $errors->first() }}
             </div>
         @endif
 
